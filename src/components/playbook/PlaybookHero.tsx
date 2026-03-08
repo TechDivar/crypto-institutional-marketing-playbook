@@ -421,7 +421,7 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
               transition={{ delay: 1.4 }}
             >
               {[
-                { value: "13", label: "Chapters" },
+                { value: "14", label: "Chapters" },
                 { value: "18", label: "Companies" },
                 { value: "5", label: "Personas" },
               ].map((stat) => (
