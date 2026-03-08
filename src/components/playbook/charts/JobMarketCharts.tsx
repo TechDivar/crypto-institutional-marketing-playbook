@@ -140,21 +140,26 @@ export const CompensationChart = () => (
 export const BackgroundsChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Preferred Industry Backgrounds</h3>
-    <p className="text-sm text-muted-foreground mb-6">What backgrounds are employers looking for?</p>
-    <div className="h-[300px]">
+    <p className="text-sm text-muted-foreground mb-6">Percentage of job listings mentioning each background as preferred</p>
+    <div className="h-[280px]">
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={backgroundsData} margin={{ left: 10, right: 30 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+        <BarChart data={backgroundsData} layout="vertical" margin={{ left: 20, right: 50 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" horizontal={false} />
           <XAxis 
-            dataKey="background" 
-            stroke="hsl(var(--muted-foreground))" 
-            fontSize={12}
-            tickLine={false}
-          />
-          <YAxis 
+            type="number"
             stroke="hsl(var(--muted-foreground))" 
             fontSize={12}
             tickFormatter={(value) => `${value}%`}
+            domain={[0, 40]}
+          />
+          <YAxis 
+            dataKey="background" 
+            type="category"
+            width={110}
+            stroke="hsl(var(--muted-foreground))" 
+            fontSize={12}
+            tickLine={false}
+            axisLine={false}
           />
           <Tooltip
             contentStyle={{
@@ -165,14 +170,17 @@ export const BackgroundsChart = () => (
             }}
             formatter={(value: number) => [`${value}%`, "Preference"]}
           />
-          <Bar dataKey="percentage" fill="hsl(var(--accent))" radius={[4, 4, 0, 0]}>
-            {backgroundsData.map((_, index) => (
-              <Cell 
-                key={`cell-${index}`} 
-                fill={index === 0 ? "hsl(var(--primary))" : index === 1 ? "hsl(var(--accent))" : "hsl(var(--secondary))"}
-              />
-            ))}
-          </Bar>
+          <Bar 
+            dataKey="percentage" 
+            fill="hsl(var(--primary))" 
+            radius={[0, 4, 4, 0]}
+            label={{ 
+              position: 'right', 
+              fill: 'hsl(var(--muted-foreground))', 
+              fontSize: 12,
+              formatter: (value: number) => `${value}%`
+            }}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>
