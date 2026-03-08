@@ -5,7 +5,7 @@ import { ComparisonTable } from "../ui/ComparisonTable";
 export const Chapter08 = () => (
   <>
     <SectionBlock>
-      <p>Every job description lists "messaging and positioning" as a core skill. Not because it is easy, but because it is where most crypto companies fail when talking to institutions.</p>
+      <p>Every job description lists "messaging and positioning" as a core skill because it is where most crypto companies fail when talking to institutions.</p>
     </SectionBlock>
 
     <SectionBlock title="Rule 1: Outcomes Before Technology">
