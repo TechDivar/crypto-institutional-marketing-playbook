@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import logo from "@/assets/web3talez-logo.jpg";
-import { ChapterCarousel } from "./ChapterCarousel";
+
 
 interface PlaybookHeroProps {
   onStart: () => void;
@@ -433,10 +433,6 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
                 </div>
               ))}
             </motion.div>
-
-            <div className="mt-16">
-              <ChapterCarousel onSelectChapter={onSelectChapter} />
-            </div>
           </motion.div>
         </div>
       )}
