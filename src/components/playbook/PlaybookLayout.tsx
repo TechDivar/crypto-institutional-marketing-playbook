@@ -11,13 +11,15 @@ export const PlaybookLayout = () => {
 
   return (
     <div className="flex min-h-screen bg-background">
-      {/* Mobile menu button */}
-      <button
-        onClick={() => setSidebarOpen(!sidebarOpen)}
-        className="fixed top-4 left-4 z-50 p-2.5 rounded-xl bg-card border border-border soft-shadow lg:hidden"
-      >
-        {sidebarOpen ? <X className="w-5 h-5 text-foreground" /> : <Menu className="w-5 h-5 text-foreground" />}
-      </button>
+      {/* Mobile menu button - only show in chapter view */}
+      {activeChapter !== null && (
+        <button
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className="fixed top-4 left-4 z-50 p-2.5 rounded-xl bg-card border border-border soft-shadow lg:hidden"
+        >
+          {sidebarOpen ? <X className="w-5 h-5 text-foreground" /> : <Menu className="w-5 h-5 text-foreground" />}
+        </button>
+      )}
 
       {/* Sidebar */}
       <PlaybookSidebar
