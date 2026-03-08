@@ -365,7 +365,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               transition={{ delay: 0.55 }}
             >
               In 2026, almost every marketing role in Web3 is asking for an institutional marketer. But nobody is actually telling you what that means or what it takes to do the job well.
-              <span className="block mt-2">That's what this playbook is&nbsp;for.</span>
+              <span className="block mt-2 text-primary font-semibold">That's what this playbook is&nbsp;for.</span>
             </motion.p>
 
             <motion.div
