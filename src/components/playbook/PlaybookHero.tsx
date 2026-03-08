@@ -30,38 +30,64 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
     <motion.div
       className="fixed inset-0 z-50 bg-background flex items-center justify-center"
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.6 }}
     >
+      {/* Ambient glow behind stairs */}
+      <motion.div
+        className="absolute w-[600px] h-[600px] rounded-full blur-[150px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, hsl(260 80% 65% / 0.15), transparent 70%)" }}
+        animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      />
+
       <div className="flex flex-col items-center">
-        {/* Stairs */}
-        <div className="relative w-[320px] h-[280px]">
+        {/* Stairs — larger */}
+        <div className="relative w-[420px] h-[380px]">
           {stairs.map((s, i) => (
             <motion.div
               key={i}
               className="absolute flex items-end"
               style={{
-                bottom: i * 44,
-                left: i * 40,
+                bottom: i * 58,
+                left: i * 52,
               }}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.15, duration: 0.3 }}
+              initial={{ opacity: 0, x: -30, y: 20 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ delay: i * 0.12, duration: 0.4, ease: "easeOut" }}
             >
-              {/* Step block */}
               <div className="relative">
-                <div className={`w-[120px] h-[40px] rounded-md flex items-center justify-center text-xs font-semibold transition-colors duration-300 ${
-                  currentStep >= i ? "bg-primary/20 border border-primary/40 text-foreground" : "bg-card border border-border text-muted-foreground"
-                }`}>
-                  {s.label && <span className="truncate px-2">{s.label}</span>}
-                </div>
+                {/* Step block */}
+                <motion.div
+                  className={`w-[160px] h-[50px] rounded-lg flex items-center justify-center text-sm font-semibold transition-colors duration-300 ${
+                    currentStep >= i
+                      ? "bg-primary/20 border border-primary/50 text-foreground shadow-[0_0_20px_hsl(260_80%_65%/0.15)]"
+                      : "bg-card border border-border text-muted-foreground"
+                  }`}
+                  animate={currentStep === i ? { scale: [1, 1.05, 1] } : {}}
+                  transition={{ duration: 0.3 }}
+                >
+                  {s.label && <span className="truncate px-3">{s.label}</span>}
+                </motion.div>
+
+                {/* Glowing trail on completed steps */}
+                {currentStep > i && (
+                  <motion.div
+                    className="absolute inset-0 rounded-lg"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    style={{
+                      background: "linear-gradient(135deg, hsl(260 80% 65% / 0.08), transparent)",
+                    }}
+                  />
+                )}
 
                 {/* Emoji on current step */}
                 {currentStep === i && (
                   <motion.span
-                    className="absolute -top-8 left-1/2 -translate-x-1/2 text-2xl"
-                    initial={{ opacity: 0, y: 10, scale: 0.5 }}
+                    className="absolute -top-10 left-1/2 -translate-x-1/2 text-3xl drop-shadow-[0_0_12px_hsl(260_80%_65%/0.5)]"
+                    initial={{ opacity: 0, y: 15, scale: 0.3 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 12 }}
                     key={`emoji-${i}`}
                   >
                     {s.emoji}
@@ -70,20 +96,46 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
               </div>
             </motion.div>
           ))}
+
+          {/* Celebration burst at top */}
+          {currentStep === stairs.length - 1 && (
+            <>
+              {[...Array(8)].map((_, i) => (
+                <motion.div
+                  key={`particle-${i}`}
+                  className="absolute rounded-full"
+                  style={{
+                    width: 6 + Math.random() * 6,
+                    height: 6 + Math.random() * 6,
+                    top: 10,
+                    left: 280,
+                    background: `hsl(${260 + i * 15} 80% ${55 + i * 5}%)`,
+                  }}
+                  initial={{ opacity: 1, scale: 0 }}
+                  animate={{
+                    opacity: [1, 1, 0],
+                    scale: [0, 1.5, 0.5],
+                    x: (Math.random() - 0.5) * 160,
+                    y: (Math.random() - 0.8) * 120,
+                  }}
+                  transition={{ duration: 0.8, delay: i * 0.04, ease: "easeOut" }}
+                />
+              ))}
+            </>
+          )}
         </div>
 
         {/* Progress text */}
         <motion.p
-          className="text-sm text-muted-foreground mt-6"
+          className="text-base text-muted-foreground mt-8 font-medium"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.6 }}
         >
           {currentStep < stairs.length - 1 ? "Leveling up..." : "You made it 💜"}
         </motion.p>
       </div>
 
-      {/* Auto-advance steps */}
       <StepAdvancer
         totalSteps={stairs.length}
         currentStep={currentStep}
