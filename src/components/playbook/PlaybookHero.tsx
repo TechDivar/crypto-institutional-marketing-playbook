@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import logo from "@/assets/web3talez-logo.jpg";
-import hero3d from "@/assets/hero-3d-marketing.png";
+
 
 interface PlaybookHeroProps {
   onStart: () => void;
