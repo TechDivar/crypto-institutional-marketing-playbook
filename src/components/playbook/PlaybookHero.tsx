@@ -180,33 +180,17 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
-            {[
-              {
-                emoji: "📊",
-                title: "PMM is the new hot title",
-                desc: "Almost every company on this list is hiring a \"Product Marketing Manager.\" Community manager era is over.",
-                bg: "bg-lavender/10"
-              },
-              {
-                emoji: "🏛️",
-                title: "\"Institutional Narrator\"",
-                desc: "LayerZero literally named a role after pitching banks. That's how serious narrative has become.",
-                bg: "bg-butter/15"
-              },
-              {
-                emoji: "🚀",
-                title: "First hire vs. 10th hire",
-                desc: "RWA.xyz wants a founding growth lead. Fireblocks wants a senior PMM. Same industry, very different stages.",
-                bg: "bg-mint/10"
-              },
-              {
-                emoji: "⚡",
-                title: "Ondo is hiring everyone",
-                desc: "Content lead, events lead, partner lead. They're building an entire marketing org right now.",
-                bg: "bg-peach/10"
-              },
-            ].map((insight, i) => (
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.4 }}
+            whileHover={{ y: -2 }}
+            className="clay-card p-4 bg-lavender/10 text-left max-w-sm mx-auto"
+          >
+            <p className="text-lg mb-1">📊</p>
+            <p className="text-sm font-bold text-foreground mb-1">PMM is the new hot title</p>
+            <p className="text-xs text-muted-foreground leading-relaxed">Almost every company on this list is hiring a "Product Marketing Manager." Community manager era is over.</p>
+          </motion.div>
               <motion.div
                 key={insight.title}
                 initial={{ opacity: 0, y: 15 }}
