@@ -355,7 +355,7 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
               rel="noopener noreferrer"
               className="pill-btn border border-border text-foreground hover:bg-card"
             >
-              Web3talez
+              Subscribe to Web3talez
             </motion.a>
           </motion.div>
 
