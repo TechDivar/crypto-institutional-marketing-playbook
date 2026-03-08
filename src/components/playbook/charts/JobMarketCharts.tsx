@@ -86,7 +86,7 @@ export const SkillsDemandChart = () => (
 export const CompensationChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Compensation Ranges</h3>
-    <p className="text-sm text-muted-foreground mb-6">Annual base salaries from actual job postings (USD)</p>
+    <p className="text-sm text-muted-foreground mb-4">Crypto/institutional roles with published salary ranges (USD)</p>
     <div className="space-y-4">
       {compensationData.map((item) => (
         <div key={item.role} className="space-y-1">
@@ -98,8 +98,8 @@ export const CompensationChart = () => (
             <div 
               className="h-full rounded-full"
               style={{
-                marginLeft: `${((item.min - 100) / 170) * 100}%`,
-                width: `${((item.max - item.min) / 170) * 100}%`,
+                marginLeft: `${((item.min - 100) / 120) * 100}%`,
+                width: `${((item.max - item.min) / 120) * 100}%`,
                 backgroundColor: PRIMARY_COLOR,
               }}
             />
@@ -110,9 +110,14 @@ export const CompensationChart = () => (
         <span>$100K</span>
         <span>$150K</span>
         <span>$200K</span>
-        <span>$270K</span>
+        <span>$220K</span>
       </div>
     </div>
+    <p className="text-xs text-muted-foreground mt-6 italic">
+      Note: Most institutional crypto roles (Chainlink, Fireblocks, Ondo, Ledger, Allium, Artemis, LayerZero, Dakota, Dune) list "competitive salary" without publishing specific ranges.
+    </p>
+  </div>
+);
   </div>
 );
 
