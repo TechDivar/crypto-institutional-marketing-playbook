@@ -29,18 +29,17 @@ const backgroundsData = [
 ];
 
 const experienceData = [
-  { range: "2–4 years", count: 2 },
-  { range: "3–5 years", count: 2 },
-  { range: "5–6 years", count: 2 },
-  { range: "6–8 years", count: 2 },
-  { range: "10+ years", count: 2 },
-  { range: "Not specified", count: 3 },
+  { range: "2–4 years", percentage: 17 },
+  { range: "5–6 years", percentage: 28 },
+  { range: "7–8 years", percentage: 17 },
+  { range: "10+ years", percentage: 17 },
+  { range: "Not specified", percentage: 22 },
 ];
 
 const workModelData = [
-  { model: "Remote", count: 7 },
-  { model: "Office / On-site", count: 4 },
-  { model: "Hybrid", count: 2 },
+  { model: "Remote", percentage: 54 },
+  { model: "Office / On-site", percentage: 31 },
+  { model: "Hybrid", percentage: 15 },
 ];
 
 const toolsData = [
@@ -63,7 +62,7 @@ const TERTIARY_COLOR = "hsl(160, 70%, 50%)";
 export const SkillsDemandChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Most In-Demand Skills</h3>
-    <p className="text-sm text-muted-foreground mb-6">Based on analysis of 13 institutional marketing job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Based on analysis of 18 institutional marketing job descriptions</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={skillsData} layout="vertical" margin={{ left: 20, right: 50 }}>
@@ -169,13 +168,13 @@ export const BackgroundsChart = () => (
 export const ExperienceLevelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Experience Level Required</h3>
-    <p className="text-sm text-muted-foreground mb-6">Years of experience required across 13 job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Percentage of 18 job descriptions requiring each experience range</p>
     <div className="h-[280px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={experienceData} margin={{ left: 10, right: 30 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" vertical={false} />
           <XAxis dataKey="range" stroke="hsl(var(--muted-foreground))" fontSize={12} />
-          <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} />
+          <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickFormatter={(value) => `${value}%`} />
           <Tooltip
             contentStyle={{
               backgroundColor: "hsl(var(--card))",
@@ -183,10 +182,10 @@ export const ExperienceLevelChart = () => (
               borderRadius: "8px",
               color: "hsl(var(--foreground))",
             }}
-            formatter={(value: number) => [`${value} JDs`, "Count"]}
+            formatter={(value: number) => [`${value}%`, "Percentage"]}
           />
-          <Bar dataKey="count" fill={SECONDARY_COLOR} radius={[4, 4, 0, 0]}
-            label={{ position: 'top', fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+          <Bar dataKey="percentage" fill={SECONDARY_COLOR} radius={[4, 4, 0, 0]}
+            label={{ position: 'top', fill: 'hsl(var(--muted-foreground))', fontSize: 12, formatter: (value: number) => `${value}%` }}
           />
         </BarChart>
       </ResponsiveContainer>
@@ -197,12 +196,12 @@ export const ExperienceLevelChart = () => (
 export const WorkModelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Work Model Breakdown</h3>
-    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 13 job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 18 job descriptions</p>
     <div className="h-[240px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={workModelData} layout="vertical" margin={{ left: 20, right: 50 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" horizontal={false} />
-          <XAxis type="number" stroke="hsl(var(--muted-foreground))" fontSize={12} />
+          <XAxis type="number" stroke="hsl(var(--muted-foreground))" fontSize={12} tickFormatter={(value) => `${value}%`} domain={[0, 60]} />
           <YAxis
             dataKey="model" type="category" width={120}
             stroke="hsl(var(--muted-foreground))" fontSize={12}
@@ -215,10 +214,10 @@ export const WorkModelChart = () => (
               borderRadius: "8px",
               color: "hsl(var(--foreground))",
             }}
-            formatter={(value: number) => [`${value} companies`, "Count"]}
+            formatter={(value: number) => [`${value}%`, "Percentage"]}
           />
-          <Bar dataKey="count" fill={TERTIARY_COLOR} radius={[0, 4, 4, 0]}
-            label={{ position: 'right', fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+          <Bar dataKey="percentage" fill={TERTIARY_COLOR} radius={[0, 4, 4, 0]}
+            label={{ position: 'right', fill: 'hsl(var(--muted-foreground))', fontSize: 12, formatter: (value: number) => `${value}%` }}
           />
         </BarChart>
       </ResponsiveContainer>
