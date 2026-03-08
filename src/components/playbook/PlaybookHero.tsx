@@ -160,7 +160,7 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
   return (
     <>
       <AnimatePresence>
-        {showIntro && <StairAnimation onComplete={() => setShowIntro(false)} />}
+        {showIntro && <CardFlipAnimation onComplete={() => setShowIntro(false)} />}
       </AnimatePresence>
 
       {!showIntro && <div className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
