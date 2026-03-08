@@ -14,159 +14,238 @@ const companies = [
   "Figure", "Robinhood", "Artemis"
 ];
 
-const decodeLines = [
-  { text: "> SCANNING JOB DESCRIPTIONS...", delay: 0 },
-  { text: "> 18 companies detected", delay: 800 },
-  { text: "> ROLE_PATTERN: Product Marketing Manager", delay: 1600 },
-  { text: "> 13 chapters compiled", delay: 2400 },
-  { text: "> 5 buyer personas mapped", delay: 3000 },
-  { text: "", delay: 3600 },
-  { text: "> DECODING COMPLETE.", delay: 3800 },
-  { text: "> The Crypto Institutional Marketing Playbook", delay: 4400 },
+const leftItems = [
+  { emoji: "🚀", text: "Go viral on Crypto Twitter" },
+  { emoji: "💬", text: "Build a Discord community" },
+  { emoji: "🎉", text: "Host NFT giveaways" },
+  { emoji: "📣", text: "Get KOL shoutouts" },
+  { emoji: "🤝", text: "DM influencers" },
 ];
 
-const scrambleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*!?<>/";
+const rightItems = [
+  { emoji: "📊", text: "Risk framework positioning" },
+  { emoji: "🏛️", text: "Institutional buyer mapping" },
+  { emoji: "📋", text: "Compliance-first messaging" },
+  { emoji: "🎯", text: "Product marketing strategy" },
+  { emoji: "🔐", text: "Enterprise sales enablement" },
+];
 
-const ScrambleText = ({ text, startDelay }: { text: string; startDelay: number }) => {
-  const [display, setDisplay] = useState("");
-  const [started, setStarted] = useState(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setStarted(true), startDelay);
-    return () => clearTimeout(timeout);
-  }, [startDelay]);
-
-  useEffect(() => {
-    if (!started || !text) {
-      if (started && !text) setDisplay("");
-      return;
-    }
-
-    let iteration = 0;
-    const maxIterations = text.length * 3;
-    const interval = setInterval(() => {
-      setDisplay(
-        text
-          .split("")
-          .map((char, i) => {
-            if (char === " ") return " ";
-            if (i < iteration / 3) return char;
-            return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
-          })
-          .join("")
-      );
-      iteration++;
-      if (iteration > maxIterations) clearInterval(interval);
-    }, 30);
-
-    return () => clearInterval(interval);
-  }, [started, text]);
-
-  if (!started) return null;
-
-  const isHighlight = text.startsWith("> ROLE_PATTERN") || text.startsWith("> The Crypto");
-  const isComplete = text.startsWith("> DECODING");
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: -8 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.15 }}
-      className={`font-mono text-xs sm:text-sm leading-relaxed ${
-        isHighlight
-          ? "text-primary font-bold"
-          : isComplete
-          ? "text-green-400"
-          : "text-foreground/70"
-      }`}
-    >
-      {display}
-      {display.length < text.length && (
-        <motion.span
-          className="inline-block w-[2px] h-[14px] bg-primary ml-0.5 align-middle"
-          animate={{ opacity: [1, 0] }}
-          transition={{ duration: 0.5, repeat: Infinity }}
-        />
-      )}
-    </motion.div>
-  );
-};
-
-const TypewriterAnimation = ({ onComplete }: { onComplete: () => void }) => {
-  const [isExiting, setIsExiting] = useState(false);
+const ExpectationRealityAnimation = ({ onComplete }: { onComplete: () => void }) => {
+  const [phase, setPhase] = useState<"split" | "strike" | "merge" | "title">("split");
+  const [visibleLeft, setVisibleLeft] = useState(0);
+  const [visibleRight, setVisibleRight] = useState(0);
 
   useEffect(() => {
-    const lastDelay = decodeLines[decodeLines.length - 1].delay;
-    const timer = setTimeout(() => {
-      setIsExiting(true);
-      setTimeout(onComplete, 700);
-    }, lastDelay + 2000);
-    return () => clearTimeout(timer);
+    // Stagger left items
+    const leftTimers = leftItems.map((_, i) =>
+      setTimeout(() => setVisibleLeft(i + 1), 300 + i * 400)
+    );
+    // Stagger right items (slightly delayed)
+    const rightTimers = rightItems.map((_, i) =>
+      setTimeout(() => setVisibleRight(i + 1), 500 + i * 400)
+    );
+
+    // Strike through left side
+    const strikeTimer = setTimeout(() => setPhase("strike"), 2800);
+    // Merge
+    const mergeTimer = setTimeout(() => setPhase("merge"), 4000);
+    // Title
+    const titleTimer = setTimeout(() => setPhase("title"), 5000);
+    // Complete
+    const completeTimer = setTimeout(() => onComplete(), 7200);
+
+    return () => {
+      [...leftTimers, ...rightTimers].forEach(clearTimeout);
+      clearTimeout(strikeTimer);
+      clearTimeout(mergeTimer);
+      clearTimeout(titleTimer);
+      clearTimeout(completeTimer);
+    };
   }, [onComplete]);
 
+  const isMerged = phase === "merge" || phase === "title";
+
   return (
     <motion.div
-      className="fixed inset-0 z-50 bg-background flex flex-col items-center justify-center overflow-hidden px-6"
-      animate={isExiting ? { opacity: 0, scale: 1.05 } : {}}
-      transition={{ duration: 0.7, ease: "easeInOut" }}
+      className="fixed inset-0 z-50 bg-background flex items-center justify-center overflow-hidden px-4"
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6 }}
     >
-      {/* Scanline overlay */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
-        style={{
-          backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(var(--foreground)) 2px, hsl(var(--foreground)) 3px)",
-        }}
-      />
-
       {/* Ambient glow */}
       <motion.div
-        className="absolute w-[min(400px,80vw)] aspect-square rounded-full blur-[120px] pointer-events-none"
-        style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.12), transparent 70%)" }}
-        animate={{ opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute w-[min(500px,90vw)] aspect-square rounded-full blur-[140px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.1), transparent 70%)" }}
+        animate={{ opacity: [0.2, 0.4, 0.2] }}
+        transition={{ duration: 4, repeat: Infinity }}
       />
 
-      {/* Terminal window */}
-      <motion.div
-        className="w-full max-w-md sm:max-w-lg rounded-xl border border-border/50 overflow-hidden"
-        style={{
-          background: "hsl(var(--card) / 0.8)",
-          boxShadow: "0 20px 60px -15px hsl(var(--primary) / 0.1)",
-        }}
-        initial={{ opacity: 0, y: 20, scale: 0.95 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        {/* Title bar */}
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-border/30">
-          <div className="w-3 h-3 rounded-full bg-destructive/60" />
-          <div className="w-3 h-3 rounded-full bg-accent/60" />
-          <div className="w-3 h-3 rounded-full bg-primary/60" />
-          <span className="ml-2 text-[10px] text-muted-foreground/50 font-mono">playbook_decoder.sh</span>
-        </div>
-
-        {/* Terminal content */}
-        <div className="p-5 sm:p-6 space-y-2 min-h-[280px] sm:min-h-[320px]">
-          {decodeLines.map((line, i) => (
-            <ScrambleText key={i} text={line.text} startDelay={line.delay} />
-          ))}
-
-          {/* Blinking cursor */}
-          <motion.div
-            className="flex items-center gap-1 mt-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+      <div className="w-full max-w-3xl">
+        {/* Headers */}
+        <motion.div
+          className="flex items-center justify-between mb-6 sm:mb-8 px-2"
+          animate={isMerged ? { opacity: 0, y: -20 } : {}}
+          transition={{ duration: 0.4 }}
+        >
+          <motion.p
+            className="text-xs sm:text-sm uppercase tracking-[0.15em] text-muted-foreground/60 font-bold"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.1 }}
           >
-            <span className="text-muted-foreground/40 font-mono text-xs">$</span>
-            <motion.span
-              className="w-[7px] h-[14px] bg-primary/60"
-              animate={{ opacity: [1, 0] }}
-              transition={{ duration: 0.6, repeat: Infinity }}
-            />
+            What you think it is
+          </motion.p>
+          <motion.div
+            className="w-px h-6 bg-border/30"
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 1 }}
+            transition={{ delay: 0.2 }}
+          />
+          <motion.p
+            className="text-xs sm:text-sm uppercase tracking-[0.15em] text-primary font-bold"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.1 }}
+          >
+            What it actually is
+          </motion.p>
+        </motion.div>
+
+        {/* Split panels */}
+        <motion.div
+          className="flex gap-3 sm:gap-4"
+          animate={isMerged ? { opacity: 0, scale: 0.9, y: 30 } : {}}
+          transition={{ duration: 0.5 }}
+        >
+          {/* Left column — what people think */}
+          <div className="flex-1 space-y-2 sm:space-y-3">
+            {leftItems.map((item, i) => (
+              <motion.div
+                key={`l-${i}`}
+                className="relative"
+                initial={{ opacity: 0, x: -30 }}
+                animate={i < visibleLeft ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              >
+                <div
+                  className={`flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border transition-all duration-500 ${
+                    phase === "strike" || isMerged
+                      ? "border-destructive/30 bg-destructive/5"
+                      : "border-border/40 bg-card/60"
+                  }`}
+                >
+                  <span className="text-base sm:text-lg shrink-0">{item.emoji}</span>
+                  <span
+                    className={`text-xs sm:text-sm font-medium transition-all duration-500 ${
+                      phase === "strike" || isMerged
+                        ? "line-through text-muted-foreground/30"
+                        : "text-foreground/80"
+                    }`}
+                  >
+                    {item.text}
+                  </span>
+                </div>
+
+                {/* Strike animation */}
+                {(phase === "strike" || isMerged) && (
+                  <motion.div
+                    className="absolute inset-0 flex items-center pointer-events-none"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: i * 0.08 }}
+                  >
+                    <motion.span
+                      className="text-lg sm:text-xl ml-auto mr-3"
+                      initial={{ scale: 0, rotate: -20 }}
+                      animate={{ scale: 1, rotate: 0 }}
+                      transition={{ delay: i * 0.08, type: "spring", stiffness: 400 }}
+                    >
+                      ❌
+                    </motion.span>
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Divider */}
+          <motion.div
+            className="w-px bg-border/20 self-stretch"
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          />
+
+          {/* Right column — what it actually is */}
+          <div className="flex-1 space-y-2 sm:space-y-3">
+            {rightItems.map((item, i) => (
+              <motion.div
+                key={`r-${i}`}
+                initial={{ opacity: 0, x: 30 }}
+                animate={i < visibleRight ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+              >
+                <div
+                  className={`flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg border transition-all duration-500 ${
+                    phase === "strike" || isMerged
+                      ? "border-primary/40 bg-primary/5 shadow-[0_0_15px_hsl(var(--primary)/0.08)]"
+                      : "border-border/40 bg-card/60"
+                  }`}
+                >
+                  <span className="text-base sm:text-lg shrink-0">{item.emoji}</span>
+                  <span
+                    className={`text-xs sm:text-sm font-medium transition-all duration-500 ${
+                      phase === "strike" || isMerged
+                        ? "text-primary font-bold"
+                        : "text-foreground/80"
+                    }`}
+                  >
+                    {item.text}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Title reveal after merge */}
+        {phase === "title" && (
+          <motion.div
+            className="absolute inset-0 flex flex-col items-center justify-center px-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <motion.p
+              className="text-xs uppercase tracking-[0.25em] text-primary font-bold mb-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              Now you know the difference
+            </motion.p>
+            <motion.h1
+              className="text-3xl sm:text-5xl font-black text-foreground text-center leading-tight"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, type: "spring", stiffness: 120 }}
+            >
+              The Crypto
+              <br />
+              <span className="gradient-text">Institutional Marketing</span>
+              <br />
+              Playbook
+            </motion.h1>
+            <motion.p
+              className="text-sm text-muted-foreground mt-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+            >
+              Let's get you ready →
+            </motion.p>
           </motion.div>
-        </div>
-      </motion.div>
+        )}
+      </div>
     </motion.div>
   );
 };
@@ -177,12 +256,11 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
   return (
     <>
       <AnimatePresence>
-        {showIntro && <TypewriterAnimation onComplete={() => setShowIntro(false)} />}
+        {showIntro && <ExpectationRealityAnimation onComplete={() => setShowIntro(false)} />}
       </AnimatePresence>
 
       {!showIntro && (
         <div className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
-          {/* Animated gradient orbs */}
           <motion.div
             className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px] pointer-events-none"
             animate={{ x: [0, 60, -40, 0], y: [0, -50, 30, 0], scale: [1, 1.2, 0.9, 1] }}
@@ -200,7 +278,6 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
             className="text-center max-w-3xl relative z-10"
           >
-            {/* Logo */}
             <motion.img
               src={logo}
               alt="Web3talez"
@@ -218,7 +295,6 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
               Web3 marketing made simple 💜
             </motion.p>
 
-            {/* Headline */}
             <motion.h1
               className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-6 tracking-tight"
               initial={{ opacity: 0, y: 20 }}
@@ -241,7 +317,6 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
               What the job descriptions actually want — decoded for marketers who mean business.
             </motion.p>
 
-            {/* CTAs */}
             <motion.div
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
               initial={{ opacity: 0, y: 10 }}
@@ -270,7 +345,6 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
               </motion.a>
             </motion.div>
 
-            {/* Companies */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -295,7 +369,6 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
               </div>
             </motion.div>
 
-            {/* Insight card */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
@@ -307,7 +380,6 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
               <p className="text-xs text-muted-foreground leading-relaxed">Almost every company on this list is hiring a "Product Marketing Manager." Community manager era is over.</p>
             </motion.div>
 
-            {/* Stats */}
             <motion.div
               className="mt-12 flex items-center justify-center gap-8 sm:gap-12"
               initial={{ opacity: 0 }}
