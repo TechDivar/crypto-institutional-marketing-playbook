@@ -25,8 +25,9 @@ const About = () => {
             <div>
               <p className="text-[10px] uppercase tracking-[0.2em] text-primary font-bold">About</p>
               <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
-                Web3 Marketing Made Simple
+                Web3talez
               </h1>
+              <p className="text-sm text-muted-foreground mt-1">Web3 marketing made simple 💜</p>
             </div>
           </div>
 
