@@ -103,7 +103,7 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
       >
         {/* Title above stairs */}
         <motion.p
-          className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-10 font-bold"
+          className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-muted-foreground mb-6 sm:mb-10 font-bold"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -111,8 +111,8 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
           Your career path
         </motion.p>
 
-        {/* Stairs with perspective */}
-        <div className="relative w-[460px] h-[400px]" style={{ perspective: "800px" }}>
+        {/* Stairs with perspective — scaled down on mobile */}
+        <div className="relative w-[460px] h-[400px] scale-[0.55] sm:scale-75 md:scale-100 origin-center" style={{ perspective: "800px" }}>
           <motion.div
             style={{ transformStyle: "preserve-3d", rotateX: "5deg", rotateY: "-5deg" }}
           >
@@ -285,7 +285,7 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
         </div>
 
         {/* Progress bar */}
-        <div className="w-48 h-1 bg-border/30 rounded-full mt-10 overflow-hidden">
+        <div className="w-32 sm:w-48 h-1 bg-border/30 rounded-full mt-4 sm:mt-10 overflow-hidden">
           <motion.div
             className="h-full rounded-full"
             style={{
@@ -299,7 +299,7 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
 
         {/* Status text */}
         <motion.p
-          className="text-base text-muted-foreground mt-5 font-semibold"
+          className="text-sm sm:text-base text-muted-foreground mt-3 sm:mt-5 font-semibold"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
