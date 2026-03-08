@@ -14,149 +14,161 @@ const companies = [
   "Figure", "Robinhood", "Artemis"
 ];
 
-const flipCards = [
-  { emoji: "🏢", big: "18", label: "Companies Analyzed" },
-  { emoji: "📖", big: "13", label: "Chapters Deep" },
-  { emoji: "🎭", big: "5", label: "Buyer Personas" },
-  { emoji: "🎯", big: "PMM", label: "The Role Everyone Wants" },
-  { emoji: "💜", big: "Ready?", label: "Let's go." },
+const decodeLines = [
+  { text: "> SCANNING JOB DESCRIPTIONS...", delay: 0 },
+  { text: "> 18 companies detected", delay: 800 },
+  { text: "> ROLE_PATTERN: Product Marketing Manager", delay: 1600 },
+  { text: "> 13 chapters compiled", delay: 2400 },
+  { text: "> 5 buyer personas mapped", delay: 3000 },
+  { text: "", delay: 3600 },
+  { text: "> DECODING COMPLETE.", delay: 3800 },
+  { text: "> The Crypto Institutional Marketing Playbook", delay: 4400 },
 ];
 
-const CardFlipAnimation = ({ onComplete }: { onComplete: () => void }) => {
-  const [currentCard, setCurrentCard] = useState(0);
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*!?<>/";
+
+const ScrambleText = ({ text, startDelay }: { text: string; startDelay: number }) => {
+  const [display, setDisplay] = useState("");
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setStarted(true), startDelay);
+    return () => clearTimeout(timeout);
+  }, [startDelay]);
+
+  useEffect(() => {
+    if (!started || !text) {
+      if (started && !text) setDisplay("");
+      return;
+    }
+
+    let iteration = 0;
+    const maxIterations = text.length * 3;
+    const interval = setInterval(() => {
+      setDisplay(
+        text
+          .split("")
+          .map((char, i) => {
+            if (char === " ") return " ";
+            if (i < iteration / 3) return char;
+            return chars[Math.floor(Math.random() * chars.length)];
+          })
+          .join("")
+      );
+      iteration++;
+      if (iteration > maxIterations) clearInterval(interval);
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [started, text]);
+
+  if (!started) return null;
+
+  const isHighlight = text.startsWith("> ROLE_PATTERN") || text.startsWith("> The Crypto");
+  const isComplete = text.startsWith("> DECODING");
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -8 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.15 }}
+      className={`font-mono text-xs sm:text-sm leading-relaxed ${
+        isHighlight
+          ? "text-primary font-bold"
+          : isComplete
+          ? "text-green-400"
+          : "text-foreground/70"
+      }`}
+    >
+      {display}
+      {display.length < text.length && (
+        <motion.span
+          className="inline-block w-[2px] h-[14px] bg-primary ml-0.5 align-middle"
+          animate={{ opacity: [1, 0] }}
+          transition={{ duration: 0.5, repeat: Infinity }}
+        />
+      )}
+    </motion.div>
+  );
+};
+
+const TypewriterAnimation = ({ onComplete }: { onComplete: () => void }) => {
   const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      if (currentCard < flipCards.length - 1) {
-        setCurrentCard((c) => c + 1);
-      } else {
-        clearInterval(timer);
-        setTimeout(() => {
-          setIsExiting(true);
-          setTimeout(onComplete, 700);
-        }, 1200);
-      }
-    }, 1100);
-    return () => clearInterval(timer);
-  }, [currentCard, onComplete]);
-
-  const card = flipCards[currentCard];
+    const lastDelay = decodeLines[decodeLines.length - 1].delay;
+    const timer = setTimeout(() => {
+      setIsExiting(true);
+      setTimeout(onComplete, 700);
+    }, lastDelay + 2000);
+    return () => clearTimeout(timer);
+  }, [onComplete]);
 
   return (
     <motion.div
       className="fixed inset-0 z-50 bg-background flex flex-col items-center justify-center overflow-hidden px-6"
-      animate={isExiting ? { opacity: 0, scale: 1.08 } : {}}
+      animate={isExiting ? { opacity: 0, scale: 1.05 } : {}}
       transition={{ duration: 0.7, ease: "easeInOut" }}
     >
-      {/* Ambient glow */}
-      <motion.div
-        className="absolute w-[min(500px,85vw)] aspect-square rounded-full blur-[140px] pointer-events-none"
-        style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.15), transparent 70%)" }}
-        animate={{ scale: [1, 1.25, 1], opacity: [0.3, 0.6, 0.3] }}
-        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+      {/* Scanline overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{
+          backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(var(--foreground)) 2px, hsl(var(--foreground)) 3px)",
+        }}
       />
 
-      {/* Subtitle */}
-      <motion.p
-        className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-8 font-bold"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
+      {/* Ambient glow */}
+      <motion.div
+        className="absolute w-[min(400px,80vw)] aspect-square rounded-full blur-[120px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.12), transparent 70%)" }}
+        animate={{ opacity: [0.3, 0.5, 0.3] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Terminal window */}
+      <motion.div
+        className="w-full max-w-md sm:max-w-lg rounded-xl border border-border/50 overflow-hidden"
+        style={{
+          background: "hsl(var(--card) / 0.8)",
+          boxShadow: "0 20px 60px -15px hsl(var(--primary) / 0.1)",
+        }}
+        initial={{ opacity: 0, y: 20, scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.5 }}
       >
-        The Institutional Marketing Playbook
-      </motion.p>
+        {/* Title bar */}
+        <div className="flex items-center gap-2 px-4 py-3 border-b border-border/30">
+          <div className="w-3 h-3 rounded-full bg-red-400/60" />
+          <div className="w-3 h-3 rounded-full bg-yellow-400/60" />
+          <div className="w-3 h-3 rounded-full bg-green-400/60" />
+          <span className="ml-2 text-[10px] text-muted-foreground/50 font-mono">playbook_decoder.sh</span>
+        </div>
 
-      {/* Flip Card */}
-      <div className="relative w-[260px] sm:w-[300px] h-[320px] sm:h-[360px] perspective-[1000px]">
-        <AnimatePresence mode="wait">
+        {/* Terminal content */}
+        <div className="p-5 sm:p-6 space-y-2 min-h-[280px] sm:min-h-[320px]">
+          {decodeLines.map((line, i) => (
+            <ScrambleText key={i} text={line.text} startDelay={line.delay} />
+          ))}
+
+          {/* Blinking cursor at bottom */}
           <motion.div
-            key={currentCard}
-            className="absolute inset-0 rounded-2xl border border-border/50 flex flex-col items-center justify-center gap-4 p-8"
-            style={{
-              background: "linear-gradient(145deg, hsl(var(--card)), hsl(var(--card) / 0.6))",
-              boxShadow: "0 20px 60px -15px hsl(var(--primary) / 0.15), 0 0 40px hsl(var(--primary) / 0.05)",
-            }}
-            initial={{ rotateY: 90, opacity: 0, scale: 0.85 }}
-            animate={{ rotateY: 0, opacity: 1, scale: 1 }}
-            exit={{ rotateY: -90, opacity: 0, scale: 0.85 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="flex items-center gap-1 mt-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
           >
-            {/* Emoji */}
+            <span className="text-muted-foreground/40 font-mono text-xs">$</span>
             <motion.span
-              className="text-5xl sm:text-6xl"
-              initial={{ scale: 0 }}
-              animate={{ scale: [0, 1.2, 1] }}
-              transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
-            >
-              {card.emoji}
-            </motion.span>
-
-            {/* Big number/text */}
-            <motion.p
-              className="text-5xl sm:text-6xl font-black text-foreground tracking-tight"
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35, duration: 0.35 }}
-            >
-              {card.big}
-            </motion.p>
-
-            {/* Label */}
-            <motion.p
-              className="text-sm sm:text-base text-muted-foreground font-semibold text-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.45 }}
-            >
-              {card.label}
-            </motion.p>
-
-            {/* Corner accent */}
-            <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-primary/40" />
-            <div className="absolute bottom-3 left-3 w-2 h-2 rounded-full bg-primary/20" />
+              className="w-[7px] h-[14px] bg-primary/60"
+              animate={{ opacity: [1, 0] }}
+              transition={{ duration: 0.6, repeat: Infinity }}
+            />
           </motion.div>
-        </AnimatePresence>
-      </div>
-
-      {/* Progress dots */}
-      <div className="flex gap-2 mt-8">
-        {flipCards.map((_, i) => (
-          <motion.div
-            key={i}
-            className="w-2 h-2 rounded-full transition-all duration-300"
-            style={{
-              background: i <= currentCard
-                ? "hsl(var(--primary))"
-                : "hsl(var(--border))",
-            }}
-            animate={i === currentCard ? { scale: [1, 1.4, 1] } : {}}
-            transition={{ duration: 0.3 }}
-          />
-        ))}
-      </div>
-
-      {/* Status text */}
-      <div className="mt-5 h-6">
-        <AnimatePresence mode="wait">
-          <motion.p
-            key={currentCard}
-            className="text-xs text-muted-foreground/60 font-medium"
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 0.2 }}
-          >
-            {currentCard + 1} / {flipCards.length}
-          </motion.p>
-        </AnimatePresence>
-      </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
-};
-export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
-  const [showIntro, setShowIntro] = useState(true);
-
   return (
     <>
       <AnimatePresence>
