@@ -14,7 +14,7 @@ export const chapters: Chapter[] = [
   { id: 7, title: "Common Mistakes", subtitle: "Consumer crypto logic vs. institutional reality." },
   { id: 8, title: "Messaging Rules", subtitle: "Landing in a boardroom, not the trash." },
   { id: 9, title: "The Launch Playbook", subtitle: "From positioning to post-launch." },
-  { id: 10, title: "Metrics and KPIs", subtitle: "What actually matters, what does not." },
+  { id: 10, title: "Metrics and KPIs", subtitle: "What actually matters and what does not." },
   { id: 11, title: "How to Get One of These Jobs", subtitle: "What the JDs actually want." },
   { id: 12, title: "Test Yourself", subtitle: "Questions before you walk in." },
   { id: 13, title: "Glossary", subtitle: "Terms explained without jargon." },
