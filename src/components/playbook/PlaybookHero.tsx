@@ -111,9 +111,9 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
           Your career path
         </motion.p>
 
-        {/* Stairs with perspective — wrapper clips to scaled size */}
-        <div className="relative overflow-visible" style={{ width: 'min(460px, 80vw)', height: 'min(400px, 55vh)' }}>
-          <div className="absolute left-1/2 top-1/2 w-[460px] h-[400px] -translate-x-1/2 -translate-y-1/2 scale-[0.55] sm:scale-75 md:scale-100" style={{ perspective: "800px" }}>
+        {/* Stairs with perspective — scaled for mobile */}
+        <div className="relative overflow-visible flex items-center justify-center" style={{ width: 'min(460px, 85vw)', height: 'min(400px, 50vh)' }}>
+          <div className="w-[460px] h-[400px] scale-[0.5] sm:scale-[0.7] md:scale-100 origin-center" style={{ perspective: "800px" }}>
           <motion.div
             style={{ transformStyle: "preserve-3d", rotateX: "5deg", rotateY: "-5deg" }}
           >
