@@ -44,12 +44,15 @@ const chapterComponents: Record<number, React.FC> = {
 
 export const ChapterRenderer = ({ chapterId, onNavigate, totalChapters }: ChapterRendererProps) => {
   const ChapterContent = chapterComponents[chapterId];
+  const isThankYou = chapterId === 16;
 
   return (
     <div>
-      <ChapterHeader chapterId={chapterId} />
+      {!isThankYou && <ChapterHeader chapterId={chapterId} />}
       {ChapterContent && <ChapterContent />}
-      <NavigationButtons chapterId={chapterId} onNavigate={onNavigate} totalChapters={totalChapters} />
+      {!isThankYou && (
+        <NavigationButtons chapterId={chapterId} onNavigate={onNavigate} totalChapters={totalChapters} />
+      )}
     </div>
   );
 };
