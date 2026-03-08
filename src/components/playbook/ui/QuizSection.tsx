@@ -37,7 +37,7 @@ export const QuizSection = ({ title, questions }: QuizSectionProps) => {
             </button>
             {q.hint && expandedIndex === i && (
               <div className={cn("px-4 pb-3 text-xs text-muted-foreground leading-relaxed border-t border-border/50 pt-3 mx-4 mb-2")}>
-                💡 {q.hint}
+                {q.hint}
               </div>
             )}
           </div>
