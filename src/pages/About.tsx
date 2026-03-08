@@ -33,10 +33,7 @@ const About = () => {
 
           <div className="space-y-6">
             <p className="text-[15px] leading-[1.8] text-foreground/85">
-              Case studies and marketing tips, written so anyone can follow along — whether you are deep in crypto or just curious about it.
-            </p>
-            <p className="text-[15px] leading-[1.8] text-foreground/85">
-              We share what we find, twice a month. No buzzwords, no jargon, no gatekeeping. Just practical marketing stories told the way they should be told.
+              Web3talez is the best newsletter in Web3 marketing that accommodates everyone — newbies and crypto natives alike.
             </p>
 
             <div className="mt-10 h-px bg-border" />
