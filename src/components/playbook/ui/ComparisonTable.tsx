@@ -5,12 +5,12 @@ interface ComparisonTableProps {
 
 export const ComparisonTable = ({ headers, rows }: ComparisonTableProps) => {
   return (
-    <div className="my-6 overflow-x-auto rounded-xl border border-border">
-      <table className="w-full text-sm">
+    <div className="my-6 overflow-x-auto clay-card overflow-hidden">
+      <table className="w-full text-sm font-body">
         <thead>
-          <tr className="bg-muted/50">
+          <tr className="bg-accent">
             {headers.map((h, i) => (
-              <th key={i} className="text-left px-4 py-3 font-display font-semibold text-foreground border-b border-border">
+              <th key={i} className="text-left px-5 py-3.5 font-display text-foreground border-b border-border">
                 {h}
               </th>
             ))}
@@ -18,9 +18,9 @@ export const ComparisonTable = ({ headers, rows }: ComparisonTableProps) => {
         </thead>
         <tbody>
           {rows.map((row, i) => (
-            <tr key={i} className="border-b border-border/50 last:border-0 hover:bg-muted/20 transition-colors">
+            <tr key={i} className="border-b border-border/50 last:border-0 hover:bg-accent/30 transition-colors">
               {row.map((cell, j) => (
-                <td key={j} className="px-4 py-3 text-foreground/80 leading-relaxed">
+                <td key={j} className="px-5 py-3.5 text-foreground/80 leading-relaxed">
                   {cell}
                 </td>
               ))}
