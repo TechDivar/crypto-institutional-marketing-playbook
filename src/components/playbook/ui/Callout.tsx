@@ -37,7 +37,7 @@ export const Callout = ({ variant = "info", children, source }: CalloutProps) =>
     <div className={cn("my-6 rounded-xl p-5 border", styles[variant])}>
       <div className="flex gap-3">
         <Icon className={cn("w-5 h-5 shrink-0 mt-0.5", iconStyles[variant])} />
-        <div className="text-sm leading-relaxed text-foreground/80">
+        <div className="text-sm leading-relaxed text-foreground/90">
           {children}
           {source && <p className="text-xs text-muted-foreground mt-2 italic">{source}</p>}
         </div>

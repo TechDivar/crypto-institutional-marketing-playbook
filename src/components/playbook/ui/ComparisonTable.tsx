@@ -20,7 +20,7 @@ export const ComparisonTable = ({ headers, rows }: ComparisonTableProps) => {
           {rows.map((row, i) => (
             <tr key={i} className="border-b border-border/50 last:border-0 hover:bg-card/50 transition-colors">
               {row.map((cell, j) => (
-                <td key={j} className="px-5 py-3 text-foreground/75 leading-relaxed">
+                <td key={j} className="px-5 py-3 text-foreground/85 leading-relaxed">
                   {cell}
                 </td>
               ))}
