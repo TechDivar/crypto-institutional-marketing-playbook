@@ -21,19 +21,21 @@ export const PlaybookLayout = () => {
         </button>
       )}
 
-      {/* Sidebar */}
-      <PlaybookSidebar
-        activeChapter={activeChapter}
-        onSelectChapter={(id) => {
-          setActiveChapter(id);
-          setSidebarOpen(false);
-        }}
-        onGoHome={() => {
-          setActiveChapter(null);
-          setSidebarOpen(false);
-        }}
-        isOpen={sidebarOpen}
-      />
+      {/* Sidebar - hidden on homepage */}
+      {activeChapter !== null && (
+        <PlaybookSidebar
+          activeChapter={activeChapter}
+          onSelectChapter={(id) => {
+            setActiveChapter(id);
+            setSidebarOpen(false);
+          }}
+          onGoHome={() => {
+            setActiveChapter(null);
+            setSidebarOpen(false);
+          }}
+          isOpen={sidebarOpen}
+        />
+      )}
 
       {/* Overlay */}
       {sidebarOpen && (
@@ -44,7 +46,7 @@ export const PlaybookLayout = () => {
       )}
 
       {/* Main content */}
-      <main className="flex-1 lg:ml-72 min-h-screen">
+      <main className={`flex-1 min-h-screen ${activeChapter !== null ? 'lg:ml-72' : ''}`}>
         {activeChapter === null ? (
           <PlaybookHero onStart={() => setActiveChapter(1)} />
         ) : (
