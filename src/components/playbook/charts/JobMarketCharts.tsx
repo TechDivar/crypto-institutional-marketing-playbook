@@ -21,16 +21,14 @@ const skillsData = [
   { skill: "Partnership Marketing", count: 4 },
 ];
 
-// Actual salary data from the job descriptions
+// Salary data from job postings - only crypto/institutional companies with published ranges
 const compensationData = [
-  { role: "Benchling PMM", range: "$191K – $259K", min: 191, max: 259 },
-  { role: "TaxBit Principal PMM", range: "$180K – $210K", min: 180, max: 210 },
-  { role: "Mithrl PM Lead", range: "$150K – $200K", min: 150, max: 200 },
-  { role: "Tyba PMM", range: "$140K – $170K", min: 140, max: 170 },
-  { role: "Collectly PMM", range: "$120K – $170K", min: 120, max: 170 },
-  { role: "Trovata Sr Content", range: "$120K – $160K", min: 120, max: 160 },
-  { role: "Tatari PMM", range: "$110K – $150K", min: 110, max: 150 },
+  { role: "TaxBit – Principal PMM", range: "$180K – $210K", min: 180, max: 210 },
+  { role: "Trovata – Sr Content Marketing", range: "$120K – $160K", min: 120, max: 160 },
 ];
+
+// Note: Most crypto/institutional roles (Chainlink, Fireblocks, Ondo, Ledger, Allium, Artemis, 
+// LayerZero, Dakota, Dune, Keyrock, Notabene) list "competitive salary" without specific ranges
 
 const backgroundsData = [
   { background: "B2B SaaS", percentage: 35 },
@@ -88,7 +86,7 @@ export const SkillsDemandChart = () => (
 export const CompensationChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Compensation Ranges</h3>
-    <p className="text-sm text-muted-foreground mb-6">Annual base salaries from actual job postings (USD)</p>
+    <p className="text-sm text-muted-foreground mb-4">Crypto/institutional roles with published salary ranges (USD)</p>
     <div className="space-y-4">
       {compensationData.map((item) => (
         <div key={item.role} className="space-y-1">
@@ -100,8 +98,8 @@ export const CompensationChart = () => (
             <div 
               className="h-full rounded-full"
               style={{
-                marginLeft: `${((item.min - 100) / 170) * 100}%`,
-                width: `${((item.max - item.min) / 170) * 100}%`,
+                marginLeft: `${((item.min - 100) / 120) * 100}%`,
+                width: `${((item.max - item.min) / 120) * 100}%`,
                 backgroundColor: PRIMARY_COLOR,
               }}
             />
@@ -112,9 +110,12 @@ export const CompensationChart = () => (
         <span>$100K</span>
         <span>$150K</span>
         <span>$200K</span>
-        <span>$270K</span>
+        <span>$220K</span>
       </div>
     </div>
+    <p className="text-xs text-muted-foreground mt-6 italic">
+      Note: Most institutional crypto roles (Chainlink, Fireblocks, Ondo, Ledger, Allium, Artemis, LayerZero, Dakota, Dune) list "competitive salary" without publishing specific ranges.
+    </p>
   </div>
 );
 
