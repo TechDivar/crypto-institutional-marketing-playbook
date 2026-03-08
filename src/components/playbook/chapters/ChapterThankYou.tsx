@@ -27,7 +27,7 @@ export const ChapterThankYou = () => (
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4 }}
     >
-      If this playbook helped you, the newsletter goes deeper — twice a month, straight to your inbox.
+      Web3 marketing stories are boring. But not here. Subscribe to the newsletter for case studies and tips twice a month.
     </motion.p>
 
     <motion.a
