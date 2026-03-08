@@ -63,7 +63,7 @@ const TERTIARY_COLOR = "hsl(160, 70%, 50%)";
 export const SkillsDemandChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Most In-Demand Skills</h3>
-    <p className="text-sm text-muted-foreground mb-6">Based on analysis of 18 institutional marketing job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Based on analysis of 13 institutional marketing job descriptions</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={skillsData} layout="vertical" margin={{ left: 20, right: 50 }}>
