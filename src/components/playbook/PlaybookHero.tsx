@@ -472,7 +472,7 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
             ))}
           </motion.div>
         </motion.div>
-      </div>
+      </div>}
     </>
   );
 };
