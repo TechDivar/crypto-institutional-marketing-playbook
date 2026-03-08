@@ -4,15 +4,6 @@ import { ArrowRight } from "lucide-react";
 import logo from "@/assets/web3talez-logo.jpg";
 import hero3d from "@/assets/hero-3d.png";
 
-            <motion.img
-              src={hero3d}
-              alt="Institutional marketing cube"
-              initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
-              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-              transition={{ delay: 0.4, type: "spring", stiffness: 100, damping: 16 }}
-              className="w-44 h-44 sm:w-52 sm:h-52 mx-auto mb-10 object-contain drop-shadow-[0_20px_40px_hsl(var(--primary)/0.25)]"
-            />
-
 interface PlaybookHeroProps {
   onStart: () => void;
 }
