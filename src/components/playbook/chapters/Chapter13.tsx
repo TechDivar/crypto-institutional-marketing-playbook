@@ -1,0 +1,65 @@
+import { SectionBlock } from "../ui/SectionBlock";
+
+const GlossaryTerm = ({ term, definition }: { term: string; definition: string }) => (
+  <div className="py-3 border-b border-border/50 last:border-0">
+    <dt className="text-sm font-display font-semibold text-primary">{term}</dt>
+    <dd className="text-sm text-foreground/75 mt-1 leading-relaxed">{definition}</dd>
+  </div>
+);
+
+export const Chapter13 = () => (
+  <>
+    <SectionBlock title="The Buyers">
+      <dl>
+        <GlossaryTerm term="G-SIB" definition="Global Systemically Important Bank. JP Morgan, Citi, BNP Paribas, HSBC. If they adopt your infrastructure, the rest follow." />
+        <GlossaryTerm term="Asset Manager" definition="A company that invests money on behalf of clients. BlackRock, Fidelity, Vanguard. They manage trillions and move carefully." />
+        <GlossaryTerm term="Family Office" definition="Private wealth management for ultra-high-net-worth individuals. Often early movers because they have less regulatory overhead than banks." />
+        <GlossaryTerm term="Hedge Fund" definition="An investment fund using aggressive strategies. Many are early movers in crypto because they have high risk tolerance and sophisticated teams." />
+        <GlossaryTerm term="Corporate Treasury" definition="The team inside a company managing cash, debt, and short-term investments. Stablecoin and payments products target this buyer." />
+      </dl>
+    </SectionBlock>
+
+    <SectionBlock title="The Compliance World">
+      <dl>
+        <GlossaryTerm term="AML" definition="Anti-Money Laundering. A set of laws designed to prevent money laundering. Any product touching financial transactions needs an AML story." />
+        <GlossaryTerm term="KYC" definition="Know Your Customer. The process of verifying who a customer is. Required for most financial products." />
+        <GlossaryTerm term="FATF" definition="Financial Action Task Force. The global body that sets AML and counter-terrorism financing standards. The international rulebook." />
+        <GlossaryTerm term="Travel Rule" definition="A FATF requirement that financial institutions must collect and transmit originator and beneficiary information on transfers. Notabene is built specifically to solve this." />
+        <GlossaryTerm term="CARF" definition="Crypto Asset Reporting Framework. A new tax reporting standard from the OECD. TaxBit's entire product is built around this." />
+        <GlossaryTerm term="SOC 2" definition="A security audit standard certifying an organisation's data security practices. Table stakes for institutional data vendors." />
+        <GlossaryTerm term="MiCA" definition="Markets in Crypto Assets. The EU's regulatory framework for crypto assets, fully in force from 2025." />
+        <GlossaryTerm term="GENIUS Act" definition="The US stablecoin regulatory framework passed in 2025. Cited in the DWF Ventures report as a key driver of institutional momentum." />
+      </dl>
+    </SectionBlock>
+
+    <SectionBlock title="The Technology">
+      <dl>
+        <GlossaryTerm term="Zero-Knowledge Proof (ZK Proof)" definition="A cryptographic method allowing one party to prove something is true without revealing the underlying information." />
+        <GlossaryTerm term="FHE" definition="Fully Homomorphic Encryption. Allows computations on encrypted data without ever decrypting it. One of the most important privacy technologies for institutional DeFi." />
+        <GlossaryTerm term="Selective Disclosure" definition="The ability to reveal specific verified information to a specific party (a regulator, an auditor) without making it public." />
+        <GlossaryTerm term="Tokenization" definition="Taking a real-world asset and representing it as a digital token on a blockchain. The biggest institutional crypto trend of 2025-2026." />
+        <GlossaryTerm term="RWA" definition="Real-World Asset. An asset from the traditional financial world represented on-chain. US Treasuries, corporate bonds, and real estate are examples." />
+        <GlossaryTerm term="Stablecoin" definition="A cryptocurrency designed to maintain a stable value, usually pegged to the US dollar. Increasingly used in institutional payments." />
+        <GlossaryTerm term="Composability" definition="The ability of on-chain assets to interact with other protocols. A composable tokenized Treasury bond can be pledged as collateral, stripped for yield, or structured into a product." />
+        <GlossaryTerm term="Settlement" definition="The process of completing a financial transaction. Blockchain's core value proposition for institutions is faster, cheaper settlement." />
+        <GlossaryTerm term="Custody" definition="The safekeeping of financial assets. Institutional-grade custody means storing digital assets securely enough that a bank's risk team will approve it." />
+        <GlossaryTerm term="Oracle" definition="A system that brings real-world data onto a blockchain. Chainlink is the dominant oracle network." />
+        <GlossaryTerm term="Layer 1 / Layer 2" definition="Layer 1 is the base blockchain (Ethereum, Solana, Bitcoin). Layer 2 is built on top to increase speed and reduce cost." />
+      </dl>
+    </SectionBlock>
+
+    <SectionBlock title="The Marketing Terms">
+      <dl>
+        <GlossaryTerm term="GTM" definition="Go-To-Market. The strategy for launching and selling a product, covering positioning, channels, sales approach, and pricing." />
+        <GlossaryTerm term="ICP" definition="Ideal Customer Profile. A detailed description of the exact type of organisation most likely to buy your product." />
+        <GlossaryTerm term="ABM" definition="Account-Based Marketing. Targeting specific named companies rather than broad audiences." />
+        <GlossaryTerm term="Sales Enablement" definition="The content, tools, and training that help your sales team have better conversations and close more deals." />
+        <GlossaryTerm term="Battle Card" definition="A one or two page document showing your product vs. the competition. Designed for sales reps, not external distribution." />
+        <GlossaryTerm term="Thought Leadership" definition="Content that positions your executives or company as authoritative experts. Being the source your buyers trust and cite, not going viral." />
+        <GlossaryTerm term="Pipeline" definition="The set of deals currently being worked by the sales team at various stages of the buying process." />
+        <GlossaryTerm term="POC / Pilot" definition="Proof of Concept. A limited trial that allows an institution to test a product before full commitment." />
+        <GlossaryTerm term="NDA" definition="Non-Disclosure Agreement. Institutional buyers often require an NDA before sharing detailed information about their needs." />
+      </dl>
+    </SectionBlock>
+  </>
+);
