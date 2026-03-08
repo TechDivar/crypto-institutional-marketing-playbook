@@ -14,7 +14,7 @@ export const PlaybookLayout = () => {
       {/* Mobile menu button */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className="fixed top-4 left-4 z-50 p-2 rounded-lg bg-card border border-border lg:hidden"
+        className="fixed top-4 left-4 z-50 p-2.5 rounded-xl bg-card border border-border soft-shadow lg:hidden"
       >
         {sidebarOpen ? <X className="w-5 h-5 text-foreground" /> : <Menu className="w-5 h-5 text-foreground" />}
       </button>
@@ -36,7 +36,7 @@ export const PlaybookLayout = () => {
       {/* Overlay */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 z-30 bg-background/60 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-30 bg-foreground/10 backdrop-blur-sm lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
@@ -46,7 +46,7 @@ export const PlaybookLayout = () => {
         {activeChapter === null ? (
           <PlaybookHero onStart={() => setActiveChapter(1)} />
         ) : (
-          <div className="max-w-4xl mx-auto px-6 py-12 lg:py-16">
+          <div className="max-w-3xl mx-auto px-6 py-12 lg:py-16">
             <ChapterRenderer
               chapterId={activeChapter}
               onNavigate={setActiveChapter}

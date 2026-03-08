@@ -16,7 +16,7 @@ export const NavigationButtons = ({ chapterId, onNavigate, totalChapters }: Navi
       {prevChapter ? (
         <button
           onClick={() => { onNavigate(prevChapter.id); window.scrollTo(0, 0); }}
-          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
+          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group font-body"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           <span className="hidden sm:inline">{prevChapter.title}</span>
@@ -28,7 +28,7 @@ export const NavigationButtons = ({ chapterId, onNavigate, totalChapters }: Navi
       {nextChapter ? (
         <button
           onClick={() => { onNavigate(nextChapter.id); window.scrollTo(0, 0); }}
-          className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors group font-medium"
+          className="flex items-center gap-2 text-sm font-medium transition-colors group font-body px-5 py-2.5 bg-foreground text-background rounded-xl hover:bg-foreground/90"
         >
           <span className="hidden sm:inline">{nextChapter.title}</span>
           <span className="sm:hidden">Next</span>

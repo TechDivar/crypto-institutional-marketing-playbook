@@ -19,40 +19,40 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
       )}
     >
       {/* Brand */}
-      <button onClick={onGoHome} className="p-6 border-b border-sidebar-border text-left hover:opacity-80 transition-opacity w-full flex items-center gap-3">
-        <img src={logo} alt="Web3talez" className="w-10 h-10 rounded-full ring-2 ring-primary/30" />
+      <button onClick={onGoHome} className="p-5 border-b border-sidebar-border text-left hover:bg-accent/50 transition-colors w-full flex items-center gap-3">
+        <img src={logo} alt="Web3talez" className="w-10 h-10 rounded-xl soft-shadow" />
         <div>
-          <h2 className="font-display text-lg font-bold gradient-text">Web3talez</h2>
-          <p className="text-xs text-muted-foreground mt-0.5">Web3 marketing made simple 💜</p>
+          <h2 className="font-display text-lg gradient-text">Web3talez</h2>
+          <p className="text-[11px] text-muted-foreground mt-0.5 font-body">Web3 marketing made simple 💜</p>
         </div>
       </button>
 
       {/* Chapter list */}
       <nav className="flex-1 overflow-y-auto py-4 px-3">
-        <p className="text-[10px] uppercase tracking-widest text-muted-foreground px-3 mb-3 font-semibold">Chapters</p>
+        <p className="text-[10px] uppercase tracking-widest text-muted-foreground px-3 mb-3 font-semibold font-body">Chapters</p>
         {chapters.map((ch) => (
           <button
             key={ch.id}
             onClick={() => onSelectChapter(ch.id)}
             className={cn(
-              "w-full text-left px-3 py-2.5 rounded-lg mb-1 transition-all duration-200 group",
+              "w-full text-left px-3 py-2.5 rounded-xl mb-1 transition-all duration-200 group",
               activeChapter === ch.id
-                ? "bg-sidebar-accent text-sidebar-accent-foreground"
-                : "text-sidebar-foreground hover:bg-sidebar-accent/50 hover:text-sidebar-accent-foreground"
+                ? "bg-accent text-accent-foreground soft-shadow"
+                : "text-sidebar-foreground hover:bg-accent/50 hover:text-accent-foreground"
             )}
           >
             <div className="flex items-start gap-3">
               <span
                 className={cn(
-                  "shrink-0 w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold mt-0.5 transition-colors",
+                  "shrink-0 w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold mt-0.5 transition-colors font-body",
                   activeChapter === ch.id
                     ? "bg-primary text-primary-foreground"
-                    : "bg-muted text-muted-foreground group-hover:bg-primary/20 group-hover:text-primary"
+                    : "bg-muted text-muted-foreground group-hover:bg-primary/15 group-hover:text-primary"
                 )}
               >
                 {ch.id}
               </span>
-              <span className="text-sm font-medium leading-snug">{ch.title}</span>
+              <span className="text-sm font-medium leading-snug font-body">{ch.title}</span>
             </div>
           </button>
         ))}
@@ -64,11 +64,11 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
           href="https://web3talez.substack.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full text-center px-4 py-2.5 bg-primary text-primary-foreground font-display font-semibold text-sm rounded-lg hover:brightness-110 transition-all"
+          className="block w-full text-center px-4 py-2.5 bg-foreground text-background font-body font-semibold text-sm rounded-xl hover:bg-foreground/90 transition-all soft-shadow"
         >
-          Subscribe to Newsletter
+          Subscribe ✨
         </a>
-        <p className="text-[10px] text-muted-foreground text-center">2026 Edition | By Ivy</p>
+        <p className="text-[10px] text-muted-foreground text-center font-body">2026 Edition | By Ivy</p>
       </div>
     </aside>
   );

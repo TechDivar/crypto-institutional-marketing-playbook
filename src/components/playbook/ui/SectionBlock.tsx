@@ -16,9 +16,9 @@ export const SectionBlock = ({ title, children }: SectionBlockProps) => {
       className="mb-10"
     >
       {title && (
-        <h2 className="text-xl font-display font-semibold text-foreground mb-4">{title}</h2>
+        <h2 className="text-xl font-display text-foreground mb-4">{title}</h2>
       )}
-      <div className="text-sm leading-relaxed text-foreground/80 space-y-4">{children}</div>
+      <div className="text-sm leading-relaxed text-foreground/75 space-y-4 font-body">{children}</div>
     </motion.section>
   );
 };

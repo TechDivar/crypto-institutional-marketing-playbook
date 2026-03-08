@@ -17,16 +17,16 @@ export const ChapterHeader = ({ chapterId }: ChapterHeaderProps) => {
       transition={{ duration: 0.4 }}
       className="mb-10"
     >
-      <p className="text-xs uppercase tracking-[0.2em] text-primary font-semibold mb-3 font-display">
+      <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-accent text-accent-foreground text-xs font-semibold font-body mb-4">
         Chapter {String(chapter.id).padStart(2, "0")}
-      </p>
-      <h1 className="text-3xl sm:text-4xl font-display font-bold text-foreground mb-3">
+      </span>
+      <h1 className="text-3xl sm:text-4xl font-display text-foreground mb-3">
         {chapter.title}
       </h1>
       {chapter.subtitle && (
-        <p className="text-lg text-muted-foreground">{chapter.subtitle}</p>
+        <p className="text-lg text-muted-foreground font-body">{chapter.subtitle}</p>
       )}
-      <div className="mt-6 h-px bg-gradient-to-r from-primary/40 via-border to-transparent" />
+      <div className="mt-6 h-px bg-border" />
     </motion.div>
   );
 };
