@@ -145,6 +145,35 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
     </motion.div>
   );
 };
+
+const StepAdvancer = ({
+  totalSteps,
+  currentStep,
+  onStep,
+  onComplete,
+}: {
+  totalSteps: number;
+  currentStep: number;
+  onStep: (s: number) => void;
+  onComplete: () => void;
+}) => {
+  useState(() => {
+    let step = 0;
+    const interval = setInterval(() => {
+      step++;
+      if (step >= totalSteps) {
+        clearInterval(interval);
+        setTimeout(onComplete, 600);
+      } else {
+        onStep(step);
+      }
+    }, 500);
+    return () => clearInterval(interval);
+  });
+  return null;
+};
+
+export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
   const [showIntro, setShowIntro] = useState(true);
 
   return (
