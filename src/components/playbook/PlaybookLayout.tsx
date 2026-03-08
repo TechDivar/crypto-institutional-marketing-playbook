@@ -11,17 +11,17 @@ export const PlaybookLayout = () => {
 
   return (
     <div className="flex min-h-screen bg-background">
-      {/* Mobile menu button - only show in chapter view */}
+      {/* Mobile menu button */}
       {activeChapter !== null && (
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="fixed top-4 left-4 z-50 p-2.5 rounded-xl bg-card border border-border soft-shadow lg:hidden"
+          className="fixed top-4 left-4 z-50 p-2 rounded-lg bg-card border border-border lg:hidden"
         >
           {sidebarOpen ? <X className="w-5 h-5 text-foreground" /> : <Menu className="w-5 h-5 text-foreground" />}
         </button>
       )}
 
-      {/* Sidebar - hidden on homepage */}
+      {/* Sidebar */}
       {activeChapter !== null && (
         <PlaybookSidebar
           activeChapter={activeChapter}
@@ -40,7 +40,7 @@ export const PlaybookLayout = () => {
       {/* Overlay */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 z-30 bg-foreground/10 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-30 bg-background/60 backdrop-blur-sm lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
