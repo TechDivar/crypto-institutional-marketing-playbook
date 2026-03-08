@@ -433,6 +433,10 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
                 </div>
               ))}
             </motion.div>
+
+            <div className="mt-16">
+              <ChapterCarousel onSelectChapter={onSelectChapter} />
+            </div>
           </motion.div>
         </div>
       )}
