@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import logo from "@/assets/web3talez-logo.jpg";
-import hero3d from "@/assets/hero-3d.png";
 
 interface PlaybookHeroProps {
   onStart: () => void;
@@ -262,6 +261,39 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
 
       {!showIntro && (
         <div className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
+          {/* Floating background shapes */}
+          {[
+            { size: "w-16 h-16", top: "10%", left: "8%", delay: 0, dur: 18, shape: "rounded-xl rotate-45", color: "bg-primary/10" },
+            { size: "w-10 h-10", top: "20%", left: "85%", delay: 2, dur: 14, shape: "rounded-full", color: "bg-accent/15" },
+            { size: "w-20 h-20", top: "65%", left: "5%", delay: 1, dur: 20, shape: "rounded-full", color: "bg-primary/8" },
+            { size: "w-12 h-12", top: "75%", left: "90%", delay: 3, dur: 16, shape: "rounded-xl rotate-12", color: "bg-accent/10" },
+            { size: "w-8 h-8", top: "40%", left: "92%", delay: 4, dur: 12, shape: "rounded-lg rotate-45", color: "bg-primary/12" },
+            { size: "w-14 h-14", top: "85%", left: "45%", delay: 1.5, dur: 22, shape: "rounded-full", color: "bg-primary/6" },
+            { size: "w-6 h-6", top: "15%", left: "55%", delay: 5, dur: 10, shape: "rounded-md rotate-45", color: "bg-accent/12" },
+            { size: "w-24 h-24", top: "50%", left: "15%", delay: 0.5, dur: 25, shape: "rounded-full", color: "bg-primary/5" },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              className={`absolute ${item.size} ${item.shape} ${item.color} pointer-events-none`}
+              style={{ top: item.top, left: item.left }}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: [0, 0.8, 0.4, 0.9, 0],
+                y: [0, -40, 20, -30, 0],
+                x: [0, 20, -15, 10, 0],
+                rotate: [0, 90, 180, 270, 360],
+                scale: [0.8, 1.1, 0.9, 1.2, 0.8],
+              }}
+              transition={{
+                duration: item.dur,
+                delay: item.delay,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+
+          {/* Ambient glow blobs */}
           <motion.div
             className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px] pointer-events-none"
             animate={{ x: [0, 60, -40, 0], y: [0, -50, 30, 0], scale: [1, 1.2, 0.9, 1] }}
@@ -296,14 +328,6 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
               Web3 marketing made simple 💜
             </motion.p>
 
-            <motion.img
-              src={hero3d}
-              alt="Institutional marketing cube"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, type: "spring", stiffness: 100, damping: 16 }}
-              className="w-44 h-44 sm:w-52 sm:h-52 mx-auto mb-10 object-contain drop-shadow-[0_20px_40px_hsl(var(--primary)/0.25)]"
-            />
 
             <motion.h1
               className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-6 tracking-tight"
