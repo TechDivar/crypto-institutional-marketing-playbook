@@ -58,7 +58,7 @@ export default {
         "callout-border": "hsl(var(--callout-border))",
         success: "hsl(var(--success))",
         warning: "hsl(var(--warning))",
-        gold: "hsl(var(--gold))",
+        "primary-light": "hsl(var(--primary-light))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
