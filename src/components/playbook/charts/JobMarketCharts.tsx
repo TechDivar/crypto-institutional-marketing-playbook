@@ -76,16 +76,17 @@ export const SkillsDemandChart = () => (
 
 export const CompensationChart = () => (
   <div className="w-full">
-    <h3 className="text-lg font-semibold text-foreground mb-4">Estimated Compensation Ranges</h3>
-    <p className="text-sm text-muted-foreground mb-6">Based on role seniority and market data (USD, annual base)</p>
-    <div className="space-y-2">
-      {compensationData.map((item) => (
-        <div key={item.role} className="flex justify-between py-2 border-b border-border/50 last:border-0">
-          <span className="text-foreground text-sm">{item.role}</span>
-          <span className="text-primary font-medium text-sm">{item.range}</span>
-        </div>
-      ))}
+    <h3 className="text-lg font-semibold text-foreground mb-4">Compensation Estimate</h3>
+    <p className="text-sm text-muted-foreground mb-6">Based on published salary data from institutional marketing job postings</p>
+    <div className="p-6 rounded-xl bg-primary/10 border border-primary/20">
+      <div className="text-center">
+        <p className="text-3xl font-bold text-primary mb-2">$120K – $210K</p>
+        <p className="text-sm text-muted-foreground">Annual base salary range</p>
+      </div>
     </div>
+    <p className="text-xs text-muted-foreground mt-4 italic">
+      Source: TaxBit ($180K–$210K) and Trovata ($120K–$160K) job postings
+    </p>
   </div>
 );
 
