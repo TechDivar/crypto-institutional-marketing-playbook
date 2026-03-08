@@ -7,7 +7,7 @@ export interface Chapter {
 export const chapters: Chapter[] = [
   { id: 1, title: "What Is Institutional Marketing?", subtitle: "It's not about going viral on X or building a community. This one is different." },
   { id: 2, title: "What Institutions Need From DeFi", subtitle: "Privacy, compliance, and risk — the 3 things that actually matters." },
-  { id: 3, title: "Who Are You Selling To?", subtitle: "The Buyer Map: five personas, five fears." },
+  { id: 3, title: "Who Are You Selling To?", subtitle: "Your target audience." },
   { id: 4, title: "Where They Hang Out", subtitle: "Not Twitter. Not Discord." },
   { id: 5, title: "What Content to Make", subtitle: "Content that helps them say yes." },
   { id: 6, title: "Founder Content Is Your Cheapest Trust Signal", subtitle: "The compliance officer googles your CEO before the deal is approved." },
