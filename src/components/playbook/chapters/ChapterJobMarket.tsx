@@ -6,8 +6,8 @@ export const ChapterJobMarket = () => (
   <>
     <SectionBlock>
       <p>
-        We analyzed 18 institutional marketing job descriptions from companies like Chainlink, 
-        Fireblocks, Ondo Finance, Paxos, and more to understand what the market actually wants.
+        We analyzed 13 institutional marketing job descriptions from companies like Chainlink, 
+        Fireblocks, Ondo Finance, LayerZero, Dune, TaxBit, and more to understand what the market actually wants.
       </p>
     </SectionBlock>
 
