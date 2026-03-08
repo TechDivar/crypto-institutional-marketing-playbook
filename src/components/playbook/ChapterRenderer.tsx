@@ -5,6 +5,7 @@ import { Chapter02 } from "./chapters/Chapter02";
 import { Chapter03 } from "./chapters/Chapter03";
 import { Chapter04 } from "./chapters/Chapter04";
 import { Chapter05 } from "./chapters/Chapter05";
+import { Chapter05b } from "./chapters/Chapter05b";
 import { Chapter06 } from "./chapters/Chapter06";
 import { Chapter07 } from "./chapters/Chapter07";
 import { Chapter08 } from "./chapters/Chapter08";
@@ -26,14 +27,15 @@ const chapterComponents: Record<number, React.FC> = {
   3: Chapter03,
   4: Chapter04,
   5: Chapter05,
-  6: Chapter06,
-  7: Chapter07,
-  8: Chapter08,
-  9: Chapter09,
-  10: Chapter10,
-  11: Chapter11,
-  12: Chapter12,
-  13: Chapter13,
+  6: Chapter05b,
+  7: Chapter06,
+  8: Chapter07,
+  9: Chapter08,
+  10: Chapter09,
+  11: Chapter10,
+  12: Chapter11,
+  13: Chapter12,
+  14: Chapter13,
 };
 
 export const ChapterRenderer = ({ chapterId, onNavigate, totalChapters }: ChapterRendererProps) => {
