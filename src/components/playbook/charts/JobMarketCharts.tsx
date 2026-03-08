@@ -28,7 +28,36 @@ const backgroundsData = [
   { background: "Crypto Native", percentage: 12 },
 ];
 
+const experienceData = [
+  { range: "2–4 years", count: 2 },
+  { range: "5–6 years", count: 3 },
+  { range: "7–8 years", count: 1 },
+  { range: "10+ years", count: 2 },
+  { range: "Not specified", count: 3 },
+];
+
+const workModelData = [
+  { model: "Remote", count: 7 },
+  { model: "Office / On-site", count: 4 },
+  { model: "Hybrid", count: 2 },
+];
+
+const toolsData = [
+  { tool: "SQL", count: 3 },
+  { tool: "Snowflake", count: 3 },
+  { tool: "AI Tools (ChatGPT/Claude)", count: 3 },
+  { tool: "HubSpot", count: 2 },
+  { tool: "Salesforce", count: 2 },
+  { tool: "Google Analytics", count: 2 },
+  { tool: "Amplitude / Mixpanel", count: 2 },
+  { tool: "Ahrefs / SEO Tools", count: 1 },
+  { tool: "BigQuery", count: 1 },
+  { tool: "Databricks", count: 1 },
+];
+
 const PRIMARY_COLOR = "hsl(280, 100%, 70%)";
+const SECONDARY_COLOR = "hsl(220, 90%, 65%)";
+const TERTIARY_COLOR = "hsl(160, 70%, 50%)";
 
 export const SkillsDemandChart = () => (
   <div className="w-full">
@@ -136,10 +165,111 @@ export const BackgroundsChart = () => (
   </div>
 );
 
+export const ExperienceLevelChart = () => (
+  <div className="w-full">
+    <h3 className="text-lg font-semibold text-foreground mb-4">Experience Level Required</h3>
+    <p className="text-sm text-muted-foreground mb-6">Years of experience required across 13 job descriptions</p>
+    <div className="h-[280px]">
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={experienceData} margin={{ left: 10, right: 30 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" vertical={false} />
+          <XAxis dataKey="range" stroke="hsl(var(--muted-foreground))" fontSize={12} />
+          <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "hsl(var(--card))",
+              border: "1px solid hsl(var(--border))",
+              borderRadius: "8px",
+              color: "hsl(var(--foreground))",
+            }}
+            formatter={(value: number) => [`${value} JDs`, "Count"]}
+          />
+          <Bar dataKey="count" fill={SECONDARY_COLOR} radius={[4, 4, 0, 0]}
+            label={{ position: 'top', fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+          />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  </div>
+);
+
+export const WorkModelChart = () => (
+  <div className="w-full">
+    <h3 className="text-lg font-semibold text-foreground mb-4">Work Model Breakdown</h3>
+    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 13 companies</p>
+    <div className="h-[240px]">
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={workModelData} layout="vertical" margin={{ left: 20, right: 50 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" horizontal={false} />
+          <XAxis type="number" stroke="hsl(var(--muted-foreground))" fontSize={12} />
+          <YAxis
+            dataKey="model" type="category" width={120}
+            stroke="hsl(var(--muted-foreground))" fontSize={12}
+            tickLine={false} axisLine={false}
+          />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "hsl(var(--card))",
+              border: "1px solid hsl(var(--border))",
+              borderRadius: "8px",
+              color: "hsl(var(--foreground))",
+            }}
+            formatter={(value: number) => [`${value} companies`, "Count"]}
+          />
+          <Bar dataKey="count" fill={TERTIARY_COLOR} radius={[0, 4, 4, 0]}
+            label={{ position: 'right', fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+          />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  </div>
+);
+
+export const ToolsPlatformsChart = () => (
+  <div className="w-full">
+    <h3 className="text-lg font-semibold text-foreground mb-4">Most Mentioned Tools & Platforms</h3>
+    <p className="text-sm text-muted-foreground mb-6">Tools and platforms mentioned across job descriptions</p>
+    <div className="h-[400px]">
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart data={toolsData} layout="vertical" margin={{ left: 20, right: 50 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" horizontal={false} />
+          <XAxis type="number" stroke="hsl(var(--muted-foreground))" fontSize={12} />
+          <YAxis
+            dataKey="tool" type="category" width={170}
+            stroke="hsl(var(--muted-foreground))" fontSize={12}
+            tickLine={false} axisLine={false}
+          />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "hsl(var(--card))",
+              border: "1px solid hsl(var(--border))",
+              borderRadius: "8px",
+              color: "hsl(var(--foreground))",
+            }}
+            formatter={(value: number) => [`${value} mentions`, "Frequency"]}
+          />
+          <Bar dataKey="count" fill={PRIMARY_COLOR} radius={[0, 4, 4, 0]}
+            label={{ position: 'right', fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+          />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  </div>
+);
+
 export const JobMarketCharts = () => (
   <div className="space-y-12">
     <div className="p-6 rounded-xl border border-border bg-card/50">
       <SkillsDemandChart />
+    </div>
+    <div className="p-6 rounded-xl border border-border bg-card/50">
+      <ExperienceLevelChart />
+    </div>
+    <div className="p-6 rounded-xl border border-border bg-card/50">
+      <WorkModelChart />
+    </div>
+    <div className="p-6 rounded-xl border border-border bg-card/50">
+      <ToolsPlatformsChart />
     </div>
     <div className="p-6 rounded-xl border border-border bg-card/50">
       <CompensationChart />
