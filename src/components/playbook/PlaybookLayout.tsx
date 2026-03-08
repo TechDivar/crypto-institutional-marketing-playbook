@@ -21,19 +21,21 @@ export const PlaybookLayout = () => {
         </button>
       )}
 
-      {/* Sidebar */}
-      <PlaybookSidebar
-        activeChapter={activeChapter}
-        onSelectChapter={(id) => {
-          setActiveChapter(id);
-          setSidebarOpen(false);
-        }}
-        onGoHome={() => {
-          setActiveChapter(null);
-          setSidebarOpen(false);
-        }}
-        isOpen={sidebarOpen}
-      />
+      {/* Sidebar - hidden on homepage */}
+      {activeChapter !== null && (
+        <PlaybookSidebar
+          activeChapter={activeChapter}
+          onSelectChapter={(id) => {
+            setActiveChapter(id);
+            setSidebarOpen(false);
+          }}
+          onGoHome={() => {
+            setActiveChapter(null);
+            setSidebarOpen(false);
+          }}
+          isOpen={sidebarOpen}
+        />
+      )}
 
       {/* Overlay */}
       {sidebarOpen && (
