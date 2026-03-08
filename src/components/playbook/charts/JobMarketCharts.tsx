@@ -89,29 +89,31 @@ export const CompensationChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Compensation Ranges</h3>
     <p className="text-sm text-muted-foreground mb-6">Annual base salaries from actual job postings (USD)</p>
-    <div className="space-y-3">
+    <div className="space-y-4">
       {compensationData.map((item) => (
-        <div key={item.role} className="flex items-center gap-4">
-          <div className="w-40 text-sm text-foreground/80 truncate">{item.role}</div>
-          <div className="flex-1 relative h-8">
+        <div key={item.role} className="space-y-1">
+          <div className="flex justify-between text-sm">
+            <span className="text-foreground">{item.role}</span>
+            <span className="text-primary font-medium">{item.range}</span>
+          </div>
+          <div className="h-3 bg-muted/30 rounded-full overflow-hidden">
             <div 
-              className="absolute h-full rounded-md"
+              className="h-full rounded-full"
               style={{
-                left: `${((item.min - 100) / 170) * 100}%`,
+                marginLeft: `${((item.min - 100) / 170) * 100}%`,
                 width: `${((item.max - item.min) / 170) * 100}%`,
                 backgroundColor: PRIMARY_COLOR,
               }}
             />
           </div>
-          <div className="w-28 text-sm text-muted-foreground text-right">{item.range}</div>
         </div>
       ))}
-    </div>
-    <div className="flex justify-between mt-4 text-xs text-muted-foreground px-44">
-      <span>$100K</span>
-      <span>$150K</span>
-      <span>$200K</span>
-      <span>$250K</span>
+      <div className="flex justify-between text-xs text-muted-foreground pt-2">
+        <span>$100K</span>
+        <span>$150K</span>
+        <span>$200K</span>
+        <span>$270K</span>
+      </div>
     </div>
   </div>
 );
