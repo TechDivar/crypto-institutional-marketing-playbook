@@ -4,7 +4,7 @@ import { BulletList } from "../ui/BulletList";
 export const Chapter03 = () => (
   <>
     <SectionBlock>
-      <p>Not "institutions." Specific people inside institutions who have specific fears and specific goals. Inside a single bank there can be five different buyers, all with different priorities, and you need different messages for each one.</p>
+      <p>You're not selling to "institutions" but specific people inside institutions who have specific fears and specific goals. Inside a single bank there can be five different buyers, all with different priorities, and you need different messages for each one.</p>
     </SectionBlock>
 
     <SectionBlock title="Buyer Type 1: The CFO and Treasury Team">
