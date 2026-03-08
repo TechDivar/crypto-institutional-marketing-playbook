@@ -322,14 +322,17 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               transition={{ delay: 0.3, type: "spring", stiffness: 150, damping: 14 }}
               className="w-14 h-14 rounded-full mx-auto mb-3"
             />
-            <motion.p
-              className="text-sm text-muted-foreground mb-2 font-bold"
+            <motion.a
+              href="https://web3talez.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground mb-2 font-bold hover:text-primary transition-colors"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.35 }}
             >
               Web3talez
-            </motion.p>
+            </motion.a>
             <motion.p
               className="text-sm text-muted-foreground mb-10 font-medium"
               initial={{ opacity: 0 }}
