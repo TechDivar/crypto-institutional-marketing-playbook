@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"DM Serif Display"', 'Georgia', 'serif'],
-        body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        body: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -58,6 +58,10 @@ export default {
         "callout-border": "hsl(var(--callout-border))",
         success: "hsl(var(--success))",
         warning: "hsl(var(--warning))",
+        butter: "hsl(var(--butter))",
+        peach: "hsl(var(--peach))",
+        mint: "hsl(var(--mint))",
+        lavender: "hsl(var(--lavender))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -71,8 +75,10 @@ export default {
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
+        "2xl": "1.5rem",
+        "3xl": "2rem",
       },
       keyframes: {
         "accordion-down": {
@@ -88,15 +94,32 @@ export default {
           to: { opacity: "1", transform: "translateY(0)" },
         },
         "float": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-8px)" },
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-12px) rotate(3deg)" },
+        },
+        "float-reverse": {
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-10px) rotate(-3deg)" },
+        },
+        "wiggle": {
+          "0%, 100%": { transform: "rotate(-2deg)" },
+          "50%": { transform: "rotate(2deg)" },
+        },
+        "blob": {
+          "0%, 100%": { borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" },
+          "25%": { borderRadius: "58% 42% 75% 25% / 76% 46% 54% 24%" },
+          "50%": { borderRadius: "50% 50% 33% 67% / 55% 27% 73% 45%" },
+          "75%": { borderRadius: "33% 67% 58% 42% / 63% 68% 32% 37%" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
-        "float": "float 3s ease-in-out infinite",
+        "float": "float 4s ease-in-out infinite",
+        "float-reverse": "float-reverse 5s ease-in-out infinite",
+        "wiggle": "wiggle 2s ease-in-out infinite",
+        "blob": "blob 8s ease-in-out infinite",
       },
     },
   },

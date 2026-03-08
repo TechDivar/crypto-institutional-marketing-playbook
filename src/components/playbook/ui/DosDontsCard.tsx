@@ -8,23 +8,23 @@ interface DosDontsCardProps {
 export const DosDontsCard = ({ wrong, right }: DosDontsCardProps) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-4">
-      <div className="rounded-2xl border border-destructive/15 bg-destructive/5 p-5">
-        <div className="flex items-center gap-2 mb-2">
-          <div className="w-6 h-6 rounded-lg bg-destructive/10 flex items-center justify-center">
+      <div className="rounded-2xl border border-peach/30 bg-peach/8 p-5">
+        <div className="flex items-center gap-2 mb-3">
+          <div className="w-7 h-7 rounded-lg bg-destructive/10 flex items-center justify-center">
             <X className="w-3.5 h-3.5 text-destructive" />
           </div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-destructive font-body">Wrong</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-destructive">Wrong</span>
         </div>
-        <p className="text-sm text-foreground/80 font-body">{wrong}</p>
+        <p className="text-sm text-foreground/80">{wrong}</p>
       </div>
-      <div className="rounded-2xl border border-success/15 bg-success/5 p-5">
-        <div className="flex items-center gap-2 mb-2">
-          <div className="w-6 h-6 rounded-lg bg-success/10 flex items-center justify-center">
+      <div className="rounded-2xl border border-mint/30 bg-mint/8 p-5">
+        <div className="flex items-center gap-2 mb-3">
+          <div className="w-7 h-7 rounded-lg bg-success/10 flex items-center justify-center">
             <Check className="w-3.5 h-3.5 text-success" />
           </div>
-          <span className="text-xs font-semibold uppercase tracking-wider text-success font-body">Right</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-success">Right</span>
         </div>
-        <p className="text-sm text-foreground/80 font-body">{right}</p>
+        <p className="text-sm text-foreground/80">{right}</p>
       </div>
     </div>
   );
