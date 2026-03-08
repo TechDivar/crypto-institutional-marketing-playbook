@@ -21,20 +21,6 @@ const skillsData = [
   { skill: "Partnership Marketing", count: 4 },
 ];
 
-// Estimated salary ranges based on role seniority and market data
-const compensationData = [
-  { role: "Fireblocks – PMM Director", range: "$180K – $240K", min: 180, max: 240 },
-  { role: "Ledger – Enterprise Marketing Dir", range: "$175K – $230K", min: 175, max: 230 },
-  { role: "Dakota – Head of Marketing", range: "$170K – $220K", min: 170, max: 220 },
-  { role: "TaxBit – Principal PMM", range: "$180K – $210K", min: 180, max: 210 },
-  { role: "Chainlink – Sr PMM, Web3", range: "$150K – $200K", min: 150, max: 200 },
-  { role: "Ondo – Growth Marketing Lead", range: "$140K – $180K", min: 140, max: 180 },
-  { role: "LayerZero – Vertical MM", range: "$130K – $170K", min: 130, max: 170 },
-  { role: "Dune – PMM Enterprise Data", range: "$130K – $165K", min: 130, max: 165 },
-  { role: "Trovata – Sr Content Marketing", range: "$120K – $160K", min: 120, max: 160 },
-  { role: "Artemis – GTM Associate", range: "$90K – $130K", min: 90, max: 130 },
-];
-
 const backgroundsData = [
   { background: "B2B SaaS", percentage: 35 },
   { background: "TradFi / Banking", percentage: 28 },
@@ -90,16 +76,17 @@ export const SkillsDemandChart = () => (
 
 export const CompensationChart = () => (
   <div className="w-full">
-    <h3 className="text-lg font-semibold text-foreground mb-4">Estimated Compensation Ranges</h3>
-    <p className="text-sm text-muted-foreground mb-6">Based on role seniority and market data (USD, annual base)</p>
-    <div className="space-y-2">
-      {compensationData.map((item) => (
-        <div key={item.role} className="flex justify-between py-2 border-b border-border/50 last:border-0">
-          <span className="text-foreground text-sm">{item.role}</span>
-          <span className="text-primary font-medium text-sm">{item.range}</span>
-        </div>
-      ))}
+    <h3 className="text-lg font-semibold text-foreground mb-4">Compensation Estimate</h3>
+    <p className="text-sm text-muted-foreground mb-6">Based on published salary data from institutional marketing job postings</p>
+    <div className="p-6 rounded-xl bg-primary/10 border border-primary/20">
+      <div className="text-center">
+        <p className="text-3xl font-bold text-primary mb-2">$120K – $210K</p>
+        <p className="text-sm text-muted-foreground">Annual base salary range</p>
+      </div>
     </div>
+    <p className="text-xs text-muted-foreground mt-4 italic">
+      Source: TaxBit ($180K–$210K) and Trovata ($120K–$160K) job postings
+    </p>
   </div>
 );
 
