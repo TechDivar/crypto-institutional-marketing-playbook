@@ -26,7 +26,6 @@ const backgroundsData = [
   { background: "TradFi / Banking", percentage: 28 },
   { background: "Fintech", percentage: 20 },
   { background: "Crypto Native", percentage: 12 },
-  { background: "Enterprise Tech", percentage: 5 },
 ];
 
 const PRIMARY_COLOR = "hsl(280, 100%, 70%)";
