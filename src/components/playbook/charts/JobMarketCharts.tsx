@@ -6,7 +6,6 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Cell,
 } from "recharts";
 
 const skillsData = [
@@ -41,11 +40,7 @@ const backgroundsData = [
   { background: "Enterprise Tech", percentage: 5 },
 ];
 
-const CHART_COLORS = [
-  "hsl(var(--primary))",
-  "hsl(var(--accent))",
-  "hsl(var(--secondary))",
-];
+const PRIMARY_COLOR = "hsl(280, 100%, 70%)"; // Bright purple that works on dark bg
 
 export const SkillsDemandChart = () => (
   <div className="w-full">
@@ -73,11 +68,7 @@ export const SkillsDemandChart = () => (
             }}
             formatter={(value: number) => [`${value} job listings`, "Frequency"]}
           />
-          <Bar dataKey="count" radius={[0, 4, 4, 0]}>
-            {skillsData.map((_, index) => (
-              <Cell key={`cell-${index}`} fill={CHART_COLORS[index % CHART_COLORS.length]} />
-            ))}
-          </Bar>
+          <Bar dataKey="count" fill={PRIMARY_COLOR} radius={[0, 4, 4, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>
@@ -119,18 +110,18 @@ export const CompensationChart = () => (
               name === "min" ? "Minimum" : "Maximum",
             ]}
           />
-          <Bar dataKey="min" fill="hsl(var(--secondary))" name="min" radius={[4, 4, 0, 0]} />
-          <Bar dataKey="max" fill="hsl(var(--primary))" name="max" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="min" fill="hsl(280, 60%, 50%)" name="min" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="max" fill={PRIMARY_COLOR} name="max" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>
     <div className="flex justify-center gap-6 mt-4 text-sm">
       <div className="flex items-center gap-2">
-        <div className="w-3 h-3 rounded bg-secondary" />
+        <div className="w-3 h-3 rounded" style={{ backgroundColor: "hsl(280, 60%, 50%)" }} />
         <span className="text-muted-foreground">Minimum</span>
       </div>
       <div className="flex items-center gap-2">
-        <div className="w-3 h-3 rounded bg-primary" />
+        <div className="w-3 h-3 rounded" style={{ backgroundColor: PRIMARY_COLOR }} />
         <span className="text-muted-foreground">Maximum</span>
       </div>
     </div>
@@ -172,7 +163,7 @@ export const BackgroundsChart = () => (
           />
           <Bar 
             dataKey="percentage" 
-            fill="hsl(var(--primary))" 
+            fill={PRIMARY_COLOR}
             radius={[0, 4, 4, 0]}
             label={{ 
               position: 'right', 
