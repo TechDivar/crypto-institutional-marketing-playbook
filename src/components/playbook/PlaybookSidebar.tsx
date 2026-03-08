@@ -18,10 +18,10 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
       )}
     >
       {/* Brand */}
-      <div className="p-6 border-b border-sidebar-border">
+      <button onClick={onGoHome} className="p-6 border-b border-sidebar-border text-left hover:opacity-80 transition-opacity w-full">
         <h2 className="font-display text-lg font-bold gradient-text">Web3talez</h2>
         <p className="text-xs text-muted-foreground mt-1">Web3 marketing made simple 💜</p>
-      </div>
+      </button>
 
       {/* Chapter list */}
       <nav className="flex-1 overflow-y-auto py-4 px-3">

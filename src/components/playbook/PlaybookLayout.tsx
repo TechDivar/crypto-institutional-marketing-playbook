@@ -26,6 +26,10 @@ export const PlaybookLayout = () => {
           setActiveChapter(id);
           setSidebarOpen(false);
         }}
+        onGoHome={() => {
+          setActiveChapter(null);
+          setSidebarOpen(false);
+        }}
         isOpen={sidebarOpen}
       />
 
