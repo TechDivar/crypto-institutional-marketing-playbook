@@ -54,7 +54,7 @@ export const Chapter09 = () => (
 
     <SectionBlock title="Event Timing Strategy">
       <p>Trovata's job description says it directly: develop and manage a content calendar aligned to pipeline goals, product moments, and conferences. LayerZero says plan and support participation in key events, roundtables, and forums. Fireblocks says represent the company at industry events, webinars, and analyst briefings.</p>
-      <p>Every one of these companies knows that a launch timed to a conference lands harder than a launch timed to nothing.</p>
+      <p>Every one of these companies know that a launch timed to a conference lands harder than a launch timed to nothing.</p>
       <p>Here is how it works in practice. Your announcement drops 48 hours before a major conference your buyers are attending. Not during the conference when inboxes are ignored. Not after when the moment has passed. 48 hours before, when people are travelling, checking their phones, and paying attention to what is happening in the industry they are about to walk into.</p>
       <p>The conferences worth timing launches around are the ones already covered in Chapter 5. Sibos for banking and payments announcements. Consensus for broad crypto industry awareness. TOKEN2049 for crypto-native institutional buyers. Point Zero Forum for compliance-first products and regulatory positioning.</p>
       <p>If you cannot time a launch to a conference, time it to a regulatory moment. MiCA updates, GENIUS Act guidance, FATF Travel Rule enforcement deadlines. These are the moments when your buyers are already thinking about your product category. That is when your launch lands hardest.</p>
