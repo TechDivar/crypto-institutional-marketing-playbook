@@ -335,7 +335,7 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
         {showIntro && <StairAnimation onComplete={() => setShowIntro(false)} />}
       </AnimatePresence>
 
-      <div className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
+      {!showIntro && <div className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
         {/* Animated gradient orbs */}
         <motion.div
           className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px] pointer-events-none"
