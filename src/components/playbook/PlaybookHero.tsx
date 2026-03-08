@@ -111,8 +111,8 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
           Your career path
         </motion.p>
 
-        {/* Stairs with perspective */}
-        <div className="relative w-[460px] h-[400px]" style={{ perspective: "800px" }}>
+        {/* Stairs with perspective — scaled down on mobile */}
+        <div className="relative w-[460px] h-[400px] scale-[0.55] sm:scale-75 md:scale-100 origin-center" style={{ perspective: "800px" }}>
           <motion.div
             style={{ transformStyle: "preserve-3d", rotateX: "5deg", rotateY: "-5deg" }}
           >
