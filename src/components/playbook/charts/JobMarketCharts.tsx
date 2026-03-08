@@ -30,8 +30,9 @@ const backgroundsData = [
 
 const experienceData = [
   { range: "2–4 years", count: 2 },
-  { range: "5–6 years", count: 3 },
-  { range: "7–8 years", count: 1 },
+  { range: "3–5 years", count: 2 },
+  { range: "5–6 years", count: 2 },
+  { range: "6–8 years", count: 2 },
   { range: "10+ years", count: 2 },
   { range: "Not specified", count: 3 },
 ];
