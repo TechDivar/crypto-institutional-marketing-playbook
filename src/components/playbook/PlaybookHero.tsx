@@ -433,6 +433,51 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
                 </div>
               ))}
             </motion.div>
+
+            {/* About Web3talez */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.6 }}
+              className="mt-20 max-w-lg mx-auto text-left"
+            >
+              <p className="text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-3">About</p>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-3 tracking-tight">
+                Web3 Marketing Made Simple
+              </h2>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                Case studies and marketing tips, written so anyone can follow along — whether you are deep in crypto or just curious about it.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                We share what we find, twice a month. No buzzwords, no jargon, no gatekeeping. Just practical marketing stories told the way they should be told.
+              </p>
+
+              <h3 className="text-lg font-bold text-foreground mb-3">Why an Institutional Marketing Playbook?</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                In 2026, almost every marketing role in Web3 is asking for an institutional marketer. But nobody is actually telling you what that means or what it takes to do the job well.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                So we dug into it. We pulled 18 real job descriptions from companies building the infrastructure that banks, asset managers, and treasury teams are starting to use. We read the DWF Ventures 2026 research report on what institutions are actually demanding from DeFi right now. And we turned all of it into this playbook.
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                Because at Web3talez, we believe practical marketing stories should be free, simple, and useful to anyone — whether you have been in crypto for five years or five days.
+              </p>
+
+              <div className="rounded-xl border border-border bg-card/80 p-5">
+                <p className="text-xs font-bold text-primary mb-2">Made with love from Web3talez</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Web3 marketing stories are boring. But not here. Subscribe to the newsletter for case studies and tips twice a month at{" "}
+                  <a
+                    href="https://web3talez.substack.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary font-medium hover:underline"
+                  >
+                    web3talez.substack.com
+                  </a>
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       )}
