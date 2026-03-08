@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen } from "lucide-react";
+import logo from "@/assets/web3talez-logo.jpg";
 
 interface PlaybookHeroProps {
   onStart: () => void;
