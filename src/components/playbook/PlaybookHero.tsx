@@ -332,7 +332,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
                 transition={{ delay: 0.35 }}
               >
                 <span className="text-primary">Web3</span>
-                <span className="text-amber-400">talez</span>
+                <span className="text-gold">talez</span>
               </motion.span>
             </Link>
             <motion.p
