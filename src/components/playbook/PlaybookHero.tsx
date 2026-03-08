@@ -18,6 +18,15 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-center max-w-2xl relative z-10"
       >
+        <motion.img
+          src={logo}
+          alt="Web3talez"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1 }}
+          className="w-20 h-20 rounded-full ring-4 ring-primary/30 mx-auto mb-6"
+        />
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
