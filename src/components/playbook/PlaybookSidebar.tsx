@@ -1,5 +1,6 @@
 import { chapters } from "@/data/playbook-data";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/web3talez-logo.jpg";
 
 interface PlaybookSidebarProps {
   activeChapter: number | null;
