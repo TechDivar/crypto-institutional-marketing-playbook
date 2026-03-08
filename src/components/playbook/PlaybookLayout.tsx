@@ -48,7 +48,7 @@ export const PlaybookLayout = () => {
       {/* Main content */}
       <main className={`flex-1 min-h-screen ${activeChapter !== null ? 'lg:ml-72' : ''}`}>
         {activeChapter === null ? (
-          <PlaybookHero onStart={() => setActiveChapter(1)} />
+          <PlaybookHero onStart={() => setActiveChapter(1)} onSelectChapter={setActiveChapter} />
         ) : (
           <div className="max-w-3xl mx-auto px-6 py-12 lg:py-16">
             <ChapterRenderer
