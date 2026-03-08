@@ -324,14 +324,15 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
             />
             <Link
               to="/about"
-              className="text-sm text-muted-foreground mb-2 font-bold hover:text-primary transition-colors"
+              className="text-sm mb-2 font-bold hover:opacity-80 transition-opacity"
             >
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.35 }}
               >
-                Web3talez
+                <span className="text-primary">Web3</span>
+                <span className="text-amber-400">talez</span>
               </motion.span>
             </Link>
             <motion.p
