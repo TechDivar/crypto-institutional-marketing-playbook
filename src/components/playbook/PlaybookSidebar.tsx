@@ -19,9 +19,12 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
       )}
     >
       {/* Brand */}
-      <button onClick={onGoHome} className="p-6 border-b border-sidebar-border text-left hover:opacity-80 transition-opacity w-full">
-        <h2 className="font-display text-lg font-bold gradient-text">Web3talez</h2>
-        <p className="text-xs text-muted-foreground mt-1">Web3 marketing made simple 💜</p>
+      <button onClick={onGoHome} className="p-6 border-b border-sidebar-border text-left hover:opacity-80 transition-opacity w-full flex items-center gap-3">
+        <img src={logo} alt="Web3talez" className="w-10 h-10 rounded-full ring-2 ring-primary/30" />
+        <div>
+          <h2 className="font-display text-lg font-bold gradient-text">Web3talez</h2>
+          <p className="text-xs text-muted-foreground mt-0.5">Web3 marketing made simple 💜</p>
+        </div>
       </button>
 
       {/* Chapter list */}
