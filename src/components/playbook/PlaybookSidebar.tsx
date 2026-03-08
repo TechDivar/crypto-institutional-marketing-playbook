@@ -75,7 +75,7 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
         >
           Subscribe ✨
         </a>
-        <p className="text-[10px] text-muted-foreground text-center">2026 Edition | By Ivy</p>
+        <p className="text-[10px] text-muted-foreground text-center">2026 Edition</p>
       </div>
     </aside>
   );
