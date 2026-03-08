@@ -168,13 +168,13 @@ export const BackgroundsChart = () => (
 export const ExperienceLevelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Experience Level Required</h3>
-    <p className="text-sm text-muted-foreground mb-6">Years of experience required across 13 job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Percentage of 18 job descriptions requiring each experience range</p>
     <div className="h-[280px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={experienceData} margin={{ left: 10, right: 30 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" vertical={false} />
           <XAxis dataKey="range" stroke="hsl(var(--muted-foreground))" fontSize={12} />
-          <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} />
+          <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickFormatter={(value) => `${value}%`} />
           <Tooltip
             contentStyle={{
               backgroundColor: "hsl(var(--card))",
@@ -182,10 +182,10 @@ export const ExperienceLevelChart = () => (
               borderRadius: "8px",
               color: "hsl(var(--foreground))",
             }}
-            formatter={(value: number) => [`${value} JDs`, "Count"]}
+            formatter={(value: number) => [`${value}%`, "Percentage"]}
           />
-          <Bar dataKey="count" fill={SECONDARY_COLOR} radius={[4, 4, 0, 0]}
-            label={{ position: 'top', fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+          <Bar dataKey="percentage" fill={SECONDARY_COLOR} radius={[4, 4, 0, 0]}
+            label={{ position: 'top', fill: 'hsl(var(--muted-foreground))', fontSize: 12, formatter: (value: number) => `${value}%` }}
           />
         </BarChart>
       </ResponsiveContainer>
