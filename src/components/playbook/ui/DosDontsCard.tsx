@@ -13,7 +13,7 @@ export const DosDontsCard = ({ wrong, right }: DosDontsCardProps) => {
           <X className="w-4 h-4 text-destructive" />
           <span className="text-xs font-bold uppercase tracking-wider text-destructive">Wrong</span>
         </div>
-        <p className="text-sm text-foreground/75">{wrong}</p>
+        <p className="text-sm text-foreground/85">{wrong}</p>
       </div>
       <div className="rounded-xl border border-success/15 bg-success/5 p-4">
         <div className="flex items-center gap-2 mb-2">
