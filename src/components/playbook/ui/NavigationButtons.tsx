@@ -26,7 +26,15 @@ export const NavigationButtons = ({ chapterId, onNavigate, totalChapters }: Navi
       ) : (
         <div />
       )}
-      {nextChapter ? (
+      {isLastChapter ? (
+        <button
+          onClick={() => { onNavigate(16); window.scrollTo(0, 0); }}
+          className="pill-btn bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2 text-sm"
+        >
+          <span>Finish</span>
+          <ArrowRight className="w-4 h-4" />
+        </button>
+      ) : nextChapter ? (
         <button
           onClick={() => { onNavigate(nextChapter.id); window.scrollTo(0, 0); }}
           className="pill-btn bg-foreground text-background hover:bg-foreground/90 flex items-center gap-2 text-sm"
