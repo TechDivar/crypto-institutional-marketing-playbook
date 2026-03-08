@@ -43,16 +43,16 @@ const workModelData = [
 ];
 
 const toolsData = [
-  { tool: "SQL", count: 3 },
-  { tool: "Snowflake", count: 3 },
-  { tool: "AI Tools (ChatGPT/Claude)", count: 3 },
-  { tool: "HubSpot", count: 2 },
-  { tool: "Salesforce", count: 2 },
-  { tool: "Google Analytics", count: 2 },
-  { tool: "Amplitude / Mixpanel", count: 2 },
-  { tool: "Ahrefs / SEO Tools", count: 1 },
-  { tool: "BigQuery", count: 1 },
-  { tool: "Databricks", count: 1 },
+  { tool: "SQL", percentage: 17 },
+  { tool: "Snowflake", percentage: 17 },
+  { tool: "AI Tools (ChatGPT/Claude)", percentage: 17 },
+  { tool: "HubSpot", percentage: 11 },
+  { tool: "Salesforce", percentage: 11 },
+  { tool: "Google Analytics", percentage: 11 },
+  { tool: "Amplitude / Mixpanel", percentage: 11 },
+  { tool: "Ahrefs / SEO Tools", percentage: 6 },
+  { tool: "BigQuery", percentage: 6 },
+  { tool: "Databricks", percentage: 6 },
 ];
 
 const PRIMARY_COLOR = "hsl(280, 100%, 70%)";
