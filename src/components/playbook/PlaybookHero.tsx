@@ -351,7 +351,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               animate={{ opacity: 1 }}
               transition={{ delay: 0.55 }}
             >
-              What the job descriptions actually want — decoded for marketers who mean business.
+              In 2026, almost every marketing role in Web3 is asking for an institutional marketer. But nobody is actually telling you what that means or what it takes to do the job well. That's what this playbook is for.
             </motion.p>
 
             <motion.div
