@@ -336,7 +336,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               </motion.span>
             </Link>
             <motion.p
-              className="text-sm text-muted-foreground mb-10 font-medium"
+              className="text-xs text-muted-foreground mb-10 font-medium"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
