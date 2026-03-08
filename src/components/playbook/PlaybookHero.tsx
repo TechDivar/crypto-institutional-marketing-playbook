@@ -95,7 +95,7 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          By Ivy | <span className="gradient-text font-bold">Web3talez</span>
+          <span className="gradient-text font-bold">Web3talez</span>
         </motion.p>
 
         {/* CTAs */}
