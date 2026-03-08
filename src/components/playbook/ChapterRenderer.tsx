@@ -51,7 +51,7 @@ export const ChapterRenderer = ({ chapterId, onNavigate, totalChapters }: Chapte
   return (
     <div>
       {!isThankYou && <ChapterHeader chapterId={chapterId} />}
-      <Suspense fallback={<div className="min-h-[50vh] flex items-center justify-center"><div className="animate-pulse text-muted-foreground">Loading chapter...</div></div>}>
+      <Suspense fallback={<div className="min-h-[50vh]" />}>
         {ChapterContent && <ChapterContent />}
       </Suspense>
       {!isThankYou && (
