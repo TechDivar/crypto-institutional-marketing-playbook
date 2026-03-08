@@ -29,18 +29,17 @@ const backgroundsData = [
 ];
 
 const experienceData = [
-  { range: "2–4 years", count: 2 },
-  { range: "3–5 years", count: 2 },
-  { range: "5–6 years", count: 2 },
-  { range: "6–8 years", count: 2 },
-  { range: "10+ years", count: 2 },
-  { range: "Not specified", count: 3 },
+  { range: "2–4 years", percentage: 17 },
+  { range: "5–6 years", percentage: 28 },
+  { range: "7–8 years", percentage: 17 },
+  { range: "10+ years", percentage: 17 },
+  { range: "Not specified", percentage: 22 },
 ];
 
 const workModelData = [
-  { model: "Remote", count: 7 },
-  { model: "Office / On-site", count: 4 },
-  { model: "Hybrid", count: 2 },
+  { model: "Remote", percentage: 54 },
+  { model: "Office / On-site", percentage: 31 },
+  { model: "Hybrid", percentage: 15 },
 ];
 
 const toolsData = [
