@@ -346,7 +346,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
             </motion.h1>
 
             <motion.p
-              className="text-lg sm:text-xl text-muted-foreground mb-12 max-w-lg mx-auto"
+              className="text-lg sm:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.55 }}
