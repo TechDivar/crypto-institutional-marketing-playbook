@@ -21,15 +21,15 @@ const skillsData = [
   { skill: "Partnership Marketing", count: 4 },
 ];
 
+// Actual salary data from the job descriptions
 const compensationData = [
-  { company: "Chainlink", min: 154, max: 203 },
-  { company: "Fireblocks", min: 155, max: 185 },
-  { company: "Ondo Finance", min: 165, max: 200 },
-  { company: "Paxos", min: 170, max: 195 },
-  { company: "Figure", min: 150, max: 175 },
-  { company: "Blockstream", min: 140, max: 170 },
-  { company: "TaxBit", min: 145, max: 180 },
-  { company: "Allium", min: 130, max: 160 },
+  { role: "Benchling PMM", range: "$191K – $259K", min: 191, max: 259 },
+  { role: "TaxBit Principal PMM", range: "$180K – $210K", min: 180, max: 210 },
+  { role: "Mithrl PM Lead", range: "$150K – $200K", min: 150, max: 200 },
+  { role: "Tyba PMM", range: "$140K – $170K", min: 140, max: 170 },
+  { role: "Collectly PMM", range: "$120K – $170K", min: 120, max: 170 },
+  { role: "Trovata Sr Content", range: "$120K – $160K", min: 120, max: 160 },
+  { role: "Tatari PMM", range: "$110K – $150K", min: 110, max: 150 },
 ];
 
 const backgroundsData = [
@@ -40,7 +40,7 @@ const backgroundsData = [
   { background: "Enterprise Tech", percentage: 5 },
 ];
 
-const PRIMARY_COLOR = "hsl(280, 100%, 70%)"; // Bright purple that works on dark bg
+const PRIMARY_COLOR = "hsl(280, 100%, 70%)";
 
 export const SkillsDemandChart = () => (
   <div className="w-full">
@@ -48,16 +48,17 @@ export const SkillsDemandChart = () => (
     <p className="text-sm text-muted-foreground mb-6">Based on analysis of 18 institutional marketing job descriptions</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={skillsData} layout="vertical" margin={{ left: 20, right: 30 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+        <BarChart data={skillsData} layout="vertical" margin={{ left: 20, right: 50 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" horizontal={false} />
           <XAxis type="number" stroke="hsl(var(--muted-foreground))" fontSize={12} />
           <YAxis 
             dataKey="skill" 
             type="category" 
-            width={120} 
+            width={130} 
             stroke="hsl(var(--muted-foreground))" 
             fontSize={12}
             tickLine={false}
+            axisLine={false}
           />
           <Tooltip
             contentStyle={{
@@ -68,7 +69,16 @@ export const SkillsDemandChart = () => (
             }}
             formatter={(value: number) => [`${value} job listings`, "Frequency"]}
           />
-          <Bar dataKey="count" fill={PRIMARY_COLOR} radius={[0, 4, 4, 0]} />
+          <Bar 
+            dataKey="count" 
+            fill={PRIMARY_COLOR} 
+            radius={[0, 4, 4, 0]}
+            label={{ 
+              position: 'right', 
+              fill: 'hsl(var(--muted-foreground))', 
+              fontSize: 12 
+            }}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>
@@ -77,53 +87,31 @@ export const SkillsDemandChart = () => (
 
 export const CompensationChart = () => (
   <div className="w-full">
-    <h3 className="text-lg font-semibold text-foreground mb-4">Compensation Ranges by Company</h3>
-    <p className="text-sm text-muted-foreground mb-6">Annual base salary ranges in thousands (USD)</p>
-    <div className="h-[350px]">
-      <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={compensationData} margin={{ left: 10, right: 30, bottom: 60 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-          <XAxis 
-            dataKey="company" 
-            stroke="hsl(var(--muted-foreground))" 
-            fontSize={11}
-            angle={-45}
-            textAnchor="end"
-            interval={0}
-            height={80}
-          />
-          <YAxis 
-            stroke="hsl(var(--muted-foreground))" 
-            fontSize={12}
-            tickFormatter={(value) => `$${value}K`}
-            domain={[100, 220]}
-          />
-          <Tooltip
-            contentStyle={{
-              backgroundColor: "hsl(var(--card))",
-              border: "1px solid hsl(var(--border))",
-              borderRadius: "8px",
-              color: "hsl(var(--foreground))",
-            }}
-            formatter={(value: number, name: string) => [
-              `$${value}K`,
-              name === "min" ? "Minimum" : "Maximum",
-            ]}
-          />
-          <Bar dataKey="min" fill="hsl(280, 60%, 50%)" name="min" radius={[4, 4, 0, 0]} />
-          <Bar dataKey="max" fill={PRIMARY_COLOR} name="max" radius={[4, 4, 0, 0]} />
-        </BarChart>
-      </ResponsiveContainer>
+    <h3 className="text-lg font-semibold text-foreground mb-4">Compensation Ranges</h3>
+    <p className="text-sm text-muted-foreground mb-6">Annual base salaries from actual job postings (USD)</p>
+    <div className="space-y-3">
+      {compensationData.map((item) => (
+        <div key={item.role} className="flex items-center gap-4">
+          <div className="w-40 text-sm text-foreground/80 truncate">{item.role}</div>
+          <div className="flex-1 relative h-8">
+            <div 
+              className="absolute h-full rounded-md"
+              style={{
+                left: `${((item.min - 100) / 170) * 100}%`,
+                width: `${((item.max - item.min) / 170) * 100}%`,
+                backgroundColor: PRIMARY_COLOR,
+              }}
+            />
+          </div>
+          <div className="w-28 text-sm text-muted-foreground text-right">{item.range}</div>
+        </div>
+      ))}
     </div>
-    <div className="flex justify-center gap-6 mt-4 text-sm">
-      <div className="flex items-center gap-2">
-        <div className="w-3 h-3 rounded" style={{ backgroundColor: "hsl(280, 60%, 50%)" }} />
-        <span className="text-muted-foreground">Minimum</span>
-      </div>
-      <div className="flex items-center gap-2">
-        <div className="w-3 h-3 rounded" style={{ backgroundColor: PRIMARY_COLOR }} />
-        <span className="text-muted-foreground">Maximum</span>
-      </div>
+    <div className="flex justify-between mt-4 text-xs text-muted-foreground px-44">
+      <span>$100K</span>
+      <span>$150K</span>
+      <span>$200K</span>
+      <span>$250K</span>
     </div>
   </div>
 );
