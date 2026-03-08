@@ -1,5 +1,6 @@
 import { chapters } from "@/data/playbook-data";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/web3talez-logo.jpg";
 
 interface PlaybookSidebarProps {
   activeChapter: number | null;
@@ -18,9 +19,12 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
       )}
     >
       {/* Brand */}
-      <button onClick={onGoHome} className="p-6 border-b border-sidebar-border text-left hover:opacity-80 transition-opacity w-full">
-        <h2 className="font-display text-lg font-bold gradient-text">Web3talez</h2>
-        <p className="text-xs text-muted-foreground mt-1">Web3 marketing made simple 💜</p>
+      <button onClick={onGoHome} className="p-6 border-b border-sidebar-border text-left hover:opacity-80 transition-opacity w-full flex items-center gap-3">
+        <img src={logo} alt="Web3talez" className="w-10 h-10 rounded-full ring-2 ring-primary/30" />
+        <div>
+          <h2 className="font-display text-lg font-bold gradient-text">Web3talez</h2>
+          <p className="text-xs text-muted-foreground mt-0.5">Web3 marketing made simple 💜</p>
+        </div>
       </button>
 
       {/* Chapter list */}
@@ -55,7 +59,15 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
       </nav>
 
       {/* Footer */}
-      <div className="p-4 border-t border-sidebar-border">
+      <div className="p-4 border-t border-sidebar-border space-y-3">
+        <a
+          href="https://web3talez.substack.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full text-center px-4 py-2.5 bg-primary text-primary-foreground font-display font-semibold text-sm rounded-lg hover:brightness-110 transition-all"
+        >
+          Subscribe to Newsletter
+        </a>
         <p className="text-[10px] text-muted-foreground text-center">2026 Edition | By Ivy</p>
       </div>
     </aside>

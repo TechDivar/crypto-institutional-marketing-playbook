@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen } from "lucide-react";
+import logo from "@/assets/web3talez-logo.jpg";
 
 interface PlaybookHeroProps {
   onStart: () => void;
@@ -17,6 +18,15 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-center max-w-2xl relative z-10"
       >
+        <motion.img
+          src={logo}
+          alt="Web3talez"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1 }}
+          className="w-20 h-20 rounded-full ring-4 ring-primary/30 mx-auto mb-6"
+        />
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -50,6 +60,17 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
           Start Reading
           <ArrowRight className="w-5 h-5" />
         </motion.button>
+
+        <motion.a
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.98 }}
+          href="https://web3talez.substack.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-8 py-4 border border-border bg-card text-foreground font-display font-semibold rounded-xl hover:bg-accent transition-all mt-4"
+        >
+          Subscribe to Newsletter
+        </motion.a>
 
         <div className="mt-16 grid grid-cols-3 gap-8 text-center">
           {[
