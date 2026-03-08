@@ -91,32 +91,14 @@ export const SkillsDemandChart = () => (
 export const CompensationChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Estimated Compensation Ranges</h3>
-    <p className="text-sm text-muted-foreground mb-4">Based on role seniority and market data (USD, annual base)</p>
-    <div className="space-y-3">
+    <p className="text-sm text-muted-foreground mb-6">Based on role seniority and market data (USD, annual base)</p>
+    <div className="space-y-2">
       {compensationData.map((item) => (
-        <div key={item.role} className="space-y-1">
-          <div className="flex justify-between text-sm">
-            <span className="text-foreground">{item.role}</span>
-            <span className="text-primary font-medium">{item.range}</span>
-          </div>
-          <div className="h-3 bg-muted/30 rounded-full overflow-hidden">
-            <div 
-              className="h-full rounded-full"
-              style={{
-                marginLeft: `${((item.min - 80) / 180) * 100}%`,
-                width: `${((item.max - item.min) / 180) * 100}%`,
-                backgroundColor: PRIMARY_COLOR,
-              }}
-            />
-          </div>
+        <div key={item.role} className="flex justify-between py-2 border-b border-border/50 last:border-0">
+          <span className="text-foreground text-sm">{item.role}</span>
+          <span className="text-primary font-medium text-sm">{item.range}</span>
         </div>
       ))}
-      <div className="flex justify-between text-xs text-muted-foreground pt-2">
-        <span>$80K</span>
-        <span>$130K</span>
-        <span>$180K</span>
-        <span>$260K</span>
-      </div>
     </div>
   </div>
 );
