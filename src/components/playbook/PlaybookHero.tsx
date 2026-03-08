@@ -192,7 +192,6 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
             <p className="text-xs text-muted-foreground leading-relaxed">Almost every company on this list is hiring a "Product Marketing Manager." Community manager era is over.</p>
           </motion.div>
         </motion.div>
-        </motion.div>
       </motion.div>
     </div>
   );
