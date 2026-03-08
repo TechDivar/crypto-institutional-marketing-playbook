@@ -424,7 +424,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               transition={{ delay: 1.4 }}
             >
               {[
-                { value: "14", label: "Chapters" },
+                { value: "15", label: "Chapters" },
                 { value: "18", label: "Companies" },
                 { value: "5", label: "Personas" },
               ].map((stat) => (
