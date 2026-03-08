@@ -184,26 +184,26 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
             {[
               {
                 emoji: "📊",
-                title: "Product Marketing dominates",
-                desc: "The most common title is some version of \"Product Marketing Manager,\" signaling the industry's shift from community roles to structured GTM functions.",
+                title: "PMM is the new hot title",
+                desc: "Almost every company on this list is hiring a \"Product Marketing Manager.\" Community manager era is over.",
                 bg: "bg-lavender/10"
               },
               {
                 emoji: "🏛️",
-                title: "LayerZero's bold move",
-                desc: "Their \"Institutional Narrator\" title says it all: telling the story to banks is the product. That's rare and intentional.",
+                title: "\"Institutional Narrator\"",
+                desc: "LayerZero literally named a role after pitching banks. That's how serious narrative has become.",
                 bg: "bg-butter/15"
               },
               {
                 emoji: "🚀",
-                title: "Zero-to-one vs. scaling",
-                desc: "RWA.xyz's \"Founding Growth Lead\" is a first hire building from scratch, while Fireblocks and Chainlink are scaling established teams.",
+                title: "First hire vs. 10th hire",
+                desc: "RWA.xyz wants a founding growth lead. Fireblocks wants a senior PMM. Same industry, very different stages.",
                 bg: "bg-mint/10"
               },
               {
                 emoji: "⚡",
-                title: "Ondo's full-stack build",
-                desc: "Their cluster of Lead titles (Content, Events, Partner) shows how fast they're building an entire marketing function from zero.",
+                title: "Ondo is hiring everyone",
+                desc: "Content lead, events lead, partner lead. They're building an entire marketing org right now.",
                 bg: "bg-peach/10"
               },
             ].map((insight, i) => (
