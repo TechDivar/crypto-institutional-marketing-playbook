@@ -8,266 +8,159 @@ interface PlaybookHeroProps {
 }
 
 const companies = [
-  "Chainlink", "Allium", "TaxBit", "Trovata", "Notabene",
+  "Chainlink", "Allium", "TaxBit", "Trovada", "Notabene",
   "Ledger", "Dakota", "LayerZero", "Ondo Finance", "Fireblocks",
   "Keyrock", "Dune", "RWA.xyz", "Blockstream", "Twinstake",
   "Figure", "Robinhood", "Artemis"
 ];
 
-const stairs = [
-  { step: 0, emoji: "🚶", label: "" },
-  { step: 1, emoji: "🏃", label: "Community Manager" },
-  { step: 2, emoji: "📝", label: "Content Lead" },
-  { step: 3, emoji: "📊", label: "Growth Marketer" },
-  { step: 4, emoji: "🎯", label: "Product Marketing" },
-  { step: 5, emoji: "🏛️", label: "Institutional PMM" },
+const flipCards = [
+  { emoji: "🏢", big: "18", label: "Companies Analyzed" },
+  { emoji: "📖", big: "13", label: "Chapters Deep" },
+  { emoji: "🎭", big: "5", label: "Buyer Personas" },
+  { emoji: "🎯", big: "PMM", label: "The Role Everyone Wants" },
+  { emoji: "💜", big: "Ready?", label: "Let's go." },
 ];
 
-const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
-  const [currentStep, setCurrentStep] = useState(0);
+const CardFlipAnimation = ({ onComplete }: { onComplete: () => void }) => {
+  const [currentCard, setCurrentCard] = useState(0);
+  const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    let step = 0;
-    const interval = setInterval(() => {
-      step++;
-      if (step >= stairs.length) {
-        clearInterval(interval);
-        setTimeout(onComplete, 1400);
+    const timer = setInterval(() => {
+      if (currentCard < flipCards.length - 1) {
+        setCurrentCard((c) => c + 1);
       } else {
-        setCurrentStep(step);
+        clearInterval(timer);
+        setTimeout(() => {
+          setIsExiting(true);
+          setTimeout(onComplete, 700);
+        }, 1200);
       }
-    }, 650);
-    return () => clearInterval(interval);
-  }, [onComplete]);
+    }, 1100);
+    return () => clearInterval(timer);
+  }, [currentCard, onComplete]);
 
-  const isFinished = currentStep === stairs.length - 1;
+  const card = flipCards[currentCard];
 
   return (
     <motion.div
       className="fixed inset-0 z-50 bg-background flex flex-col items-center justify-center overflow-hidden px-6"
-      exit={{ opacity: 0, scale: 1.05 }}
+      animate={isExiting ? { opacity: 0, scale: 1.08 } : {}}
       transition={{ duration: 0.7, ease: "easeInOut" }}
     >
       {/* Ambient glow */}
       <motion.div
-        className="absolute w-[min(600px,90vw)] aspect-square rounded-full blur-[120px] sm:blur-[180px] pointer-events-none"
-        style={{ background: "radial-gradient(circle, hsl(260 80% 65% / 0.18), transparent 70%)" }}
-        animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.7, 0.3] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute w-[min(500px,85vw)] aspect-square rounded-full blur-[140px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.15), transparent 70%)" }}
+        animate={{ scale: [1, 1.25, 1], opacity: [0.3, 0.6, 0.3] }}
+        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Floating particles */}
-      {[...Array(8)].map((_, i) => (
-        <motion.div
-          key={`p-${i}`}
-          className="absolute rounded-full pointer-events-none"
-          style={{
-            width: 3 + Math.random() * 3,
-            height: 3 + Math.random() * 3,
-            background: `hsl(${260 + Math.random() * 60} 70% 65%)`,
-            left: `${15 + Math.random() * 70}%`,
-            top: `${15 + Math.random() * 70}%`,
-          }}
-          animate={{ y: [0, -20, 0], opacity: [0, 0.5, 0] }}
-          transition={{ duration: 2.5 + Math.random() * 2, repeat: Infinity, delay: Math.random() * 2, ease: "easeInOut" }}
-        />
-      ))}
-
-      {/* Title */}
+      {/* Subtitle */}
       <motion.p
-        className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6 sm:mb-8 font-bold"
-        initial={{ opacity: 0, y: -15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.4 }}
+        className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-8 font-bold"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
       >
-        Your career path
+        The Institutional Marketing Playbook
       </motion.p>
 
-      {/* Vertical step tower — fully responsive */}
-      <div className="flex flex-col-reverse items-center gap-2 sm:gap-3 relative">
-        {stairs.map((s, i) => {
-          const isActive = currentStep === i;
-          const isPast = currentStep > i;
-          const isReached = currentStep >= i;
-
-          return (
-            <motion.div
-              key={i}
-              className="relative flex items-center gap-3"
-              initial={{ opacity: 0, x: -30, scale: 0.9 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ delay: i * 0.08, duration: 0.4, type: "spring", stiffness: 200, damping: 18 }}
-            >
-              {/* Step number */}
-              {i > 0 && (
-                <motion.div
-                  className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-[10px] sm:text-xs font-black shrink-0 transition-all duration-300 ${
-                    isReached
-                      ? "bg-primary/25 text-foreground border border-primary/50"
-                      : "bg-card border border-border/30 text-muted-foreground/30"
-                  }`}
-                  animate={isActive ? { scale: [1, 1.2, 1] } : {}}
-                  transition={{ duration: 0.3 }}
-                >
-                  {i}
-                </motion.div>
-              )}
-
-              {/* Step block */}
-              <motion.div
-                className={`w-[180px] sm:w-[220px] h-[44px] sm:h-[50px] rounded-xl flex items-center justify-center text-xs sm:text-sm font-bold transition-all duration-400 ${
-                  isReached
-                    ? "border text-foreground"
-                    : "bg-card/40 border border-border/40 text-muted-foreground/40"
-                }`}
-                style={isReached ? {
-                  background: `linear-gradient(135deg, hsl(260 80% 65% / ${isActive ? 0.2 : 0.1}), hsl(330 80% 60% / ${isActive ? 0.1 : 0.04}))`,
-                  borderColor: `hsl(260 80% 65% / ${isActive ? 0.8 : 0.3})`,
-                  boxShadow: isActive
-                    ? "0 0 25px hsl(260 80% 65% / 0.3), 0 0 50px hsl(260 80% 65% / 0.1)"
-                    : isPast
-                    ? "0 0 10px hsl(260 80% 65% / 0.08)"
-                    : "none",
-                } : {}}
-                animate={isActive ? { scale: [1, 1.06, 1.02] } : {}}
-                transition={{ duration: 0.35, ease: "easeOut" }}
-              >
-                {s.label ? (
-                  <span className="truncate px-3">{s.label}</span>
-                ) : (
-                  <span className="text-muted-foreground/30 text-xs">Start</span>
-                )}
-              </motion.div>
-
-              {/* Active emoji */}
-              {isActive && (
-                <motion.span
-                  className="text-2xl sm:text-3xl shrink-0"
-                  style={{
-                    filter: "drop-shadow(0 0 12px hsl(260 80% 65% / 0.5))",
-                  }}
-                  initial={{ opacity: 0, scale: 0, rotate: -15 }}
-                  animate={{ opacity: 1, scale: 1, rotate: 0, y: [0, -4, 0] }}
-                  transition={{
-                    opacity: { duration: 0.15 },
-                    scale: { type: "spring", stiffness: 400, damping: 12 },
-                    y: { duration: 0.8, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
-                  }}
-                  key={`emoji-${i}`}
-                >
-                  {s.emoji}
-                </motion.span>
-              )}
-
-              {/* Glow line between steps */}
-              {isPast && i < stairs.length - 1 && (
-                <motion.div
-                  className="absolute -top-2 sm:-top-3 left-[14px] sm:left-[16px] w-[2px] h-2 sm:h-3 rounded-full"
-                  style={{ background: "linear-gradient(to top, hsl(260 80% 65% / 0.4), transparent)" }}
-                  initial={{ scaleY: 0 }}
-                  animate={{ scaleY: 1 }}
-                  transition={{ duration: 0.2 }}
-                />
-              )}
-            </motion.div>
-          );
-        })}
-
-        {/* Celebration at top */}
-        {isFinished && (
-          <>
-            {/* Ring burst */}
-            <motion.div
-              className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full border-2"
-              style={{ borderColor: "hsl(260 80% 65% / 0.6)" }}
-              initial={{ scale: 0, opacity: 1 }}
-              animate={{ scale: 5, opacity: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            />
-
-            {/* Confetti */}
-            {[...Array(12)].map((_, i) => {
-              const angle = (i / 12) * Math.PI * 2;
-              const dist = 50 + Math.random() * 60;
-              return (
-                <motion.div
-                  key={`c-${i}`}
-                  className="absolute rounded-full"
-                  style={{
-                    width: 4 + Math.random() * 6,
-                    height: 4 + Math.random() * 6,
-                    top: 0,
-                    left: "50%",
-                    background: `hsl(${200 + i * 25} 80% ${55 + Math.random() * 15}%)`,
-                  }}
-                  initial={{ opacity: 1, scale: 0 }}
-                  animate={{
-                    opacity: [1, 1, 0],
-                    scale: [0, 1.2, 0.4],
-                    x: Math.cos(angle) * dist,
-                    y: Math.sin(angle) * dist,
-                    rotate: Math.random() * 540,
-                  }}
-                  transition={{ duration: 0.8, delay: i * 0.02, ease: "easeOut" }}
-                />
-              );
-            })}
-
-            {/* Crown */}
+      {/* Flip Card */}
+      <div className="relative w-[260px] sm:w-[300px] h-[320px] sm:h-[360px] perspective-[1000px]">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentCard}
+            className="absolute inset-0 rounded-2xl border border-border/50 flex flex-col items-center justify-center gap-4 p-8"
+            style={{
+              background: "linear-gradient(145deg, hsl(var(--card)), hsl(var(--card) / 0.6))",
+              boxShadow: "0 20px 60px -15px hsl(var(--primary) / 0.15), 0 0 40px hsl(var(--primary) / 0.05)",
+            }}
+            initial={{ rotateY: 90, opacity: 0, scale: 0.85 }}
+            animate={{ rotateY: 0, opacity: 1, scale: 1 }}
+            exit={{ rotateY: -90, opacity: 0, scale: 0.85 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {/* Emoji */}
             <motion.span
-              className="absolute -top-10 left-1/2 -translate-x-1/2 text-2xl sm:text-3xl"
-              initial={{ opacity: 0, y: 15, scale: 0 }}
-              animate={{ opacity: 1, y: 0, scale: [0, 1.3, 1] }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 300 }}
+              className="text-5xl sm:text-6xl"
+              initial={{ scale: 0 }}
+              animate={{ scale: [0, 1.2, 1] }}
+              transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
             >
-              👑
+              {card.emoji}
             </motion.span>
-          </>
-        )}
+
+            {/* Big number/text */}
+            <motion.p
+              className="text-5xl sm:text-6xl font-black text-foreground tracking-tight"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.35 }}
+            >
+              {card.big}
+            </motion.p>
+
+            {/* Label */}
+            <motion.p
+              className="text-sm sm:text-base text-muted-foreground font-semibold text-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.45 }}
+            >
+              {card.label}
+            </motion.p>
+
+            {/* Corner accent */}
+            <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-primary/40" />
+            <div className="absolute bottom-3 left-3 w-2 h-2 rounded-full bg-primary/20" />
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      {/* Progress bar */}
-      <div className="w-36 sm:w-48 h-1 bg-border/30 rounded-full mt-8 sm:mt-10 overflow-hidden">
-        <motion.div
-          className="h-full rounded-full"
-          style={{ background: "linear-gradient(90deg, hsl(260 80% 65%), hsl(330 80% 60%))" }}
-          initial={{ width: "0%" }}
-          animate={{ width: `${(currentStep / (stairs.length - 1)) * 100}%` }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-        />
+      {/* Progress dots */}
+      <div className="flex gap-2 mt-8">
+        {flipCards.map((_, i) => (
+          <motion.div
+            key={i}
+            className="w-2 h-2 rounded-full transition-all duration-300"
+            style={{
+              background: i <= currentCard
+                ? "hsl(var(--primary))"
+                : "hsl(var(--border))",
+            }}
+            animate={i === currentCard ? { scale: [1, 1.4, 1] } : {}}
+            transition={{ duration: 0.3 }}
+          />
+        ))}
       </div>
 
       {/* Status text */}
-      <div className="mt-4 sm:mt-5 h-6">
+      <div className="mt-5 h-6">
         <AnimatePresence mode="wait">
           <motion.p
-            key={currentStep}
-            className="text-sm text-muted-foreground font-semibold text-center"
-            initial={{ opacity: 0, y: 8 }}
+            key={currentCard}
+            className="text-xs text-muted-foreground/60 font-medium"
+            initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
+            exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.2 }}
           >
-            {currentStep === 0 && "Starting the grind..."}
-            {currentStep === 1 && "Building the community 🔥"}
-            {currentStep === 2 && "Sharpening the pen ✍️"}
-            {currentStep === 3 && "Numbers don't lie 📈"}
-            {currentStep === 4 && "Almost there..."}
-            {currentStep === stairs.length - 1 && "You made it 💜"}
+            {currentCard + 1} / {flipCards.length}
           </motion.p>
         </AnimatePresence>
       </div>
     </motion.div>
   );
 };
-
 export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
   const [showIntro, setShowIntro] = useState(true);
 
   return (
     <>
       <AnimatePresence>
-        {showIntro && <StairAnimation onComplete={() => setShowIntro(false)} />}
+        {showIntro && <CardFlipAnimation onComplete={() => setShowIntro(false)} />}
       </AnimatePresence>
 
       {!showIntro && <div className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
