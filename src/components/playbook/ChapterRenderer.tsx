@@ -15,6 +15,7 @@ import { Chapter10 } from "./chapters/Chapter10";
 import { Chapter11 } from "./chapters/Chapter11";
 import { Chapter12 } from "./chapters/Chapter12";
 import { Chapter13 } from "./chapters/Chapter13";
+import { ChapterThankYou } from "./chapters/ChapterThankYou";
 
 interface ChapterRendererProps {
   chapterId: number;
@@ -38,6 +39,7 @@ const chapterComponents: Record<number, React.FC> = {
   13: Chapter11,
   14: Chapter12,
   15: Chapter13,
+  16: ChapterThankYou,
 };
 
 export const ChapterRenderer = ({ chapterId, onNavigate, totalChapters }: ChapterRendererProps) => {
