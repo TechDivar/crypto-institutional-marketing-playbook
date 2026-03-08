@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import logo from "@/assets/web3talez-logo.jpg";
+import { ChapterCarousel } from "./ChapterCarousel";
 
 interface PlaybookHeroProps {
   onStart: () => void;
+  onSelectChapter: (id: number) => void;
 }
 
 const companies = [
