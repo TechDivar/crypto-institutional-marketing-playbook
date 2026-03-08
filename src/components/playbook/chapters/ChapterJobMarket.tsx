@@ -16,7 +16,7 @@ export const ChapterJobMarket = () => (
     </SectionBlock>
 
     <SectionBlock title="Key Takeaways">
-      <Callout emoji="💡">
+      <Callout variant="tip">
         <strong>GTM Strategy</strong> and <strong>Content Marketing</strong> are the most demanded skills. 
         B2B SaaS background is preferred over crypto-native experience. Salaries range from $130K to $203K 
         depending on company and seniority.
