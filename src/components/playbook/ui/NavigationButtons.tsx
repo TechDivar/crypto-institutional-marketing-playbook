@@ -10,6 +10,7 @@ interface NavigationButtonsProps {
 export const NavigationButtons = ({ chapterId, onNavigate, totalChapters }: NavigationButtonsProps) => {
   const prevChapter = chapterId > 1 ? chapters.find((c) => c.id === chapterId - 1) : null;
   const nextChapter = chapterId < totalChapters ? chapters.find((c) => c.id === chapterId + 1) : null;
+  const isLastChapter = chapterId === totalChapters;
 
   return (
     <div className="flex items-center justify-between mt-16 pt-8 border-t border-border">
