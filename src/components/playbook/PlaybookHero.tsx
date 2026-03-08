@@ -48,7 +48,7 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
           initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ delay: 0.15, type: "spring", stiffness: 200, damping: 12 }}
-          className="inline-block mb-8"
+          className="mb-8"
         >
           <img
             src={logo}
