@@ -17,16 +17,16 @@ export const QuizSection = ({ title, questions }: QuizSectionProps) => {
 
   return (
     <div className="my-6">
-      <h3 className="font-display text-lg text-foreground mb-4">{title}</h3>
-      <div className="space-y-2">
+      <h3 className="font-display font-bold text-lg text-foreground mb-4">{title}</h3>
+      <div className="space-y-2.5">
         {questions.map((q, i) => (
           <div key={i} className="clay-card overflow-hidden">
             <button
               onClick={() => setExpandedIndex(expandedIndex === i ? null : i)}
-              className="w-full text-left px-5 py-4 flex items-start justify-between gap-3 hover:bg-accent/30 transition-colors"
+              className="w-full text-left px-5 py-4 flex items-start justify-between gap-3 hover:bg-butter/8 transition-colors"
             >
-              <span className="text-sm text-foreground/90 leading-relaxed font-body">
-                <span className="text-primary font-semibold mr-2">{i + 1}.</span>
+              <span className="text-sm text-foreground/85 leading-relaxed">
+                <span className="inline-flex w-6 h-6 rounded-lg bg-lavender/15 items-center justify-center text-xs font-bold text-primary mr-2 align-middle">{i + 1}</span>
                 {q.question}
               </span>
               {q.hint && (
@@ -36,7 +36,7 @@ export const QuizSection = ({ title, questions }: QuizSectionProps) => {
               )}
             </button>
             {q.hint && expandedIndex === i && (
-              <div className={cn("px-5 pb-4 text-xs text-muted-foreground leading-relaxed border-t border-border/50 pt-3 mx-4 mb-2 font-body")}>
+              <div className={cn("px-5 pb-4 text-xs text-muted-foreground leading-relaxed border-t border-border/50 pt-3 mx-4 mb-2")}>
                 💡 {q.hint}
               </div>
             )}
