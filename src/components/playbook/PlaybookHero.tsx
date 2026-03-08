@@ -434,6 +434,20 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
                 </div>
               ))}
             </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.6 }}
+              className="mt-10"
+            >
+              <Link
+                to="/about"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
+              >
+                About Web3talez →
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       )}
