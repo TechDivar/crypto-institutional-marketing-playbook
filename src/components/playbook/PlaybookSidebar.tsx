@@ -8,7 +8,7 @@ interface PlaybookSidebarProps {
   isOpen: boolean;
 }
 
-export const PlaybookSidebar = ({ activeChapter, onSelectChapter, isOpen }: PlaybookSidebarProps) => {
+export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOpen }: PlaybookSidebarProps) => {
   return (
     <aside
       className={cn(
