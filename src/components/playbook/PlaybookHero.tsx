@@ -384,16 +384,6 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
                 <ArrowRight className="w-4 h-4" />
               </motion.button>
 
-              <motion.a
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.97 }}
-                href="https://web3talez.substack.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="pill-btn border border-border text-foreground hover:bg-card"
-              >
-                Subscribe to Web3talez
-              </motion.a>
             </motion.div>
 
             <motion.div
