@@ -191,20 +191,7 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
             <p className="text-sm font-bold text-foreground mb-1">PMM is the new hot title</p>
             <p className="text-xs text-muted-foreground leading-relaxed">Almost every company on this list is hiring a "Product Marketing Manager." Community manager era is over.</p>
           </motion.div>
-              <motion.div
-                key={insight.title}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.4 + i * 0.1 }}
-                whileHover={{ y: -2 }}
-                className={`clay-card p-4 ${insight.bg}`}
-              >
-                <p className="text-lg mb-1">{insight.emoji}</p>
-                <p className="text-sm font-bold text-foreground mb-1">{insight.title}</p>
-                <p className="text-xs text-muted-foreground leading-relaxed">{insight.desc}</p>
-              </motion.div>
-            ))}
-          </div>
+        </motion.div>
         </motion.div>
       </motion.div>
     </div>
