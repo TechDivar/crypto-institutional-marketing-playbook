@@ -9,7 +9,7 @@ export const Chapter09 = () => (
 
     <SectionBlock title="Phase 1: Positioning (6-8 Weeks Before Launch)">
       <BulletList ordered items={[
-        "Define the launch tier. Not every release is a Tier 1 launch. Tier 1: full campaign. Tier 2: blog post and email. Tier 3: release notes.",
+        "Define the phase. Not every release deserves the same energy. Before you build anything, decide how big this launch actually is. A full campaign with press, events, and sales activation. A blog post and an email to your list. Or just release notes for people already using the product. Pick the level first. Everything else follows from that decision.",
         "Write the positioning statement. One sentence: who is it for, what does it do, and why does it matter more than the alternative?",
         "Map buyer objections. For each persona, what is their primary fear and what is the one piece of evidence that moves them?",
         "Identify reference clients. If you have existing clients who match the target buyer, brief them now.",
