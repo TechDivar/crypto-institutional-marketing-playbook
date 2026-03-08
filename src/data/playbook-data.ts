@@ -13,7 +13,7 @@ export const chapters: Chapter[] = [
   { id: 6, title: "Founder Content Is Your Cheapest Trust Signal", subtitle: "The compliance officer googles your CEO before the deal is approved." },
   { id: 7, title: "The Sales Cycle", subtitle: "Stage by stage, month by month." },
   { id: 8, title: "Common Mistakes", subtitle: "Consumer crypto logic vs. institutional reality." },
-  { id: 9, title: "Messaging Rules", subtitle: "Landing in a boardroom, not the trash." },
+  { id: 9, title: "Messaging Rules", subtitle: "How to land in a boardroom and not get ghosted." },
   { id: 10, title: "The Launch Playbook", subtitle: "From positioning to post-launch." },
   { id: 11, title: "Metrics and KPIs", subtitle: "What actually matters and what does not." },
   { id: 12, title: "How to Get One of These Jobs", subtitle: "What the JDs actually want." },
