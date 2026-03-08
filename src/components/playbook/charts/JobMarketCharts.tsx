@@ -228,12 +228,12 @@ export const WorkModelChart = () => (
 export const ToolsPlatformsChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Most Mentioned Tools & Platforms</h3>
-    <p className="text-sm text-muted-foreground mb-6">Tools and platforms mentioned across job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Percentage of 18 job descriptions mentioning each tool</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={toolsData} layout="vertical" margin={{ left: 20, right: 50 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" horizontal={false} />
-          <XAxis type="number" stroke="hsl(var(--muted-foreground))" fontSize={12} />
+          <XAxis type="number" stroke="hsl(var(--muted-foreground))" fontSize={12} tickFormatter={(value) => `${value}%`} />
           <YAxis
             dataKey="tool" type="category" width={170}
             stroke="hsl(var(--muted-foreground))" fontSize={12}
@@ -246,10 +246,10 @@ export const ToolsPlatformsChart = () => (
               borderRadius: "8px",
               color: "hsl(var(--foreground))",
             }}
-            formatter={(value: number) => [`${value} mentions`, "Frequency"]}
+            formatter={(value: number) => [`${value}%`, "Percentage"]}
           />
-          <Bar dataKey="count" fill={PRIMARY_COLOR} radius={[0, 4, 4, 0]}
-            label={{ position: 'right', fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}
+          <Bar dataKey="percentage" fill={PRIMARY_COLOR} radius={[0, 4, 4, 0]}
+            label={{ position: 'right', fill: 'hsl(var(--muted-foreground))', fontSize: 12, formatter: (value: number) => `${value}%` }}
           />
         </BarChart>
       </ResponsiveContainer>
