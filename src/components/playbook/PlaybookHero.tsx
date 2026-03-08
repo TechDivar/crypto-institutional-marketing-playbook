@@ -263,14 +263,14 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
         <div className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
           {/* Floating background shapes */}
           {[
-            { size: "w-16 h-16", top: "10%", left: "8%", delay: 0, dur: 18, shape: "rounded-xl rotate-45", color: "bg-primary/10" },
-            { size: "w-10 h-10", top: "20%", left: "85%", delay: 2, dur: 14, shape: "rounded-full", color: "bg-accent/15" },
-            { size: "w-20 h-20", top: "65%", left: "5%", delay: 1, dur: 20, shape: "rounded-full", color: "bg-primary/8" },
-            { size: "w-12 h-12", top: "75%", left: "90%", delay: 3, dur: 16, shape: "rounded-xl rotate-12", color: "bg-accent/10" },
-            { size: "w-8 h-8", top: "40%", left: "92%", delay: 4, dur: 12, shape: "rounded-lg rotate-45", color: "bg-primary/12" },
-            { size: "w-14 h-14", top: "85%", left: "45%", delay: 1.5, dur: 22, shape: "rounded-full", color: "bg-primary/6" },
-            { size: "w-6 h-6", top: "15%", left: "55%", delay: 5, dur: 10, shape: "rounded-md rotate-45", color: "bg-accent/12" },
-            { size: "w-24 h-24", top: "50%", left: "15%", delay: 0.5, dur: 25, shape: "rounded-full", color: "bg-primary/5" },
+            { size: "w-16 h-16", top: "10%", left: "8%", delay: 0, dur: 18, shape: "rounded-xl rotate-45", color: "bg-primary/30" },
+            { size: "w-10 h-10", top: "20%", left: "85%", delay: 2, dur: 14, shape: "rounded-full", color: "bg-accent/35" },
+            { size: "w-20 h-20", top: "65%", left: "5%", delay: 1, dur: 20, shape: "rounded-full", color: "bg-primary/25" },
+            { size: "w-12 h-12", top: "75%", left: "90%", delay: 3, dur: 16, shape: "rounded-xl rotate-12", color: "bg-accent/30" },
+            { size: "w-8 h-8", top: "40%", left: "92%", delay: 4, dur: 12, shape: "rounded-lg rotate-45", color: "bg-primary/35" },
+            { size: "w-14 h-14", top: "85%", left: "45%", delay: 1.5, dur: 22, shape: "rounded-full", color: "bg-primary/20" },
+            { size: "w-6 h-6", top: "15%", left: "55%", delay: 5, dur: 10, shape: "rounded-md rotate-45", color: "bg-accent/30" },
+            { size: "w-24 h-24", top: "50%", left: "15%", delay: 0.5, dur: 25, shape: "rounded-full", color: "bg-primary/20" },
           ].map((item, i) => (
             <motion.div
               key={i}
