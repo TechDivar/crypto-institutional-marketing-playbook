@@ -149,6 +149,79 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Companies section */}
+        <motion.div
+          className="mt-20 max-w-2xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.1 }}
+        >
+          <p className="text-xs uppercase tracking-widest text-muted-foreground font-bold mb-6">
+            Real roles analyzed from 18 companies
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {[
+              "Chainlink", "Allium", "TaxBit", "Trovata", "Notabene",
+              "Ledger", "Dakota", "LayerZero", "Ondo Finance", "Fireblocks",
+              "Keyrock", "Dune", "RWA.xyz", "Blockstream", "Twinstake",
+              "Figure", "Robinhood", "Artemis"
+            ].map((company, i) => (
+              <motion.span
+                key={company}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.2 + i * 0.03 }}
+                className="px-3 py-1.5 rounded-full text-xs font-semibold bg-card border border-border text-foreground/70 soft-shadow"
+              >
+                {company}
+              </motion.span>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
+            {[
+              {
+                emoji: "📊",
+                title: "Product Marketing dominates",
+                desc: "The most common title is some version of \"Product Marketing Manager,\" signaling the industry's shift from community roles to structured GTM functions.",
+                bg: "bg-lavender/10"
+              },
+              {
+                emoji: "🏛️",
+                title: "LayerZero's bold move",
+                desc: "Their \"Institutional Narrator\" title says it all: telling the story to banks is the product. That's rare and intentional.",
+                bg: "bg-butter/15"
+              },
+              {
+                emoji: "🚀",
+                title: "Zero-to-one vs. scaling",
+                desc: "RWA.xyz's \"Founding Growth Lead\" is a first hire building from scratch, while Fireblocks and Chainlink are scaling established teams.",
+                bg: "bg-mint/10"
+              },
+              {
+                emoji: "⚡",
+                title: "Ondo's full-stack build",
+                desc: "Their cluster of Lead titles (Content, Events, Partner) shows how fast they're building an entire marketing function from zero.",
+                bg: "bg-peach/10"
+              },
+            ].map((insight, i) => (
+              <motion.div
+                key={insight.title}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.4 + i * 0.1 }}
+                whileHover={{ y: -2 }}
+                className={`clay-card p-4 ${insight.bg}`}
+              >
+                <p className="text-lg mb-1">{insight.emoji}</p>
+                <p className="text-sm font-bold text-foreground mb-1">{insight.title}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">{insight.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   );
