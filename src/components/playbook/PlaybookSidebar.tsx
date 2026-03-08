@@ -76,7 +76,7 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
           rel="noopener noreferrer"
           className="block w-full text-center pill-btn bg-primary text-primary-foreground hover:bg-primary/90"
         >
-          Subscribe ✨
+          Free Web3 marketing tips, twice a month 💜
         </a>
         <p className="text-[10px] text-muted-foreground text-center">2026 Edition</p>
       </div>
