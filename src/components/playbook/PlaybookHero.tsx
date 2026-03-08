@@ -427,7 +427,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               whileHover={{ y: -2 }}
               className="clay-card p-5 text-left max-w-sm mx-auto"
             >
-              <p className="text-sm font-bold text-foreground mb-1">📊 PMM is the new hot title</p>
+              <p className="text-sm font-bold text-foreground mb-1">Product Marketing Manager is the new hot title</p>
               <p className="text-xs text-muted-foreground leading-relaxed">Almost every company on this list is hiring a "Product Marketing Manager." Community manager era is over.</p>
             </motion.div>
 
