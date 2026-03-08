@@ -6,7 +6,7 @@ import { BulletList } from "../ui/BulletList";
 export const Chapter10 = () => (
   <>
     <SectionBlock>
-      <p>In institutional marketing, volume means almost nothing. One right person reading the right piece of content at the right moment in a 12-month sales cycle is worth more than ten thousand impressions from the wrong audience.</p>
+      <p>In institutional marketing, who engages matters far more than how many. One right person reading the right piece of content at the right moment in a 12-month sales cycle is worth more than ten thousand impressions from the wrong audience.</p>
     </SectionBlock>
 
     <SectionBlock title="Bucket 1: Pipeline Impact">
