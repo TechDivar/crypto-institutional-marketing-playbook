@@ -1,4 +1,5 @@
 import { SectionBlock } from "../ui/SectionBlock";
+import { ComparisonTable } from "../ui/ComparisonTable";
 
 export const Chapter09 = () => (
   <>
@@ -38,6 +39,20 @@ export const Chapter09 = () => (
       <p>Publish follow-on research 30 to 60 days after launch to keep the conversation alive. One strong research piece outlasts ten launch-week posts.</p>
       <p>Collect the first client testimonial as fast as possible. The fastest proof the product works is a customer who will say so publicly.</p>
       <p>Measure pipeline contribution. The launch worked if it generated qualified pipeline within 90 days. Not impressions. Not downloads. Pipeline.</p>
+    </SectionBlock>
+
+    <SectionBlock title="At a Glance">
+      <p>Every phase reduced to the one decision that matters most.</p>
+      <ComparisonTable
+        headers={["Phase", "Timing", "The One Thing"]}
+        rows={[
+          ["Positioning", "6 to 8 weeks before", "Decide how big this launch is before you build anything"],
+          ["Asset Creation", "4 to 6 weeks before", "Build the toolkit: deck, one-pager, case study, FAQ"],
+          ["Internal Alignment", "2 to 3 weeks before", "Sales and execs must know the message before launch day"],
+          ["Launch Week", "Day of launch", "Lead with the client story, not the feature"],
+          ["Post-Launch", "Months 1 to 6", "Measure pipeline, not impressions"],
+        ]}
+      />
     </SectionBlock>
   </>
 );
