@@ -169,7 +169,7 @@ export const BackgroundsChart = () => (
 export const ExperienceLevelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Experience Level Required</h3>
-    <p className="text-sm text-muted-foreground mb-6">Years of experience required across 18 job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Years of experience required across 13 job descriptions</p>
     <div className="h-[280px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={experienceData} margin={{ left: 10, right: 30 }}>
