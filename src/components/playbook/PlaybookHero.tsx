@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import logo from "@/assets/web3talez-logo.jpg";
-
+import hero3d from "@/assets/hero-3d.png";
 
 interface PlaybookHeroProps {
   onStart: () => void;
@@ -295,6 +295,15 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
             >
               Web3 marketing made simple 💜
             </motion.p>
+
+            <motion.img
+              src={hero3d}
+              alt="Institutional marketing cube"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4, type: "spring", stiffness: 100, damping: 16 }}
+              className="w-44 h-44 sm:w-52 sm:h-52 mx-auto mb-10 object-contain drop-shadow-[0_20px_40px_hsl(var(--primary)/0.25)]"
+            />
 
             <motion.h1
               className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-6 tracking-tight"
