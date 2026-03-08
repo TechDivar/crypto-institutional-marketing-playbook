@@ -90,9 +90,9 @@ export const SkillsDemandChart = () => (
 
 export const CompensationChart = () => (
   <div className="w-full">
-    <h3 className="text-lg font-semibold text-foreground mb-4">Compensation Ranges</h3>
-    <p className="text-sm text-muted-foreground mb-4">Crypto/institutional roles with published salary ranges (USD)</p>
-    <div className="space-y-4">
+    <h3 className="text-lg font-semibold text-foreground mb-4">Estimated Compensation Ranges</h3>
+    <p className="text-sm text-muted-foreground mb-4">Based on role seniority and market data (USD, annual base)</p>
+    <div className="space-y-3">
       {compensationData.map((item) => (
         <div key={item.role} className="space-y-1">
           <div className="flex justify-between text-sm">
@@ -103,8 +103,8 @@ export const CompensationChart = () => (
             <div 
               className="h-full rounded-full"
               style={{
-                marginLeft: `${((item.min - 100) / 120) * 100}%`,
-                width: `${((item.max - item.min) / 120) * 100}%`,
+                marginLeft: `${((item.min - 80) / 180) * 100}%`,
+                width: `${((item.max - item.min) / 180) * 100}%`,
                 backgroundColor: PRIMARY_COLOR,
               }}
             />
@@ -112,15 +112,12 @@ export const CompensationChart = () => (
         </div>
       ))}
       <div className="flex justify-between text-xs text-muted-foreground pt-2">
-        <span>$100K</span>
-        <span>$150K</span>
-        <span>$200K</span>
-        <span>$220K</span>
+        <span>$80K</span>
+        <span>$130K</span>
+        <span>$180K</span>
+        <span>$260K</span>
       </div>
     </div>
-    <p className="text-xs text-muted-foreground mt-6 italic">
-      Note: Most institutional crypto roles (Chainlink, Fireblocks, Ondo, Ledger, Allium, Artemis, LayerZero, Dakota, Dune) list "competitive salary" without publishing specific ranges.
-    </p>
   </div>
 );
 
