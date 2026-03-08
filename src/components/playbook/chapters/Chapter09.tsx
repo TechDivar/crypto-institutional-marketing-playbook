@@ -1,4 +1,5 @@
 import { SectionBlock } from "../ui/SectionBlock";
+import { ComparisonTable } from "../ui/ComparisonTable";
 
 export const Chapter09 = () => (
   <>
