@@ -20,7 +20,7 @@ export const DosDontsCard = ({ wrong, right }: DosDontsCardProps) => {
           <Check className="w-4 h-4 text-success" />
           <span className="text-xs font-bold uppercase tracking-wider text-success">Right</span>
         </div>
-        <p className="text-sm text-foreground/75">{right}</p>
+        <p className="text-sm text-foreground/85">{right}</p>
       </div>
     </div>
   );
