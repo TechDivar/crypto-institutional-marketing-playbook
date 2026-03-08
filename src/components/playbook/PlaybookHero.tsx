@@ -168,11 +168,16 @@ const TypewriterAnimation = ({ onComplete }: { onComplete: () => void }) => {
         </div>
       </motion.div>
     </motion.div>
-  );
+};
+
+export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
     <>
       <AnimatePresence>
-        {showIntro && <CardFlipAnimation onComplete={() => setShowIntro(false)} />}
+        {showIntro && <TypewriterAnimation onComplete={() => setShowIntro(false)} />}
+      </AnimatePresence>
       </AnimatePresence>
 
       {!showIntro && <div className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
