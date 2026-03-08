@@ -323,10 +323,18 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               className="w-14 h-14 rounded-full mx-auto mb-3"
             />
             <motion.p
-              className="text-sm text-muted-foreground mb-10 font-medium"
+              className="text-sm text-muted-foreground mb-2 font-bold"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.35 }}
+            >
+              Web3talez
+            </motion.p>
+            <motion.p
+              className="text-sm text-muted-foreground mb-10 font-medium"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
             >
               Web3 marketing made simple 💜
             </motion.p>
