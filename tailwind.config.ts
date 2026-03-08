@@ -58,10 +58,6 @@ export default {
         "callout-border": "hsl(var(--callout-border))",
         success: "hsl(var(--success))",
         warning: "hsl(var(--warning))",
-        butter: "hsl(var(--butter))",
-        peach: "hsl(var(--peach))",
-        mint: "hsl(var(--mint))",
-        lavender: "hsl(var(--lavender))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -77,8 +73,6 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 4px)",
         sm: "calc(var(--radius) - 8px)",
-        "2xl": "1.5rem",
-        "3xl": "2rem",
       },
       keyframes: {
         "accordion-down": {
@@ -94,16 +88,8 @@ export default {
           to: { opacity: "1", transform: "translateY(0)" },
         },
         "float": {
-          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
-          "50%": { transform: "translateY(-12px) rotate(3deg)" },
-        },
-        "float-reverse": {
-          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
-          "50%": { transform: "translateY(-10px) rotate(-3deg)" },
-        },
-        "wiggle": {
-          "0%, 100%": { transform: "rotate(-2deg)" },
-          "50%": { transform: "rotate(2deg)" },
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
         },
         "blob": {
           "0%, 100%": { borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" },
@@ -117,8 +103,6 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
         "float": "float 4s ease-in-out infinite",
-        "float-reverse": "float-reverse 5s ease-in-out infinite",
-        "wiggle": "wiggle 2s ease-in-out infinite",
         "blob": "blob 8s ease-in-out infinite",
       },
     },

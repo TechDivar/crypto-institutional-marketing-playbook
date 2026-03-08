@@ -6,56 +6,52 @@
 
 @layer base {
   :root {
-    --background: 45 50% 97%;
-    --foreground: 250 30% 14%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 250 30% 14%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 250 30% 14%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 270 55% 52%;
+    --primary: 260 80% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 60% 94%;
-    --secondary-foreground: 250 30% 18%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 80%;
 
-    --muted: 45 30% 93%;
-    --muted-foreground: 250 10% 42%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 50%;
 
-    --accent: 45 80% 65%;
-    --accent-foreground: 250 30% 14%;
+    --accent: 260 70% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 45 20% 88%;
-    --input: 45 20% 88%;
-    --ring: 270 55% 52%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 260 80% 65%;
 
-    --radius: 1.25rem;
+    --radius: 1rem;
 
-    --glow: 270 55% 52%;
-    --surface: 45 35% 96%;
-    --surface-hover: 45 30% 93%;
-    --callout: 270 40% 96%;
-    --callout-border: 270 45% 72%;
-    --success: 155 55% 38%;
-    --warning: 35 90% 50%;
-    --butter: 45 80% 65%;
-    --peach: 15 85% 70%;
-    --mint: 160 50% 65%;
-    --lavender: 270 55% 72%;
+    --glow: 260 80% 65%;
+    --surface: 0 0% 7%;
+    --surface-hover: 0 0% 10%;
+    --callout: 260 30% 10%;
+    --callout-border: 260 50% 35%;
+    --success: 155 60% 45%;
+    --warning: 35 90% 55%;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 250 15% 35%;
-    --sidebar-primary: 270 55% 52%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 65%;
+    --sidebar-primary: 260 80% 65%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 270 45% 95%;
-    --sidebar-accent-foreground: 270 55% 32%;
-    --sidebar-border: 45 20% 91%;
-    --sidebar-ring: 270 55% 52%;
+    --sidebar-accent: 260 60% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 260 80% 65%;
   }
 }
 
@@ -73,11 +69,11 @@
   }
 
   ::selection {
-    background: hsl(270 55% 52% / 0.15);
+    background: hsl(260 80% 65% / 0.25);
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
   }
 
   ::-webkit-scrollbar-track {
@@ -96,46 +92,41 @@
 
 @layer utilities {
   .glow-text {
-    text-shadow: 0 0 30px hsl(var(--glow) / 0.15);
+    text-shadow: 0 0 40px hsl(var(--glow) / 0.2);
   }
 
   .glow-border {
-    box-shadow: 0 4px 20px hsl(var(--glow) / 0.1);
+    box-shadow: 0 0 24px hsl(var(--glow) / 0.08);
   }
 
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(270 55% 48%), hsl(var(--peach)));
+    background-image: linear-gradient(135deg, hsl(260 80% 70%), hsl(330 80% 65%), hsl(20 90% 65%));
   }
 
   .glass-surface {
-    background: hsl(var(--card));
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(16px);
     border: 1px solid hsl(var(--border));
-    box-shadow: 0 1px 3px hsl(var(--foreground) / 0.04);
   }
 
   .clay-card {
     background: hsl(var(--card));
-    border: 1.5px solid hsl(var(--border));
+    border: 1px solid hsl(var(--border));
     border-radius: var(--radius);
-    box-shadow:
-      0 2px 4px hsl(var(--foreground) / 0.03),
-      0 6px 16px hsl(var(--foreground) / 0.04);
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    transition: border-color 0.2s ease, transform 0.2s ease;
   }
 
   .clay-card:hover {
-    box-shadow:
-      0 4px 8px hsl(var(--foreground) / 0.05),
-      0 12px 32px hsl(var(--foreground) / 0.07);
-    transform: translateY(-2px);
+    border-color: hsl(var(--muted-foreground) / 0.2);
+    transform: translateY(-1px);
   }
 
   .soft-shadow {
-    box-shadow: 0 2px 8px hsl(var(--foreground) / 0.05), 0 1px 2px hsl(var(--foreground) / 0.03);
+    box-shadow: 0 0 0 1px hsl(var(--border));
   }
 
-  .butter-blob {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  .pill-btn {
+    @apply px-6 py-3 rounded-full font-semibold text-sm transition-all;
   }
 }
