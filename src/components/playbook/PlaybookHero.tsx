@@ -252,7 +252,7 @@ const ExpectationRealityAnimation = ({ onComplete }: { onComplete: () => void })
   );
 };
 
-export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
+export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) => {
   const [showIntro, setShowIntro] = useState(true);
 
   return (
