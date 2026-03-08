@@ -118,8 +118,6 @@ export const CompensationChart = () => (
     </p>
   </div>
 );
-  </div>
-);
 
 export const BackgroundsChart = () => (
   <div className="w-full">
