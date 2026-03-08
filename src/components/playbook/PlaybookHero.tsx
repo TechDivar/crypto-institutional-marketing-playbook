@@ -327,7 +327,7 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
             animate={{ opacity: showIntro ? 0 : 1 }}
             transition={{ delay: 0.55 }}
           >
-            What the job descriptions actually want, decoded for marketers who mean business.
+            What the job descriptions actually want — decoded for marketers who mean business.
           </motion.p>
 
           {/* CTAs */}
