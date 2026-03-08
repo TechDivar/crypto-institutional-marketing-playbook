@@ -284,6 +284,7 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
             </>
           )}
         </div>
+        </div>
 
         {/* Progress bar */}
         <div className="w-32 sm:w-48 h-1 bg-border/30 rounded-full mt-4 sm:mt-10 overflow-hidden">
