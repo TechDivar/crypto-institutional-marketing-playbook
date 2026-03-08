@@ -21,16 +21,14 @@ const skillsData = [
   { skill: "Partnership Marketing", count: 4 },
 ];
 
-// Actual salary data from the job descriptions
+// Salary data from job postings - only crypto/institutional companies with published ranges
 const compensationData = [
-  { role: "Benchling PMM", range: "$191K – $259K", min: 191, max: 259 },
-  { role: "TaxBit Principal PMM", range: "$180K – $210K", min: 180, max: 210 },
-  { role: "Mithrl PM Lead", range: "$150K – $200K", min: 150, max: 200 },
-  { role: "Tyba PMM", range: "$140K – $170K", min: 140, max: 170 },
-  { role: "Collectly PMM", range: "$120K – $170K", min: 120, max: 170 },
-  { role: "Trovata Sr Content", range: "$120K – $160K", min: 120, max: 160 },
-  { role: "Tatari PMM", range: "$110K – $150K", min: 110, max: 150 },
+  { role: "TaxBit – Principal PMM", range: "$180K – $210K", min: 180, max: 210 },
+  { role: "Trovata – Sr Content Marketing", range: "$120K – $160K", min: 120, max: 160 },
 ];
+
+// Note: Most crypto/institutional roles (Chainlink, Fireblocks, Ondo, Ledger, Allium, Artemis, 
+// LayerZero, Dakota, Dune, Keyrock, Notabene) list "competitive salary" without specific ranges
 
 const backgroundsData = [
   { background: "B2B SaaS", percentage: 35 },
