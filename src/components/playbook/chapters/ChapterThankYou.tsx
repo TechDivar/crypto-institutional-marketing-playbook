@@ -27,7 +27,7 @@ export const ChapterThankYou = () => (
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4 }}
     >
-      Web3 marketing is boring. But not here. Subscribe and get the next juicy story before everyone else .💜
+      Web3 marketing is boring. But not here. Subscribe and get the next juicy story before everyone else.
     </motion.p>
 
     <motion.a
