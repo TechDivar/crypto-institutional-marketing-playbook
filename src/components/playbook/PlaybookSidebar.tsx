@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 interface PlaybookSidebarProps {
   activeChapter: number | null;
   onSelectChapter: (id: number) => void;
+  onGoHome: () => void;
   isOpen: boolean;
 }
 
