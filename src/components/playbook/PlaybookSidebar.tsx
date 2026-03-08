@@ -34,9 +34,7 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
           to="/about"
           className="w-full text-left px-3 py-2.5 rounded-lg mb-2 transition-all duration-200 flex items-center gap-3 text-sidebar-foreground hover:bg-sidebar-accent/40 hover:text-sidebar-accent-foreground"
         >
-          <span className="shrink-0 w-6 h-6 rounded-md flex items-center justify-center text-[10px] font-bold bg-muted text-muted-foreground">
-            i
-          </span>
+          <img src={logo} alt="Web3talez" className="shrink-0 w-6 h-6 rounded-md" />
           <span className="text-[13px] font-medium leading-snug">About Web3talez</span>
         </Link>
         <p className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground px-3 mb-3 font-bold">Chapters</p>
