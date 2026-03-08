@@ -16,7 +16,8 @@ export const chapters: Chapter[] = [
   { id: 9, title: "Messaging Rules", subtitle: "How to land in a boardroom and not get ghosted." },
   { id: 10, title: "The Launch Playbook", subtitle: "From positioning to post-launch." },
   { id: 11, title: "Metrics and KPIs", subtitle: "What actually matters and what does not." },
-  { id: 12, title: "How to Get One of These Jobs", subtitle: "What the JDs actually want." },
-  { id: 13, title: "Test Yourself", subtitle: "What you should know before any interview." },
-  { id: 14, title: "Glossary", subtitle: "Your crypto institutional marketing dictionary." },
+  { id: 12, title: "Job Market Data", subtitle: "Skills, salaries, and backgrounds from 18 real job descriptions." },
+  { id: 13, title: "How to Get One of These Jobs", subtitle: "What the JDs actually want." },
+  { id: 14, title: "Test Yourself", subtitle: "What you should know before any interview." },
+  { id: 15, title: "Glossary", subtitle: "Your crypto institutional marketing dictionary." },
 ];

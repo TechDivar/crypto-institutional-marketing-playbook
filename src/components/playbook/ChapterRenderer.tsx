@@ -12,6 +12,7 @@ import { Chapter08 } from "./chapters/Chapter08";
 import { Chapter09 } from "./chapters/Chapter09";
 import { Chapter10 } from "./chapters/Chapter10";
 import { Chapter11 } from "./chapters/Chapter11";
+import { ChapterJobMarket } from "./chapters/ChapterJobMarket";
 import { Chapter12 } from "./chapters/Chapter12";
 import { Chapter13 } from "./chapters/Chapter13";
 
@@ -33,7 +34,7 @@ const chapterComponents: Record<number, React.FC> = {
   9: Chapter08,
   10: Chapter09,
   11: Chapter10,
-  12: Chapter11,
+  12: ChapterJobMarket,
   13: Chapter12,
   14: Chapter13,
 };
