@@ -299,7 +299,7 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
 
         {/* Status text */}
         <motion.p
-          className="text-base text-muted-foreground mt-5 font-semibold"
+          className="text-sm sm:text-base text-muted-foreground mt-3 sm:mt-5 font-semibold"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
