@@ -296,8 +296,16 @@ export const PlaybookHero = ({ onStart }: PlaybookHeroProps) => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: showIntro ? 0 : 1, scale: showIntro ? 0.8 : 1 }}
             transition={{ delay: 0.3, type: "spring", stiffness: 150, damping: 14 }}
-            className="w-20 h-20 rounded-2xl mx-auto mb-10"
+            className="w-20 h-20 rounded-2xl mx-auto mb-3"
           />
+          <motion.p
+            className="text-sm text-muted-foreground mb-10 font-medium"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: showIntro ? 0 : 1 }}
+            transition={{ delay: 0.35 }}
+          >
+            Web3 marketing made simple 💜
+          </motion.p>
 
           {/* Headline */}
           <motion.h1
