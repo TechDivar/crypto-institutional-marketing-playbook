@@ -83,9 +83,6 @@ export const CompensationChart = () => (
         <p className="text-sm text-muted-foreground">Annual base salary range</p>
       </div>
     </div>
-    <p className="text-xs text-muted-foreground mt-4 italic">
-      Source: TaxBit ($180K–$210K) and Trovata ($120K–$160K) job postings
-    </p>
   </div>
 );
 
