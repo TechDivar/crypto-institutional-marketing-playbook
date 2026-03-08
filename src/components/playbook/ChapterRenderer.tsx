@@ -1,5 +1,6 @@
 import { ChapterHeader } from "./ui/ChapterHeader";
 import { NavigationButtons } from "./ui/NavigationButtons";
+import { ChapterJobMarket } from "./chapters/ChapterJobMarket";
 import { Chapter01 } from "./chapters/Chapter01";
 import { Chapter02 } from "./chapters/Chapter02";
 import { Chapter03 } from "./chapters/Chapter03";
@@ -12,7 +13,6 @@ import { Chapter08 } from "./chapters/Chapter08";
 import { Chapter09 } from "./chapters/Chapter09";
 import { Chapter10 } from "./chapters/Chapter10";
 import { Chapter11 } from "./chapters/Chapter11";
-import { ChapterJobMarket } from "./chapters/ChapterJobMarket";
 import { Chapter12 } from "./chapters/Chapter12";
 import { Chapter13 } from "./chapters/Chapter13";
 
@@ -23,20 +23,21 @@ interface ChapterRendererProps {
 }
 
 const chapterComponents: Record<number, React.FC> = {
-  1: Chapter01,
-  2: Chapter02,
-  3: Chapter03,
-  4: Chapter04,
-  5: Chapter05,
-  6: Chapter05b,
-  7: Chapter06,
-  8: Chapter07,
-  9: Chapter08,
-  10: Chapter09,
-  11: Chapter10,
-  12: ChapterJobMarket,
-  13: Chapter12,
-  14: Chapter13,
+  1: ChapterJobMarket,
+  2: Chapter01,
+  3: Chapter02,
+  4: Chapter03,
+  5: Chapter04,
+  6: Chapter05,
+  7: Chapter05b,
+  8: Chapter06,
+  9: Chapter07,
+  10: Chapter08,
+  11: Chapter09,
+  12: Chapter10,
+  13: Chapter11,
+  14: Chapter12,
+  15: Chapter13,
 };
 
 export const ChapterRenderer = ({ chapterId, onNavigate, totalChapters }: ChapterRendererProps) => {
