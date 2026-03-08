@@ -59,7 +59,15 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
       </nav>
 
       {/* Footer */}
-      <div className="p-4 border-t border-sidebar-border">
+      <div className="p-4 border-t border-sidebar-border space-y-3">
+        <a
+          href="https://web3talez.substack.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full text-center px-4 py-2.5 bg-primary text-primary-foreground font-display font-semibold text-sm rounded-lg hover:brightness-110 transition-all"
+        >
+          Subscribe to Newsletter
+        </a>
         <p className="text-[10px] text-muted-foreground text-center">2026 Edition | By Ivy</p>
       </div>
     </aside>
