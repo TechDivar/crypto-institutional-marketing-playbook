@@ -18,5 +18,5 @@ export const chapters: Chapter[] = [
   { id: 11, title: "Metrics and KPIs", subtitle: "What actually matters and what does not." },
   { id: 12, title: "How to Get One of These Jobs", subtitle: "What the JDs actually want." },
   { id: 13, title: "Test Yourself", subtitle: "Questions before you walk in." },
-  { id: 14, title: "Glossary", subtitle: "Terms explained without jargon." },
+  { id: 14, title: "Glossary", subtitle: "Your crypto institutional marketing dictionary." },
 ];
