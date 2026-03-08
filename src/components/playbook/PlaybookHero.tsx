@@ -103,7 +103,7 @@ const StairAnimation = ({ onComplete }: { onComplete: () => void }) => {
       >
         {/* Title above stairs */}
         <motion.p
-          className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-10 font-bold"
+          className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-muted-foreground mb-6 sm:mb-10 font-bold"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
