@@ -6,8 +6,8 @@ export const ChapterJobMarket = () => (
   <>
     <SectionBlock>
       <p>
-        We analyzed 23 institutional marketing job descriptions from companies like Chainlink, 
-        Fireblocks, Coinbase, Anchorage Digital, Ondo Finance, LayerZero, Dune, Cryptio, and more to understand what the market actually wants.
+        We analyzed real institutional marketing job descriptions from 22 companies — including Chainlink, 
+        Fireblocks, Coinbase, Anchorage Digital, Ondo Finance, LayerZero, Dune, Cryptio, and more — to understand what the market actually wants.
       </p>
     </SectionBlock>
 
