@@ -6,8 +6,8 @@ export const ChapterJobMarket = () => (
   <>
     <SectionBlock>
       <p>
-        We analyzed 18 institutional marketing job descriptions from companies like Chainlink, 
-        Fireblocks, Ondo Finance, LayerZero, Dune, TaxBit, and more to understand what the market actually wants.
+        We analyzed 23 institutional marketing job descriptions from companies like Chainlink, 
+        Fireblocks, Coinbase, Anchorage Digital, Ondo Finance, LayerZero, Dune, Cryptio, and more to understand what the market actually wants.
       </p>
     </SectionBlock>
 
@@ -17,9 +17,9 @@ export const ChapterJobMarket = () => (
 
     <SectionBlock title="Key Takeaways">
       <Callout variant="tip">
-        <strong>GTM Strategy</strong> and <strong>Content Marketing</strong> are the most demanded skills. 
-        B2B SaaS background is preferred over crypto-native experience. Salaries range from $130K to $203K 
-        depending on company and seniority.
+        <strong>GTM Strategy</strong>, <strong>Product Positioning</strong>, and <strong>Content Marketing</strong> are the most demanded skills. 
+        B2B SaaS and Fintech backgrounds are preferred over crypto-native experience. Salaries range from $100K to $230K 
+        depending on company and seniority. AI tools are now explicitly required in more roles.
       </Callout>
     </SectionBlock>
   </>

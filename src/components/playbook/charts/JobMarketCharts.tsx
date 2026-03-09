@@ -9,48 +9,48 @@ import {
 } from "recharts";
 
 const skillsData = [
-  { skill: "GTM Strategy", count: 14 },
-  { skill: "Content Marketing", count: 12 },
-  { skill: "Product Positioning", count: 11 },
-  { skill: "Sales Enablement", count: 10 },
-  { skill: "Event Marketing", count: 9 },
-  { skill: "Demand Generation", count: 8 },
-  { skill: "Research & Reports", count: 7 },
+  { skill: "GTM Strategy", count: 18 },
+  { skill: "Product Positioning", count: 16 },
+  { skill: "Content Marketing", count: 16 },
+  { skill: "Sales Enablement", count: 14 },
+  { skill: "Demand Generation", count: 10 },
+  { skill: "Event Marketing", count: 10 },
+  { skill: "Research & Reports", count: 9 },
   { skill: "ABM", count: 6 },
-  { skill: "PR & Comms", count: 5 },
+  { skill: "PR & Comms", count: 6 },
   { skill: "Partnership Marketing", count: 4 },
 ];
 
 const backgroundsData = [
-  { background: "B2B SaaS", percentage: 35 },
-  { background: "TradFi / Banking", percentage: 28 },
-  { background: "Fintech", percentage: 20 },
-  { background: "Crypto Native", percentage: 12 },
+  { background: "B2B SaaS", percentage: 33 },
+  { background: "TradFi / Banking", percentage: 26 },
+  { background: "Fintech", percentage: 24 },
+  { background: "Crypto Native", percentage: 13 },
 ];
 
 const experienceData = [
-  { range: "2–4 years", percentage: 17 },
-  { range: "5–6 years", percentage: 28 },
+  { range: "2–4 years", percentage: 26 },
+  { range: "5–6 years", percentage: 22 },
   { range: "7–8 years", percentage: 17 },
-  { range: "10+ years", percentage: 17 },
+  { range: "10+ years", percentage: 13 },
   { range: "Not specified", percentage: 22 },
 ];
 
 const workModelData = [
-  { model: "Remote", percentage: 54 },
-  { model: "Office / On-site", percentage: 31 },
-  { model: "Hybrid", percentage: 15 },
+  { model: "Remote", percentage: 57 },
+  { model: "Hybrid", percentage: 22 },
+  { model: "Office / On-site", percentage: 21 },
 ];
 
 const toolsData = [
+  { tool: "AI Tools (ChatGPT/Claude)", percentage: 22 },
   { tool: "SQL", percentage: 17 },
   { tool: "Snowflake", percentage: 17 },
-  { tool: "AI Tools (ChatGPT/Claude)", percentage: 17 },
-  { tool: "HubSpot", percentage: 11 },
-  { tool: "Salesforce", percentage: 11 },
+  { tool: "HubSpot", percentage: 13 },
+  { tool: "Salesforce", percentage: 13 },
   { tool: "Google Analytics", percentage: 11 },
   { tool: "Amplitude / Mixpanel", percentage: 11 },
-  { tool: "Ahrefs / SEO Tools", percentage: 6 },
+  { tool: "Ahrefs / SEO Tools", percentage: 9 },
   { tool: "BigQuery", percentage: 6 },
   { tool: "Databricks", percentage: 6 },
 ];
@@ -62,7 +62,7 @@ const TERTIARY_COLOR = "hsl(160, 70%, 50%)";
 export const SkillsDemandChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Most In-Demand Skills</h3>
-    <p className="text-sm text-muted-foreground mb-6">Based on analysis of 18 institutional marketing job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Based on analysis of 23 institutional marketing job descriptions</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={skillsData} layout="vertical" margin={{ left: 20, right: 50 }}>
@@ -108,7 +108,7 @@ export const CompensationChart = () => (
     <p className="text-sm text-muted-foreground mb-6">Based on published salary data from institutional marketing job postings</p>
     <div className="p-6 rounded-xl bg-primary/10 border border-primary/20">
       <div className="text-center">
-        <p className="text-3xl font-bold text-primary mb-2">$120K – $210K</p>
+        <p className="text-3xl font-bold text-primary mb-2">$100K – $230K</p>
         <p className="text-sm text-muted-foreground">Annual base salary range</p>
       </div>
     </div>
@@ -168,7 +168,7 @@ export const BackgroundsChart = () => (
 export const ExperienceLevelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Experience Level Required</h3>
-    <p className="text-sm text-muted-foreground mb-6">Percentage of 18 job descriptions requiring each experience range</p>
+    <p className="text-sm text-muted-foreground mb-6">Percentage of 23 job descriptions requiring each experience range</p>
     <div className="h-[320px] sm:h-[280px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={experienceData} margin={{ left: 10, right: 30, bottom: 20, top: 20 }}>
@@ -196,7 +196,7 @@ export const ExperienceLevelChart = () => (
 export const WorkModelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Work Model Breakdown</h3>
-    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 18 job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 23 job descriptions</p>
     <div className="h-[240px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={workModelData} layout="vertical" margin={{ left: 20, right: 50 }}>
@@ -228,7 +228,7 @@ export const WorkModelChart = () => (
 export const ToolsPlatformsChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Most Mentioned Tools & Platforms</h3>
-    <p className="text-sm text-muted-foreground mb-6">Percentage of 18 job descriptions mentioning each tool</p>
+    <p className="text-sm text-muted-foreground mb-6">Percentage of 23 job descriptions mentioning each tool</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={toolsData} layout="vertical" margin={{ left: 20, right: 50 }}>

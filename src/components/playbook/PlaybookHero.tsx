@@ -11,10 +11,11 @@ interface PlaybookHeroProps {
 }
 
 const companies = [
-  "Chainlink", "Allium", "TaxBit", "Trovata", "Notabene",
-  "Ledger", "Dakota", "LayerZero", "Ondo Finance", "Fireblocks",
-  "Keyrock", "Dune", "RWA.xyz", "Blockstream", "Twinstake",
-  "Figure", "Robinhood", "Artemis"
+  "Chainlink", "Coinbase", "Fireblocks", "Anchorage Digital", "Ondo Finance",
+  "LayerZero", "Cryptio", "InMobi", "Allium", "TaxBit",
+  "Trovata", "Notabene", "Ledger", "Dakota", "Keyrock",
+  "Dune", "RWA.xyz", "Blockstream", "Twinstake", "Figure",
+  "Robinhood", "Artemis"
 ];
 
 const leftItems = [
@@ -393,7 +394,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               className="mb-10"
             >
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5 font-semibold">
-                Real roles analyzed from 18 companies
+                Real roles analyzed from 22 companies
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {companies.map((company, i) => (
@@ -429,7 +430,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
             >
               {[
                 { value: "15", label: "Chapters" },
-                { value: "18", label: "Companies" },
+                { value: "22", label: "Companies" },
                 { value: "5", label: "Personas" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
