@@ -11,10 +11,11 @@ interface PlaybookHeroProps {
 }
 
 const companies = [
-  "Chainlink", "Allium", "TaxBit", "Trovata", "Notabene",
-  "Ledger", "Dakota", "LayerZero", "Ondo Finance", "Fireblocks",
-  "Keyrock", "Dune", "RWA.xyz", "Blockstream", "Twinstake",
-  "Figure", "Robinhood", "Artemis"
+  "Chainlink", "Coinbase", "Fireblocks", "Anchorage Digital", "Ondo Finance",
+  "LayerZero", "Cryptio", "InMobi", "Allium", "TaxBit",
+  "Trovata", "Notabene", "Ledger", "Dakota", "Keyrock",
+  "Dune", "RWA.xyz", "Blockstream", "Twinstake", "Figure",
+  "Robinhood", "Artemis"
 ];
 
 const leftItems = [
