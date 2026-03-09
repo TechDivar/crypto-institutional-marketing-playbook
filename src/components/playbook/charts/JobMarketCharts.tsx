@@ -196,7 +196,7 @@ export const ExperienceLevelChart = () => (
 export const WorkModelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Work Model Breakdown</h3>
-    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 18 job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 23 job descriptions</p>
     <div className="h-[240px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={workModelData} layout="vertical" margin={{ left: 20, right: 50 }}>
