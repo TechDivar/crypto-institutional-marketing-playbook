@@ -108,7 +108,7 @@ export const CompensationChart = () => (
     <p className="text-sm text-muted-foreground mb-6">Based on published salary data from institutional marketing job postings</p>
     <div className="p-6 rounded-xl bg-primary/10 border border-primary/20">
       <div className="text-center">
-        <p className="text-3xl font-bold text-primary mb-2">$120K – $210K</p>
+        <p className="text-3xl font-bold text-primary mb-2">$100K – $230K</p>
         <p className="text-sm text-muted-foreground">Annual base salary range</p>
       </div>
     </div>
