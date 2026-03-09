@@ -394,7 +394,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               className="mb-10"
             >
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5 font-semibold">
-                Real roles analyzed from 18 companies
+                Real roles analyzed from 22 companies
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {companies.map((company, i) => (
