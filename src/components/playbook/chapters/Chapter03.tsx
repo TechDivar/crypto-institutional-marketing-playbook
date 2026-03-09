@@ -39,5 +39,15 @@ export const Chapter03 = () => (
       <p><strong>What they care about:</strong> Returns, risk-adjusted performance, and access to new asset classes their competitors do not have.</p>
       <p><strong>What terrifies them:</strong> Missing a major market shift and explaining to LPs why they were too late.</p>
     </SectionBlock>
+
+    <SectionBlock title="Buyer Type 6: The Payments and Stablecoin Infrastructure Team">
+      <p><strong>Found in:</strong> Anchorage Digital, Coinbase, Figure</p>
+      <p><strong>What they care about:</strong> Cross-border settlement efficiency, correspondent banking infrastructure, stablecoin issuance and redemption workflows, and regulatory clarity around payment rails. They are asking: "Can this replace or improve an existing payment corridor and will our regulators accept it?"</p>
+      <p><strong>What terrifies them:</strong> Deploying new payment infrastructure that fails under volume, gets flagged by a correspondent banking partner, or creates compliance exposure in a jurisdiction they have not fully mapped.</p>
+      <BulletList items={[
+        "Anchorage Digital's JD explicitly focuses on 'stablecoin infrastructure and cross-border payment offerings' with a role dedicated to positioning these products for institutional adoption.",
+        "Coinbase's institutional marketing role covers 'prime brokerage products spanning trading, financing, custody' — the full stack that payments teams evaluate when choosing infrastructure.",
+      ]} />
+    </SectionBlock>
   </>
 );

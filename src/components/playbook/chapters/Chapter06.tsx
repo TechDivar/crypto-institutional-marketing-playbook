@@ -26,6 +26,7 @@ export const Chapter06 = () => (
 
     <SectionBlock title="Stage 5: Post-Purchase (Ongoing)">
       <p>The deal is signed. But institutional marketing does not end here. Every deployed client is a reference and a potential expansion. Customer marketing, onboarding support, and advocacy programs are what turn one signed deal into three.</p>
+      <p>Coinbase's JD makes this explicit: the product marketer must "be the voice of the customer and trusted advisor as to how current and future clients' needs inform product messaging, brand differentiation, marketing content, and collateral." Anchorage Digital says it directly too: "Listen to customers, sales, and market signals to surface insights that shape strategy, messaging, and roadmap input." Post-purchase is where you build the feedback loop that makes every future launch sharper and every renewal easier.</p>
     </SectionBlock>
 
     <SectionBlock title="Full Timeline at a Glance">
