@@ -342,7 +342,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Web3 marketing made simple 💜
+              Crypto institutional marketing made simple 💜
             </motion.p>
 
 
