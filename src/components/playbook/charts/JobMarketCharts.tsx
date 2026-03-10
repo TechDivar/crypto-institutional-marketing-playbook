@@ -62,7 +62,7 @@ const TERTIARY_COLOR = "hsl(160, 70%, 50%)";
 export const SkillsDemandChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Most In-Demand Skills</h3>
-    <p className="text-sm text-muted-foreground mb-6">Based on analysis of 23 institutional marketing job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Based on analysis of job descriptions from 22 institutional companies</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={skillsData} layout="vertical" margin={{ left: 20, right: 50 }}>
@@ -168,7 +168,7 @@ export const BackgroundsChart = () => (
 export const ExperienceLevelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Experience Level Required</h3>
-    <p className="text-sm text-muted-foreground mb-6">Percentage of 23 job descriptions requiring each experience range</p>
+    <p className="text-sm text-muted-foreground mb-6">Percentage of job descriptions from 22 companies requiring each experience range</p>
     <div className="h-[320px] sm:h-[280px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={experienceData} margin={{ left: 10, right: 30, bottom: 20, top: 20 }}>
@@ -196,7 +196,7 @@ export const ExperienceLevelChart = () => (
 export const WorkModelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Work Model Breakdown</h3>
-    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 23 job descriptions</p>
+    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 22 companies</p>
     <div className="h-[240px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={workModelData} layout="vertical" margin={{ left: 20, right: 50 }}>
@@ -228,7 +228,7 @@ export const WorkModelChart = () => (
 export const ToolsPlatformsChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Most Mentioned Tools & Platforms</h3>
-    <p className="text-sm text-muted-foreground mb-6">Percentage of 23 job descriptions mentioning each tool</p>
+    <p className="text-sm text-muted-foreground mb-6">Percentage of job descriptions from 22 companies mentioning each tool</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={toolsData} layout="vertical" margin={{ left: 20, right: 50 }}>
