@@ -228,7 +228,7 @@ export const WorkModelChart = () => (
 export const ToolsPlatformsChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Most Mentioned Tools & Platforms</h3>
-    <p className="text-sm text-muted-foreground mb-6">Percentage of 23 job descriptions mentioning each tool</p>
+    <p className="text-sm text-muted-foreground mb-6">Percentage of job descriptions from 22 companies mentioning each tool</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={toolsData} layout="vertical" margin={{ left: 20, right: 50 }}>
