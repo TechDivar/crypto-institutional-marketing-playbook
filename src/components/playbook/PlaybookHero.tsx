@@ -352,11 +352,11 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <span className="text-foreground">The Crypto</span>
+              <span className="text-foreground">Crypto</span>
               <br />
               <span className="gradient-text">Institutional Marketing</span>
               <br />
-              <span className="text-foreground">Playbook</span>
+              <span className="text-foreground">Made Simple</span>
             </motion.h1>
 
             <motion.p
