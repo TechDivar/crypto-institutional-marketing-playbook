@@ -6,7 +6,7 @@
 
 Most Web3 marketing resources tell you to build a community or go viral on crypto Twitter. This one does not.
 
-This playbook is built from 23 real job descriptions from companies bringing institutions onchain, including Chainlink, Fireblocks, Coinbase, Ondo Finance, LayerZero, Anchorage Digital, Cryptio, Twinstake, and 15 others. It is grounded in the DWF Ventures 2026 research report on what institutions are actually demanding from DeFi right now.
+This playbook is built from 22 real job descriptions from companies bringing institutions onchain, including Chainlink, Fireblocks, Coinbase, Ondo Finance, LayerZero, Anchorage Digital, Cryptio, Twinstake, and 15 others. It is grounded in the DWF Ventures 2026 research report on what institutions are actually demanding from DeFi right now.
 
 It exists because in 2026, almost every marketing role in Web3 is asking for an institutional marketer. But nobody is actually telling you what that means or what it takes to do the job well.
 
