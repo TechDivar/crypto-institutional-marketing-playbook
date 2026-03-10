@@ -34,6 +34,15 @@ export const Chapter02 = () => (
       <p><strong>Marketing implication:</strong> If your product solves any part of the composability problem, your marketing needs to explain the outcome, not the mechanism. The outcome is: institutions can use their on-chain assets the same way they use their TradFi assets.</p>
     </SectionBlock>
 
+    <SectionBlock title="Gap 4: LP Due Diligence and Allocator Trust">
+      <p>Family offices and institutional LPs entering crypto are discovering a painful pattern: traditional due diligence frameworks do not translate. Long investment thesis manuals create an illusion of confidence while overlooking the red flags unique to crypto VCs.</p>
+      <p>LPs conducting real due diligence are asking: Who sourced the deals? Who led internally? What was the ownership at entry and exit? Is one GP carrying all the load, or does the investment committee contribute equally? They want to understand deal flow structure, not just allocation size.</p>
+      <p><strong>Marketing implication:</strong> If your product serves allocators, fund administrators, or capital deployment workflows, your content must speak to portfolio construction discipline, GP alignment transparency, and repeatable judgment — not just returns. The buyer here is not impressed by past performance alone. They want proof of process.</p>
+      <Callout variant="tip">
+        Allocation dictates a VC's position today — access decides upside tomorrow. Marketing to LPs means proving your infrastructure helps them evaluate both.
+      </Callout>
+    </SectionBlock>
+
     <SectionBlock title="Summary">
       <ComparisonTable
         headers={["The Gap", "What Institutions Need From You"]}
@@ -41,6 +50,7 @@ export const Chapter02 = () => (
           ["Privacy", "Prove that their strategies, positions, and balances cannot be seen by competitors or exploited"],
           ["Compliance", "Show that your product is built around regulatory requirements, not just compatible with them"],
           ["Composability", "Demonstrate that tokenized assets in your ecosystem are active financial tools, not digital receipts"],
+          ["LP Due Diligence", "Show that your platform enables rigorous, process-driven evaluation — not hope-based allocation"],
         ]}
       />
     </SectionBlock>
