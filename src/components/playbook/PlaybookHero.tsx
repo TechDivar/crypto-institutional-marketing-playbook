@@ -342,7 +342,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Web3 marketing made simple 💜
+              Crypto institutional marketing made simple 💜
             </motion.p>
 
 
@@ -365,8 +365,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               animate={{ opacity: 1 }}
               transition={{ delay: 0.55 }}
             >
-              In 2026, almost every marketing role in Web3 is asking for an institutional marketer. But nobody is actually telling you what that means or what it takes to do the job well.
-              <span className="block mt-2 text-primary font-semibold">That's what this playbook is&nbsp;for.</span>
+              The crypto institutional marketing playbook.
             </motion.p>
 
             <motion.div
