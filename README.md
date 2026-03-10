@@ -1,5 +1,3 @@
-Here is the README to paste into GitHub:
-
 ---
 
 # Crypto Institutional Marketing Made Simple
@@ -44,6 +42,6 @@ Subscribe at web3talez.substack.com
 
 ## Built with
 
-Claude for research and content. Lovable for frontend design and deployment.
+Claude for research and content. Lovable for frontend design, data cleaning, presentation and deployment.
 
 ---
