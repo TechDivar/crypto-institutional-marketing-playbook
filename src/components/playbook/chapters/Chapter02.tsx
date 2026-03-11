@@ -30,9 +30,10 @@ export const Chapter02 = () => (
       <p><strong>Marketing implication:</strong> "We are compliant" is not a differentiator. "Here is how compliance is embedded at the protocol level, with real-time audit trails and documentation your legal team can take to your board" is a differentiator.</p>
     </SectionBlock>
 
-    <SectionBlock title="Gap 3: Composability">
-      <p>Institutional interest in tokenized assets has grown over five times in two years. But holding a tokenized Treasury bond on-chain and being able to use it the way you use a Treasury bond in TradFi are very different things.</p>
-      <p><strong>Marketing implication:</strong> If your product solves any part of the composability problem, your marketing needs to explain the outcome, not the mechanism. The outcome is: institutions can use their on-chain assets the same way they use their TradFi assets.</p>
+    <SectionBlock title="Gap 3: Composability and Tokenization">
+      <p>Institutional interest in tokenized assets has grown over five times in two years. $33 billion in real-world assets are now on-chain, with private credit dominating at $17–18 billion (58% of all tokenized RWAs). But holding a tokenized Treasury bond on-chain and being able to use it the way you use a Treasury bond in TradFi are very different things.</p>
+      <p>BlackRock's BUIDL fund is accepted as off-exchange collateral on multiple venues. The CFTC's Global Markets Advisory Committee now recommends tokenized money market funds as eligible margin collateral. Lloyds Banking Group and Aberdeen completed the UK's first FX trades using tokenized collateral on an FCA-regulated platform. Once an institution holds tokenized Treasuries, the custody relationship, compliance framework, and wallet infrastructure are all in place — every subsequent asset class becomes an incremental deployment, not a new build.</p>
+      <p><strong>Marketing implication:</strong> If your product solves any part of the composability or tokenization problem, your marketing needs to explain the outcome, not the mechanism. The outcome is: institutions can use their on-chain assets the same way they use their TradFi assets. Position tokenized Treasuries as the gateway, not the destination.</p>
     </SectionBlock>
 
     <SectionBlock title="Gap 4: LP Due Diligence and Allocator Trust">
