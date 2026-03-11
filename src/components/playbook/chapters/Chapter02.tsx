@@ -36,7 +36,16 @@ export const Chapter02 = () => (
       <p><strong>Marketing implication:</strong> If your product solves any part of the composability or tokenization problem, your marketing needs to explain the outcome, not the mechanism. The outcome is: institutions can use their on-chain assets the same way they use their TradFi assets. Position tokenized Treasuries as the gateway, not the destination.</p>
     </SectionBlock>
 
-    <SectionBlock title="Gap 4: LP Due Diligence and Allocator Trust">
+    <SectionBlock title="Gap 4: Settlement and Stablecoin Infrastructure">
+      <p>Global remittance flows reached $905 billion in 2024, yet sending $200 internationally still costs an average of 6.35%. On a $905 billion market, that translates to roughly $50 billion in annual intermediation costs — most of it hidden in FX spreads, prefunding requirements, and correspondent banking overhead. Stablecoins now exceed $310 billion in market capitalization and are being integrated into production settlement systems by publicly traded, regulated platforms.</p>
+      <p>The structural change is not marginal fee reduction. It is the removal of prefunding and correspondent banking layers entirely. Instead of parking millions in nostro accounts waiting for Monday's clearing cycle, platforms can move USDC in minutes and free that capital for the next corridor. Remitly, Thunes, and Western Union are all integrating stablecoin settlement into their operations.</p>
+      <p><strong>Marketing implication:</strong> If your product touches cross-border settlement, payment rails, or stablecoin infrastructure, your marketing must quantify the working capital advantage — not just the fee savings. The buyer cares about capital efficiency measured in millions freed per corridor, not theoretical percentage reductions. Position stablecoins as the infrastructure layer that replaces correspondent banking chains, not as a competitor to existing providers.</p>
+      <Callout variant="quote" source="Settled Media, 'Who's Actually Using Stablecoins' (March 2026)">
+        "Stablecoins are not replacing remittance companies. They are replacing the settlement layer beneath them."
+      </Callout>
+    </SectionBlock>
+
+    <SectionBlock title="Gap 5: LP Due Diligence and Allocator Trust">
       <p>Family offices and institutional LPs entering crypto are discovering a painful pattern: traditional due diligence frameworks do not translate. Long investment thesis manuals create an illusion of confidence while overlooking the red flags unique to crypto VCs.</p>
       <p>LPs conducting real due diligence are asking: Who sourced the deals? Who led internally? What was the ownership at entry and exit? Is one GP carrying all the load, or does the investment committee contribute equally? They want to understand deal flow structure, not just allocation size.</p>
       <p><strong>Marketing implication:</strong> If your product serves allocators, fund administrators, or capital deployment workflows, your content must speak to portfolio construction discipline, GP alignment transparency, and repeatable judgment — not just returns. The buyer here is not impressed by past performance alone. They want proof of process.</p>
