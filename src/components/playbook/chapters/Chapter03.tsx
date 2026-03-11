@@ -50,7 +50,7 @@ export const Chapter03 = () => (
       ]} />
     </SectionBlock>
 
-    <SectionBlock title="Buyer Type 7: The LP / Allocator">
+    <SectionBlock title="The LP / Allocator">
       <p><strong>Found in:</strong> Family offices, endowments, pension funds, fund-of-funds evaluating crypto VC managers</p>
       <p><strong>What they care about:</strong> Portfolio construction discipline, deal attribution, GP alignment, and repeatable judgment across management — not just headline returns. They are asking: "Is this fund's track record the result of process or luck?"</p>
       <p><strong>What terrifies them:</strong> Deploying capital into a fund where one GP is carrying all the load, where deal flow is not proprietary, or where portfolio construction relies on hope instead of discipline. They fear discovering after commitment that the investment committee does not contribute equally or that allocation wins were not repeatable.</p>
