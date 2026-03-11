@@ -45,6 +45,14 @@ export const Chapter13 = () => (
         <GlossaryTerm term="Custody" definition="The safekeeping of financial assets. Institutional-grade custody means storing digital assets securely enough that a bank's risk team will approve it." />
         <GlossaryTerm term="Oracle" definition="A system that brings real-world data onto a blockchain. Chainlink is the dominant oracle network." />
         <GlossaryTerm term="Layer 1 / Layer 2" definition="Layer 1 is the base blockchain (Ethereum, Solana, Bitcoin). Layer 2 is built on top to increase speed and reduce cost." />
+        <GlossaryTerm term="BUIDL" definition="BlackRock USD Institutional Digital Liquidity Fund. A tokenized U.S. Treasury fund holding $2.2 billion with 112 institutional holders. The benchmark for institutional on-chain asset adoption." />
+        <GlossaryTerm term="Kinexys" definition="JPMorgan's blockchain-based platform (formerly Onyx) for tokenized deposit settlements, processing roughly $2 billion per day in cross-border payments and intraday settlement." />
+        <GlossaryTerm term="Nostro Account" definition="A bank account held in a foreign country in the local currency, used to facilitate cross-border transactions. Prefunding nostro accounts locks capital and adds cost to settlement." />
+        <GlossaryTerm term="Correspondent Banking" definition="A network of intermediary banks that facilitate cross-border payments through multi-hop message chains. The legacy settlement architecture that stablecoins are replacing." />
+        <GlossaryTerm term="LP (Limited Partner)" definition="An investor who commits capital to a fund but does not manage it. Family offices, endowments, and pension funds investing in crypto venture funds are LPs." />
+        <GlossaryTerm term="GP (General Partner)" definition="The fund manager who makes investment decisions and manages portfolio companies. LPs evaluate GPs on deal sourcing, judgment, and process discipline." />
+        <GlossaryTerm term="CFTC" definition="Commodity Futures Trading Commission. The U.S. regulator overseeing derivatives markets. Its advisory committee now recommends tokenized money market funds as eligible margin collateral." />
+        <GlossaryTerm term="ERC-3643" definition="A compliance-embedded token standard that bakes KYC, AML, and investor accreditation directly into the token itself, enabling permissioned transfers on public blockchains." />
       </dl>
     </SectionBlock>
 
