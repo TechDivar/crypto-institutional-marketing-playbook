@@ -430,7 +430,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               {[
                 { value: "15", label: "Chapters" },
                 { value: "22", label: "Companies" },
-                { value: "5", label: "Personas" },
+                { value: "6", label: "Personas" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <p className="text-2xl font-extrabold gradient-text">{stat.value}</p>

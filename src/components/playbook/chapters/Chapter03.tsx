@@ -44,13 +44,15 @@ export const Chapter03 = () => (
       <p><strong>Found in:</strong> Anchorage Digital, Coinbase, Figure</p>
       <p><strong>What they care about:</strong> Cross-border settlement efficiency, correspondent banking infrastructure, stablecoin issuance and redemption workflows, and regulatory clarity around payment rails. They are asking: "Can this replace or improve an existing payment corridor and will our regulators accept it?"</p>
       <p><strong>What terrifies them:</strong> Deploying new payment infrastructure that fails under volume, gets flagged by a correspondent banking partner, or creates compliance exposure in a jurisdiction they have not fully mapped.</p>
+      <p><strong>Why this matters now:</strong> Global remittance flows reached $905 billion in 2024, with average cross-border costs exceeding 6% — roughly $50 billion in annual intermediation fees. Stablecoins are replacing the settlement layer beneath remittance providers: Remitly integrated USDC through Circle for treasury operations and launched stablecoin payouts in late 2025. Thunes, connecting 7 billion mobile wallets across 130 countries, saw USDC funding volumes grow by nearly a third month over month after going live. Settlement that previously required 3–5 business days of prefunding now completes in minutes.</p>
       <BulletList items={[
         "Anchorage Digital's JD explicitly focuses on 'stablecoin infrastructure and cross-border payment offerings' with a role dedicated to positioning these products for institutional adoption.",
         "Coinbase's institutional marketing role covers 'prime brokerage products spanning trading, financing, custody' — the full stack that payments teams evaluate when choosing infrastructure.",
+        "The critical marketing angle: stablecoins are not replacing remittance companies — they are replacing the multi-hop correspondent banking settlement chain underneath them. Position your product as the infrastructure that collapses cost, not the competitor that displaces incumbents.",
       ]} />
     </SectionBlock>
 
-    <SectionBlock title="Buyer Type 7: The LP / Allocator">
+    <SectionBlock title="The LP / Allocator">
       <p><strong>Found in:</strong> Family offices, endowments, pension funds, fund-of-funds evaluating crypto VC managers</p>
       <p><strong>What they care about:</strong> Portfolio construction discipline, deal attribution, GP alignment, and repeatable judgment across management — not just headline returns. They are asking: "Is this fund's track record the result of process or luck?"</p>
       <p><strong>What terrifies them:</strong> Deploying capital into a fund where one GP is carrying all the load, where deal flow is not proprietary, or where portfolio construction relies on hope instead of discipline. They fear discovering after commitment that the investment committee does not contribute equally or that allocation wins were not repeatable.</p>
