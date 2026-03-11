@@ -51,16 +51,5 @@ export const Chapter03 = () => (
         "The critical marketing angle: stablecoins are not replacing remittance companies — they are replacing the multi-hop correspondent banking settlement chain underneath them. Position your product as the infrastructure that collapses cost, not the competitor that displaces incumbents.",
       ]} />
     </SectionBlock>
-
-    <SectionBlock title="The LP / Allocator">
-      <p><strong>Found in:</strong> Family offices, endowments, pension funds, fund-of-funds evaluating crypto VC managers</p>
-      <p><strong>What they care about:</strong> Portfolio construction discipline, deal attribution, GP alignment, and repeatable judgment across management — not just headline returns. They are asking: "Is this fund's track record the result of process or luck?"</p>
-      <p><strong>What terrifies them:</strong> Deploying capital into a fund where one GP is carrying all the load, where deal flow is not proprietary, or where portfolio construction relies on hope instead of discipline. They fear discovering after commitment that the investment committee does not contribute equally or that allocation wins were not repeatable.</p>
-      <BulletList items={[
-        "Institutional LPs conduct due diligence on deal sourcing, internal leadership, ownership at entry and exit, and whether the fund has genuine access to competitive rounds.",
-        "They evaluate reserve strategy for follow-on rounds, expected loss ratios, target ownership at entry, and agreed deviation thresholds — the math behind the thesis, not just the thesis itself.",
-        "GP alignment is a dealbreaker: how economics are split, decision-making structure, and historical partner turnover all signal whether the fund will perform consistently.",
-      ]} />
-    </SectionBlock>
   </>
 );
