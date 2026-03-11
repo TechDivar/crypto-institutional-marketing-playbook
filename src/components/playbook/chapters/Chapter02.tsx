@@ -51,7 +51,8 @@ export const Chapter02 = () => (
         rows={[
           ["Privacy", "Prove that their strategies, positions, and balances cannot be seen by competitors or exploited"],
           ["Compliance", "Show that your product is built around regulatory requirements, not just compatible with them"],
-          ["Composability", "Demonstrate that tokenized assets in your ecosystem are active financial tools, not digital receipts"],
+          ["Composability & Tokenization", "Demonstrate that tokenized assets in your ecosystem are active financial tools, not digital receipts — and position Treasuries as the gateway to broader on-chain adoption"],
+          ["Settlement & Stablecoins", "Prove that your infrastructure collapses the multi-hop correspondent banking chain — show working capital advantages measured in real numbers, not theoretical savings"],
           ["LP Due Diligence", "Show that your platform enables rigorous, process-driven evaluation — not hope-based allocation"],
         ]}
       />
