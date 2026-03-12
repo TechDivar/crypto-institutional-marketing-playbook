@@ -101,7 +101,7 @@ export const Chapter06c = () => (
         "Build a multi-touch attribution report that shows the full journey from first content interaction to closed deal — not just the last click before the meeting was booked.",
         "The deal source field is the most important field in your HubSpot setup. Every deal should be tagged as marketing-sourced, sales-sourced, inbound, event-sourced, or partner-sourced.",
       ]} />
-      <Callout variant="insight">
+      <Callout variant="tip">
         This single field is what lets you stand in front of a CEO or head of sales and say: this quarter, marketing content generated this many qualified meetings, which converted to this much pipeline, at this average deal size.
       </Callout>
     </SectionBlock>

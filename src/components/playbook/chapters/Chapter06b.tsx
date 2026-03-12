@@ -85,7 +85,7 @@ export const Chapter06b = () => (
         "The quality bar is higher than anything else in marketing. A white paper with a factual error about a regulatory framework does not just underperform — it actively damages the trust you have been building for months.",
         "A LinkedIn post that gets 50 impressions from five heads of digital assets at target accounts is worth more than a post that gets 5,000 impressions from retail crypto holders.",
       ]} />
-      <Callout variant="insight">
+      <Callout variant="tip">
         Marketing that does not connect to revenue is decoration. Track post-to-meeting. Track content-to-opportunity. Track which piece of content a prospect last engaged with before they booked a call.
       </Callout>
     </SectionBlock>
