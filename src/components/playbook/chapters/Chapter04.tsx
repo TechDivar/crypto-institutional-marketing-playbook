@@ -58,6 +58,9 @@ export const Chapter04 = () => (
           ["Webinars and virtual events", "Education and pipeline warming"],
           ["Private roundtables", "Highest-trust conversations, large deals"],
           ["Trade press", "Industry credibility and visibility"],
+          ["Private Telegram and Signal groups", "Closed-door conversations, alpha sharing, deal flow among trusted peers"],
+          ["Research platforms (e.g. Messari)", "Deep-dive analysis, market intelligence, institutional-grade data consumption"],
+          ["Institutional trading venues (e.g. CME Group crypto markets)", "Where institutional capital actively trades — signals serious market participation"],
         ]}
       />
     </SectionBlock>
