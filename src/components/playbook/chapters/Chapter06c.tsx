@@ -56,7 +56,7 @@ export const Chapter06c = () => (
         "Books a meeting in September.",
       ]} />
       <p>Last-touch attribution would credit the conference. First-touch attribution would credit the research report. Multi-touch attribution shows you that all five touchpoints contributed and that removing any one of them might have broken the chain.</p>
-      <Callout variant="insight">
+      <Callout variant="tip">
         Attribution matters more in institutional marketing than in almost any other context. The buying cycle is long enough that without a proper model, marketing looks like it is doing nothing for months at a time. With a proper model, you can show that content published in January is closing deals in September.
       </Callout>
     </SectionBlock>
