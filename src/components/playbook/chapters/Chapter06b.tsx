@@ -43,7 +43,7 @@ export const Chapter06b = () => (
         "The CFO version leads with settlement efficiency and cost reduction.",
         "The technology lead version leads with API reliability and integration documentation.",
       ]} />
-      <Callout variant="insight">
+      <Callout variant="tip">
         This is why institutional marketing requires persona-specific content at every stage. The one-pager for the compliance officer leads with regulatory certifications and audit history. The one-pager for the CFO leads with cost reduction and settlement efficiency. Same product. Different first paragraph.
       </Callout>
     </SectionBlock>
