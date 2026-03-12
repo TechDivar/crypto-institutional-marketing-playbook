@@ -65,10 +65,10 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
           </button>
         ))}
         <button
-          onClick={() => onSelectChapter(16)}
+          onClick={() => onSelectChapter(18)}
           className={cn(
             "w-full text-left px-3 py-2.5 rounded-lg mb-0.5 transition-all duration-200 group mt-3 border-t border-sidebar-border pt-3",
-            activeChapter === 16
+            activeChapter === 18
               ? "bg-sidebar-accent text-sidebar-accent-foreground"
               : "text-sidebar-foreground hover:bg-sidebar-accent/40 hover:text-sidebar-accent-foreground"
           )}
@@ -77,7 +77,7 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
             <span
               className={cn(
                 "shrink-0 w-6 h-6 rounded-md flex items-center justify-center text-[10px] font-bold mt-0.5 transition-colors",
-                activeChapter === 16
+                activeChapter === 18
                   ? "bg-primary text-primary-foreground"
                   : "bg-muted text-muted-foreground group-hover:bg-primary/20 group-hover:text-primary"
               )}
