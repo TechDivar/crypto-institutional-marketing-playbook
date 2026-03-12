@@ -51,5 +51,16 @@ export const Chapter03 = () => (
         "The critical marketing angle: stablecoins are not replacing remittance companies — they are replacing the multi-hop correspondent banking settlement chain underneath them. Position your product as the infrastructure that collapses cost, not the competitor that displaces incumbents.",
       ]} />
     </SectionBlock>
+
+    <SectionBlock title="Buyer Type 7: The LP / Allocator">
+      <p><strong>Found in:</strong> Artemis, Ondo Finance, RWA.xyz, Figure</p>
+      <p><strong>What they care about:</strong> Returns, risk-adjusted performance, portfolio diversification, and access to new asset classes. They are asking: "Does this generate alpha, and can I defend the allocation to my investment committee?"</p>
+      <p><strong>What terrifies them:</strong> Capital loss in an asset class they championed internally, regulatory uncertainty that forces a position unwind, and reputational risk from association with a protocol that makes headlines for the wrong reasons.</p>
+      <BulletList items={[
+        "Artemis' JD focuses on 'institutional-grade analytics' that help allocators evaluate on-chain performance with the same rigour they apply to traditional markets.",
+        "Ondo Finance's growth marketing role targets allocators evaluating tokenized Treasuries and yield products — the entry point for institutional capital into on-chain fixed income.",
+        "The critical marketing angle: LPs and allocators do not buy products. They buy conviction. Your content needs to provide the data, the regulatory context, and the peer validation that lets them say yes to their investment committee.",
+      ]} />
+    </SectionBlock>
   </>
 );
