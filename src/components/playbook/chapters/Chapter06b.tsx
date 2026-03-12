@@ -17,7 +17,7 @@ export const Chapter06b = () => (
         "For a compliance team evaluating Notabene or TaxBit, the problem is regulatory. A new Travel Rule requirement has landed. CARF reporting is now mandatory. The existing process cannot scale to meet it and the audit is in four months.",
         "For a digital assets team evaluating Fireblocks or Chainlink, the problem is infrastructure. They have approval to move into digital assets but no secure, auditable way to hold or move them.",
       ]} />
-      <Callout variant="insight">
+      <Callout variant="tip">
         The first job of institutional marketing is not to sell the product. It is to be present when the problem is being defined. The company whose research report a compliance officer reads three months before their audit is already trusted. The company who cold emails them the week before is not.
       </Callout>
     </SectionBlock>
