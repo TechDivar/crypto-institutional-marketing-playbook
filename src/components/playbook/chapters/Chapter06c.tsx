@@ -74,7 +74,7 @@ export const Chapter06c = () => (
         "CFOs at asset managers currently evaluating custody solutions",
       ]} />
       <p>Clay pulls the contacts, enriches them with firmographic data, recent company news, job changes, LinkedIn activity, and technology stack, and delivers a list of named people at named accounts who match your exact target profile.</p>
-      <Callout variant="insight">
+      <Callout variant="tip">
         This matters for attribution because you are no longer publishing content and hoping the right people find it. You know who you are trying to reach before you hit publish. Every piece of content can be mapped to a specific set of target accounts and the attribution model tracks whether those accounts engaged.
       </Callout>
     </SectionBlock>
