@@ -44,5 +44,23 @@ export const Chapter12 = () => (
         { question: "A new head of digital assets just joined one of your target accounts. They do not know your company. Walk through the first 60 days of your marketing approach to that account.", hint: "Week one, connect on LinkedIn and make sure your thought leadership shows up in their feed. By week three, share a research report that's relevant to their new role — not a sales pitch. Around day 30-45, invite them to a private roundtable where they'll meet peers. Only after they've seen your thinking do you offer a one-on-one briefing. Earn attention before you ask for time." },
       ]}
     />
+
+    <QuizSection
+      title="Enterprise Buying Dynamics"
+      questions={[
+        { question: "A founder tells you: 'Our tech is 10x better than SWIFT — banks just don't get it.' What's wrong with this framing and how would you reposition?", hint: "Enterprises don't buy the 'best' technology — they buy the least disruptive path to progress. SWIFT persists because it offers shared governance and regulatory comfort. Reframe: don't pitch replacement, pitch extension. Show how you integrate alongside existing systems and reduce risk, not how you blow everything up." },
+        { question: "Your product champion inside a target bank loves your solution, but the deal keeps stalling. What's likely happening and what do you do?", hint: "The champion isn't the only buyer. Behind them sit legal, compliance, risk, finance, and security — all with quiet veto power. Ask your champion directly: 'How can I help you sell this internally?' Then build pre-baked answers and risk frameworks for each stakeholder. Package it as a boringly safe decision." },
+        { question: "A major consulting firm is advising your target account on their digital asset strategy. How do you engage with this dynamic?", hint: "Don't fight the consultant layer — work through it. Consulting firms are gatekeepers who translate new technology into frameworks enterprises trust. Partner with them, brief them on your product, and make it easy for them to recommend you. Deloitte's alliance with Digital Asset is the model: the consultant validated the tech, making adoption defensible." },
+        { question: "You've been selected for a pilot alongside two competitors. What's the real risk here, and how do you avoid it?", hint: "Being selected doesn't mean being adopted. Enterprises hedge — they run parallel experiments to preserve optionality. You're one of several low-conviction bets. The goal isn't to win the pilot; it's to become the winning hedge. That means professionalism, reliability, and making the internal team feel safe betting their reputation on you." },
+      ]}
+    />
+
+    <QuizSection
+      title="Pipeline & Attribution"
+      questions={[
+        { question: "Your CEO asks: 'Is our content actually generating pipeline?' You have 60 seconds. What do you show them?", hint: "Show pipeline created by marketing (first-touch), pipeline influenced by marketing (multi-touch), content-to-meeting conversion rate, and target account engagement depth. Don't show impressions or follower counts — that's not the language a CEO speaks." },
+        { question: "A deal closed after 9 months. The prospect attended a webinar, downloaded a report, met your team at Token2049, then booked a demo. How do you attribute this?", hint: "This is multi-touch attribution. No single touchpoint 'caused' the deal. Use a weighted model: the webinar created awareness, the report built credibility, the event built trust, and the demo converted. Track all touches in your CRM and attribute proportional influence. The report and event likely carried the most weight." },
+      ]}
+    />
   </>
 );
