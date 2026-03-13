@@ -70,6 +70,13 @@ export const Chapter13 = () => (
         <GlossaryTerm term="Pipeline" definition="The set of deals currently being worked by the sales team at various stages of the buying process." />
         <GlossaryTerm term="POC / Pilot" definition="Proof of Concept. A limited trial that allows an institution to test a product before full commitment." />
         <GlossaryTerm term="NDA" definition="Non-Disclosure Agreement. Institutional buyers often require an NDA before sharing detailed information about their needs." />
+        <GlossaryTerm term="Multi-Touch Attribution" definition="A measurement model that assigns credit for a conversion across multiple marketing touchpoints rather than giving all credit to the first or last interaction." />
+        <GlossaryTerm term="UTM Parameters" definition="Urchin Tracking Module. Tags added to URLs to track which campaigns, channels, and content pieces drive traffic and conversions." />
+        <GlossaryTerm term="Systems Integrator" definition="A consulting or technology firm that helps enterprises connect new solutions with existing infrastructure. Often a gatekeeper in enterprise procurement decisions." />
+        <GlossaryTerm term="Rip and Replace" definition="A go-to-market narrative that positions new technology as a full replacement for legacy systems. Almost always fails in enterprise sales — institutions prefer incremental integration." />
+        <GlossaryTerm term="Consultant / Translation Layer" definition="The intermediary layer of consulting firms, auditors, and advisors that filter and validate new technologies before they reach enterprise buyers. Ignoring this layer is a common founder mistake." />
+        <GlossaryTerm term="Messari" definition="A crypto research and data platform providing institutional-grade market intelligence, on-chain analytics, and governance research." />
+        <GlossaryTerm term="Token2049" definition="One of the largest global crypto industry conferences, held in Dubai and Singapore. A key venue for institutional networking and deal origination." />
       </dl>
     </SectionBlock>
   </>
