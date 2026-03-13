@@ -8,6 +8,9 @@ export const Chapter06b = () => (
     <SectionBlock>
       <p>Most crypto marketers think the job is to get attention. In institutional marketing, the job is to build enough trust that the right person at the right company puts you on a shortlist you never knew existed.</p>
       <p>That is a completely different assignment. Here is how the process actually works, grounded in what the companies building for institutions are hiring for right now.</p>
+      <Callout variant="quote" source="a16z crypto, Pyrs Carvolth & Christian Crowley (March 2026)">
+        "Enterprises do not buy the 'best' technology. They buy the least disruptive path to progress. If your 'better' product isn't winning, the gap isn't performance. It's fit."
+      </Callout>
     </SectionBlock>
 
     <SectionBlock title="Stage 1: The Problem Comes Before the Product">
@@ -45,6 +48,31 @@ export const Chapter06b = () => (
       ]} />
       <Callout variant="tip">
         This is why institutional marketing requires persona-specific content at every stage. The one-pager for the compliance officer leads with regulatory certifications and audit history. The one-pager for the CFO leads with cost reduction and settlement efficiency. Same product. Different first paragraph.
+      </Callout>
+    </SectionBlock>
+
+    <SectionBlock title="The Consultant and Translation Layer">
+      <p>Before new technology ever reaches an enterprise buyer, it is often filtered through an intermediary. Third parties like consulting firms, systems integrators, and auditors play a critical role in translating and legitimising new technologies for institutional adoption.</p>
+      <BulletList items={[
+        "In the U.S. alone, the management consulting services market is projected to exceed $130 billion in 2026, with the majority of that spend coming from large enterprises seeking help on strategy, risk, and transformation.",
+        "These intermediaries use established frameworks to turn new solutions into familiar concepts and uncertainty into defensible recommendations.",
+        "Deloitte's alliance with Digital Asset illustrates this dynamic: by partnering with a major consulting firm, Digital Asset's blockchain infrastructure was reframed through governance, risk, and compliance — making adoption far more defensible for institutional buyers.",
+        "As the saying goes: 'No one gets fired for hiring McKinsey.' The larger the institution, the more important it becomes that decisions can survive internal scrutiny after they are made.",
+      ]} />
+      <Callout variant="tip">
+        Ignoring the consultant layer is a strategic mistake. Founders should proactively engage with consulting firms, systems integrators, and auditors who are already trusted by target institutions. Being recommended by a known intermediary is often more powerful than any direct pitch.
+      </Callout>
+    </SectionBlock>
+
+    <SectionBlock title="Enterprises Hedge — Make Sure You Are the Winning Hedge">
+      <p>Rather than making a single decisive bet on emerging infrastructure, large enterprises frequently run parallel experiments. They allocate modest budgets across multiple vendors, test competing approaches in innovation departments, or run pilots without committing core systems.</p>
+      <BulletList items={[
+        "Being selected for a pilot does not mean being adopted. Many crypto companies become one of several low-conviction hedges — interesting to trial, not critical enough to scale.",
+        "The real objective is not to win a pilot. It is to become the winning hedge. This requires more than technical merit — it requires professionalism, predictability, and credibility.",
+        "Products that insist enterprises adopt the 'full vision' of decentralisation upfront ask too much, too soon. The founders who succeed are the ones who sequence it.",
+      ]} />
+      <Callout variant="quote" source="a16z crypto (March 2026)">
+        "Focusing on the ideological purity behind the technology — whether around decentralisation, trust minimisation, or any other part of the crypto ethos — rarely persuades institutions that operate under legal, regulatory, and reputational constraints."
       </Callout>
     </SectionBlock>
 

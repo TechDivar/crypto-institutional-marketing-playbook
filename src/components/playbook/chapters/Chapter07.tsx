@@ -49,5 +49,21 @@ export const Chapter07 = () => (
       />
       <p>SWIFT is not the most technically advanced payment network. Bloomberg is not the most technically sophisticated data platform. They are the most trusted. Your real competition is the incumbent, not the crypto competitor.</p>
     </SectionBlock>
+
+    <SectionBlock title="Mistake 7: The 'Rip and Replace' Narrative">
+      <DosDontsCard
+        wrong="Pitching a clean-slate future where legacy systems are replaced entirely with decentralised technology"
+        right="Designing entry points that integrate into existing systems, minimise disruption, and establish a credible wedge"
+      />
+      <p>Legacy infrastructure is embedded in workflows, compliance processes, vendor contracts, reporting systems, and many other touchpoints. The more sweeping the proposed change, the harder it is for someone inside the organisation to own the decision. Uniswap's collaboration with BlackRock is a good example — rather than framing DeFi as a replacement for traditional asset management, Uniswap enabled permissionless secondary market liquidity within BlackRock's existing regulatory and fund structures.</p>
+    </SectionBlock>
+
+    <SectionBlock title="Mistake 8: Running the Same Pitch Everywhere">
+      <DosDontsCard
+        wrong="Reusing the same enterprise deck, framing, and 'why now' across every lead"
+        right="Tailoring your presentation to each institution's specific systems, constraints, and internal priorities"
+      />
+      <p>Two large banks may appear similar on paper, but their constraints and priorities often differ meaningfully. A generic pitch signals you have not taken the time to understand how this specific institution defines the problem. If your pitch is not tailored, from the institution's point of view, it is hard to believe your solution can fit cleanly inside.</p>
+    </SectionBlock>
   </>
 );

@@ -33,7 +33,6 @@ const experienceData = [
   { range: "5–6 years", percentage: 22 },
   { range: "7–8 years", percentage: 17 },
   { range: "10+ years", percentage: 13 },
-  { range: "Not specified", percentage: 22 },
 ];
 
 const workModelData = [
