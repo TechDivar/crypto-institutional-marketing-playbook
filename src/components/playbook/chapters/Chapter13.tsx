@@ -53,6 +53,9 @@ export const Chapter13 = () => (
         <GlossaryTerm term="GP (General Partner)" definition="The fund manager who makes investment decisions and manages portfolio companies. LPs evaluate GPs on deal sourcing, judgment, and process discipline." />
         <GlossaryTerm term="CFTC" definition="Commodity Futures Trading Commission. The U.S. regulator overseeing derivatives markets. Its advisory committee now recommends tokenized money market funds as eligible margin collateral." />
         <GlossaryTerm term="ERC-3643" definition="A compliance-embedded token standard that bakes KYC, AML, and investor accreditation directly into the token itself, enabling permissioned transfers on public blockchains." />
+        <GlossaryTerm term="SWIFT" definition="Society for Worldwide Interbank Financial Telecommunication. The dominant messaging network for cross-border bank transfers. Persists despite being slow and expensive because it offers shared governance and regulatory comfort." />
+        <GlossaryTerm term="CME Group" definition="Chicago Mercantile Exchange. One of the world's largest derivatives exchanges, offering regulated crypto futures and options. A key institutional trading venue signalling serious market participation." />
+        <GlossaryTerm term="COBOL" definition="A legacy programming language still running critical banking systems. Persists because rewriting stable systems introduces existential risk — a reminder that enterprises value continuity over innovation." />
       </dl>
     </SectionBlock>
 
