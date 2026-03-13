@@ -45,11 +45,14 @@ export const Chapter08 = () => (
     </SectionBlock>
 
     <SectionBlock title="Rule 4: Respect the Fear">
-      <p>Every institutional buyer is managing career risk as well as business risk.</p>
+      <p>Every institutional buyer is managing career risk as well as business risk. Inside large institutions, the cost of failure is asymmetric — missed opportunities are rarely punished, while visible mistakes are. Decision-makers almost never participate directly in the upside of the technology they recommend. The upside is diffuse and indirect. The downside is immediate and often personal.</p>
       <DosDontsCard
         wrong="'The future of finance is here, get ahead or get left behind'"
         right="'Hundreds of institutions have already adopted this infrastructure, with full regulatory documentation available for your review'"
       />
+      <Callout variant="quote" source="a16z crypto (March 2026)">
+        "Enterprise decision-making is less shaped by what could work and more by what's unlikely to fail. The bar for adoption isn't technical superiority — it's whether adopting the technology makes the decision maker's job safer or riskier."
+      </Callout>
     </SectionBlock>
 
     <SectionBlock title="Rule 5: Position Against the Incumbent">
