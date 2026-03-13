@@ -1,6 +1,7 @@
 import { SectionBlock } from "../ui/SectionBlock";
 import { DosDontsCard } from "../ui/DosDontsCard";
 import { ComparisonTable } from "../ui/ComparisonTable";
+import { Callout } from "../ui/Callout";
 
 export const Chapter08 = () => (
   <>
