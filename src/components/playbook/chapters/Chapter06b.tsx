@@ -8,6 +8,9 @@ export const Chapter06b = () => (
     <SectionBlock>
       <p>Most crypto marketers think the job is to get attention. In institutional marketing, the job is to build enough trust that the right person at the right company puts you on a shortlist you never knew existed.</p>
       <p>That is a completely different assignment. Here is how the process actually works, grounded in what the companies building for institutions are hiring for right now.</p>
+      <Callout variant="quote" source="a16z crypto, Pyrs Carvolth & Christian Crowley (March 2026)">
+        "Enterprises do not buy the 'best' technology. They buy the least disruptive path to progress. If your 'better' product isn't winning, the gap isn't performance. It's fit."
+      </Callout>
     </SectionBlock>
 
     <SectionBlock title="Stage 1: The Problem Comes Before the Product">
