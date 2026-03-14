@@ -43,6 +43,9 @@ const About = () => {
               In 2026, almost every marketing role in Web3 is asking for an institutional marketer. But nobody is actually telling you what that means or what it takes to do the job well.
             </p>
             <p className="text-[15px] leading-[1.8] text-foreground/85">
+              So we dug into it. We pulled 24 real job descriptions from companies building the infrastructure that banks, asset managers, and treasury teams are starting to use. We read the DWF Ventures 2026 research report on what institutions are actually demanding from DeFi right now. And we turned all of it into this playbook.
+            </p>
+            <p className="text-[15px] leading-[1.8] text-foreground/85">
               So we dug into it. We pulled 18 real job descriptions from companies building the infrastructure that banks, asset managers, and treasury teams are starting to use. We read the DWF Ventures 2026 research report on what institutions are actually demanding from DeFi right now. And we turned all of it into this playbook.
             </p>
             <p className="text-[15px] leading-[1.8] text-foreground/85">
