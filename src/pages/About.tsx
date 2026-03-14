@@ -46,9 +46,6 @@ const About = () => {
               So we dug into it. We pulled 24 real job descriptions from companies building the infrastructure that banks, asset managers, and treasury teams are starting to use. We read the DWF Ventures 2026 research report on what institutions are actually demanding from DeFi right now. And we turned all of it into this playbook.
             </p>
             <p className="text-[15px] leading-[1.8] text-foreground/85">
-              So we dug into it. We pulled 18 real job descriptions from companies building the infrastructure that banks, asset managers, and treasury teams are starting to use. We read the DWF Ventures 2026 research report on what institutions are actually demanding from DeFi right now. And we turned all of it into this playbook.
-            </p>
-            <p className="text-[15px] leading-[1.8] text-foreground/85">
               Because at Web3talez, we believe practical marketing stories should be simple and useful to anyone — whether you have been in crypto for five years or five days.
             </p>
 
