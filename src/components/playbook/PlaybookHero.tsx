@@ -15,7 +15,7 @@ const companies = [
   "LayerZero", "Cryptio", "InMobi", "Allium", "TaxBit",
   "Trovata", "Notabene", "Ledger", "Dakota", "Keyrock",
   "Dune", "RWA.xyz", "Blockstream", "Twinstake", "Figure",
-  "Robinhood", "Artemis"
+  "Robinhood", "Artemis", "Sanctum", "SCRYPT"
 ];
 
 const leftItems = [
@@ -393,7 +393,7 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               className="mb-10"
             >
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5 font-semibold">
-                Real roles analyzed from 22 companies
+                Real roles analyzed from 24 companies
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {companies.map((company, i) => (
@@ -428,8 +428,8 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               transition={{ delay: 1.4 }}
             >
               {[
-                { value: "17", label: "Chapters" },
-                { value: "22", label: "Companies" },
+                { value: "18", label: "Chapters" },
+                { value: "24", label: "Companies" },
                 { value: "7", label: "Personas" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">

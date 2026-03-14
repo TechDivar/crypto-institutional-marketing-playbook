@@ -9,30 +9,30 @@ import {
 } from "recharts";
 
 const skillsData = [
-  { skill: "GTM Strategy", count: 18 },
-  { skill: "Product Positioning", count: 16 },
-  { skill: "Content Marketing", count: 16 },
-  { skill: "Sales Enablement", count: 14 },
-  { skill: "Demand Generation", count: 10 },
-  { skill: "Event Marketing", count: 10 },
+  { skill: "GTM Strategy", count: 19 },
+  { skill: "Product Positioning", count: 17 },
+  { skill: "Content Marketing", count: 17 },
+  { skill: "Sales Enablement", count: 15 },
+  { skill: "Demand Generation", count: 11 },
+  { skill: "Event Marketing", count: 11 },
   { skill: "Research & Reports", count: 9 },
   { skill: "ABM", count: 6 },
   { skill: "PR & Comms", count: 6 },
-  { skill: "Partnership Marketing", count: 4 },
+  { skill: "Partnership Marketing", count: 5 },
 ];
 
 const backgroundsData = [
-  { background: "B2B SaaS", percentage: 33 },
-  { background: "TradFi / Banking", percentage: 26 },
-  { background: "Fintech", percentage: 24 },
-  { background: "Crypto Native", percentage: 13 },
+  { background: "B2B SaaS", percentage: 34 },
+  { background: "TradFi / Banking", percentage: 27 },
+  { background: "Fintech", percentage: 25 },
+  { background: "Crypto Native", percentage: 14 },
 ];
 
 const experienceData = [
-  { range: "2–4 years", percentage: 26 },
-  { range: "5–6 years", percentage: 22 },
-  { range: "7–8 years", percentage: 17 },
-  { range: "10+ years", percentage: 13 },
+  { range: "2–4 years", percentage: 33 },
+  { range: "5–6 years", percentage: 28 },
+  { range: "7–8 years", percentage: 22 },
+  { range: "10+ years", percentage: 17 },
 ];
 
 const workModelData = [
@@ -42,16 +42,16 @@ const workModelData = [
 ];
 
 const toolsData = [
-  { tool: "AI Tools (ChatGPT/Claude)", percentage: 22 },
-  { tool: "SQL", percentage: 17 },
-  { tool: "Snowflake", percentage: 17 },
-  { tool: "HubSpot", percentage: 13 },
-  { tool: "Salesforce", percentage: 13 },
-  { tool: "Google Analytics", percentage: 11 },
-  { tool: "Amplitude / Mixpanel", percentage: 11 },
-  { tool: "Ahrefs / SEO Tools", percentage: 9 },
-  { tool: "BigQuery", percentage: 6 },
-  { tool: "Databricks", percentage: 6 },
+  { tool: "AI Tools (ChatGPT/Claude)", percentage: 18 },
+  { tool: "SQL", percentage: 14 },
+  { tool: "Snowflake", percentage: 13 },
+  { tool: "HubSpot", percentage: 10 },
+  { tool: "Salesforce", percentage: 10 },
+  { tool: "Google Analytics", percentage: 9 },
+  { tool: "Amplitude / Mixpanel", percentage: 9 },
+  { tool: "Ahrefs / SEO Tools", percentage: 7 },
+  { tool: "BigQuery", percentage: 5 },
+  { tool: "Databricks", percentage: 5 },
 ];
 
 const PRIMARY_COLOR = "hsl(280, 100%, 70%)";
@@ -61,7 +61,7 @@ const TERTIARY_COLOR = "hsl(160, 70%, 50%)";
 export const SkillsDemandChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Most In-Demand Skills</h3>
-    <p className="text-sm text-muted-foreground mb-6">Based on analysis of job descriptions from 22 institutional companies</p>
+    <p className="text-sm text-muted-foreground mb-6">Based on analysis of job descriptions from 24 institutional companies</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={skillsData} layout="vertical" margin={{ left: 20, right: 50 }}>
@@ -167,7 +167,7 @@ export const BackgroundsChart = () => (
 export const ExperienceLevelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Experience Level Required</h3>
-    <p className="text-sm text-muted-foreground mb-6">Percentage of job descriptions from 22 companies requiring each experience range</p>
+    <p className="text-sm text-muted-foreground mb-6">Percentage of job descriptions from 24 companies requiring each experience range</p>
     <div className="h-[320px] sm:h-[280px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={experienceData} margin={{ left: 10, right: 30, bottom: 20, top: 20 }}>
@@ -195,7 +195,7 @@ export const ExperienceLevelChart = () => (
 export const WorkModelChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Work Model Breakdown</h3>
-    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 22 companies</p>
+    <p className="text-sm text-muted-foreground mb-6">Remote vs Hybrid vs Office across 24 companies</p>
     <div className="h-[240px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={workModelData} layout="vertical" margin={{ left: 20, right: 50 }}>
@@ -227,7 +227,7 @@ export const WorkModelChart = () => (
 export const ToolsPlatformsChart = () => (
   <div className="w-full">
     <h3 className="text-lg font-semibold text-foreground mb-4">Most Mentioned Tools & Platforms</h3>
-    <p className="text-sm text-muted-foreground mb-6">Percentage of job descriptions from 22 companies mentioning each tool</p>
+    <p className="text-sm text-muted-foreground mb-6">Percentage of job descriptions from 24 companies mentioning each tool</p>
     <div className="h-[400px]">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={toolsData} layout="vertical" margin={{ left: 20, right: 50 }}>
