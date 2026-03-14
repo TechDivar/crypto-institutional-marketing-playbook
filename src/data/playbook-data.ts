@@ -5,7 +5,7 @@ export interface Chapter {
 }
 
 export const chapters: Chapter[] = [
-  { id: 1, title: "What the Data Says", subtitle: "Skills, salaries, and backgrounds from 22 companies." },
+  { id: 1, title: "What the Data Says", subtitle: "Skills, salaries, and backgrounds from 24 companies." },
   { id: 2, title: "What Is Institutional Marketing?", subtitle: "It's not about going viral on X or building a community. This one is different." },
   { id: 3, title: "What Institutions Need From DeFi", subtitle: "Privacy, compliance, and risk — the 3 things that actually matters." },
   { id: 4, title: "Who Are You Selling To?", subtitle: "Your target audience." },
@@ -20,6 +20,8 @@ export const chapters: Chapter[] = [
   { id: 13, title: "The Launch Playbook", subtitle: "From positioning to post-launch." },
   { id: 14, title: "Metrics and KPIs", subtitle: "What actually matters and what does not." },
   { id: 15, title: "How to Get One of These Jobs", subtitle: "What the JDs actually want." },
-  { id: 16, title: "Test Yourself", subtitle: "What you should know before any interview." },
-  { id: 17, title: "Glossary", subtitle: "Your crypto institutional marketing dictionary." },
+  { id: 16, title: "The Demand Generation Checklist", subtitle: "Pick your niche, pick your buyer, get your personalised checklist." },
+  { id: 17, title: "Test Yourself", subtitle: "What you should know before any interview." },
+  { id: 18, title: "Glossary", subtitle: "Your crypto institutional marketing dictionary." },
+  { id: 19, title: "The Institutional Marketing Stack", subtitle: "One visual framework that summarizes the entire playbook." },
 ];
