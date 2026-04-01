@@ -56,16 +56,15 @@ export const EmailCaptureForm = ({ source = "hero", variant = "hero" }: EmailCap
           You're in! 💜
         </p>
         <a
-          href="https://web3talez.substack.com"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/crypto-institutional-marketing-playbook.pdf"
+          download
           className="inline-flex items-center gap-2 pill-btn bg-primary text-primary-foreground hover:bg-primary/90"
         >
           <Download className="w-4 h-4" />
           Download the Playbook
         </a>
         <p className="text-xs text-muted-foreground mt-3">
-          We'll also send you the link via email.
+          Your PDF is ready to download.
         </p>
       </motion.div>
     );
