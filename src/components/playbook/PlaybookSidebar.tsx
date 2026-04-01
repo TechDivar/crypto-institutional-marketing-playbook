@@ -2,6 +2,8 @@ import { chapters } from "@/data/playbook-data";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/web3talez-logo.jpg";
+import { EmailCaptureForm } from "./ui/EmailCaptureForm";
+import logo from "@/assets/web3talez-logo.jpg";
 
 interface PlaybookSidebarProps {
   activeChapter: number | null;
