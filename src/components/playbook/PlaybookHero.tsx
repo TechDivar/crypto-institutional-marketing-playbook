@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { EmailCaptureForm } from "./ui/EmailCaptureForm";
 import logo from "@/assets/web3talez-logo.jpg";
 
 
@@ -414,11 +415,9 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.2 }}
-              whileHover={{ y: -2 }}
-              className="clay-card p-5 text-left max-w-sm mx-auto"
+              className="max-w-md mx-auto"
             >
-              <p className="text-sm font-bold text-foreground mb-1">Product Marketing Manager is the new hot title</p>
-              <p className="text-xs text-muted-foreground leading-relaxed">Almost every company on this list is hiring a "Product Marketing Manager." Community manager era is over.</p>
+              <EmailCaptureForm source="hero" variant="hero" />
             </motion.div>
 
             <motion.div
