@@ -17,10 +17,10 @@ const Chapter08 = lazy(() => import("./chapters/Chapter08").then(m => ({ default
 const Chapter09 = lazy(() => import("./chapters/Chapter09").then(m => ({ default: m.Chapter09 })));
 const Chapter10 = lazy(() => import("./chapters/Chapter10").then(m => ({ default: m.Chapter10 })));
 const Chapter11 = lazy(() => import("./chapters/Chapter11").then(m => ({ default: m.Chapter11 })));
+const ChapterOnchainGTM = lazy(() => import("./chapters/ChapterOnchainGTM").then(m => ({ default: m.ChapterOnchainGTM })));
 const ChapterChecklist = lazy(() => import("./chapters/ChapterChecklist").then(m => ({ default: m.ChapterChecklist })));
 const Chapter12 = lazy(() => import("./chapters/Chapter12").then(m => ({ default: m.Chapter12 })));
 const Chapter13 = lazy(() => import("./chapters/Chapter13").then(m => ({ default: m.Chapter13 })));
-const ChapterFramework = lazy(() => import("./chapters/ChapterFramework").then(m => ({ default: m.ChapterFramework })));
 const ChapterThankYou = lazy(() => import("./chapters/ChapterThankYou").then(m => ({ default: m.ChapterThankYou })));
 
 interface ChapterRendererProps {
@@ -43,12 +43,12 @@ const chapterComponents: Record<number, React.LazyExoticComponent<React.FC>> = {
   11: Chapter07,
   12: Chapter08,
   13: Chapter09,
-  14: Chapter10,
-  15: Chapter11,
-  16: ChapterChecklist,
-  17: Chapter12,
-  18: Chapter13,
-  19: ChapterFramework,
+  14: ChapterOnchainGTM,
+  15: Chapter10,
+  16: Chapter11,
+  17: ChapterChecklist,
+  18: Chapter12,
+  19: Chapter13,
   20: ChapterThankYou,
 };
 
