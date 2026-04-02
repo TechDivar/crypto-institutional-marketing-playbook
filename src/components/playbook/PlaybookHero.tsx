@@ -411,22 +411,13 @@ export const PlaybookHero = ({ onStart, onSelectChapter }: PlaybookHeroProps) =>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2 }}
-              className="max-w-md mx-auto"
-            >
-              <EmailCaptureForm source="hero" variant="hero" />
-            </motion.div>
-
-            <motion.div
               className="mt-12 flex items-center justify-center gap-8 sm:gap-12"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.4 }}
+              transition={{ delay: 1.2 }}
             >
               {[
-                { value: "18", label: "Chapters" },
+                { value: "19", label: "Chapters" },
                 { value: "24", label: "Companies" },
                 { value: "7", label: "Personas" },
               ].map((stat) => (

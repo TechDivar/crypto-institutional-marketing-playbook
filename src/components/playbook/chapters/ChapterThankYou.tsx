@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/web3talez-logo.jpg";
-import { EmailCaptureForm } from "../ui/EmailCaptureForm";
 
 export const ChapterThankYou = () => (
   <div className="flex flex-col items-center justify-center text-center py-12">
@@ -28,17 +27,8 @@ export const ChapterThankYou = () => (
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4 }}
     >
-      Web3 marketing is boring. But not here. Get the full playbook as a PDF and subscribe for more.
+      Web3 marketing is boring. But not here. Subscribe for more.
     </motion.p>
-
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.6 }}
-      className="mb-10 w-full"
-    >
-      <EmailCaptureForm source="thankyou" variant="thankyou" />
-    </motion.div>
 
     <motion.a
       href="https://web3talez.substack.com"
@@ -47,7 +37,7 @@ export const ChapterThankYou = () => (
       className="pill-btn bg-primary text-primary-foreground hover:bg-primary/90"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.8 }}
+      transition={{ delay: 0.6 }}
       whileHover={{ scale: 1.04 }}
       whileTap={{ scale: 0.97 }}
     >
@@ -58,7 +48,7 @@ export const ChapterThankYou = () => (
       className="text-xs text-muted-foreground mt-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1.0 }}
+      transition={{ delay: 0.8 }}
     >
       Made with love from{" "}
       <span className="text-primary font-bold">Web3</span>

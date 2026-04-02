@@ -2,7 +2,6 @@ import { chapters } from "@/data/playbook-data";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/web3talez-logo.jpg";
-import { EmailCaptureForm } from "./ui/EmailCaptureForm";
 
 interface PlaybookSidebarProps {
   activeChapter: number | null;
@@ -92,7 +91,6 @@ export const PlaybookSidebar = ({ activeChapter, onSelectChapter, onGoHome, isOp
 
       {/* Footer */}
       <div className="p-4 border-t border-sidebar-border space-y-3">
-        <EmailCaptureForm source="sidebar" variant="sidebar" />
         <a
           href="https://web3talez.substack.com"
           target="_blank"
