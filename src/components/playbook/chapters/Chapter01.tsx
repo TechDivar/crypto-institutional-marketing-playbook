@@ -2,6 +2,7 @@ import { SectionBlock } from "../ui/SectionBlock";
 import { ComparisonTable } from "../ui/ComparisonTable";
 import { Callout } from "../ui/Callout";
 import { BulletList } from "../ui/BulletList";
+import { PullQuote } from "../ui/PullQuote";
 
 export const Chapter01 = () => (
   <>
