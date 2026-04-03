@@ -1,6 +1,7 @@
 import { SectionBlock } from "../ui/SectionBlock";
 import { ComparisonTable } from "../ui/ComparisonTable";
 import { Callout } from "../ui/Callout";
+import { PullQuote } from "../ui/PullQuote";
 
 export const Chapter02 = () => (
   <>
