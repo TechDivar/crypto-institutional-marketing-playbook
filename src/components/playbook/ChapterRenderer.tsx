@@ -1,6 +1,8 @@
 import { lazy, Suspense } from "react";
 import { ChapterHeader } from "./ui/ChapterHeader";
 import { NavigationButtons } from "./ui/NavigationButtons";
+import { KeyTakeaways } from "./ui/KeyTakeaways";
+import { chapters } from "@/data/playbook-data";
 
 const ChapterJobMarket = lazy(() => import("./chapters/ChapterJobMarket").then(m => ({ default: m.ChapterJobMarket })));
 const Chapter01 = lazy(() => import("./chapters/Chapter01").then(m => ({ default: m.Chapter01 })));
