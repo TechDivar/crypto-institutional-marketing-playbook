@@ -8,6 +8,7 @@ export const Chapter10 = () => (
   <>
     <SectionBlock>
       <p>In institutional marketing, who engages matters far more than how many. One right person reading the right piece of content at the right moment in a 12-month sales cycle is worth more than ten thousand impressions from the wrong audience.</p>
+      <PullQuote quote="One right person reading the right content at the right moment is worth more than ten thousand impressions from the wrong audience." />
     </SectionBlock>
 
     <SectionBlock title="Bucket 1: Pipeline Impact">

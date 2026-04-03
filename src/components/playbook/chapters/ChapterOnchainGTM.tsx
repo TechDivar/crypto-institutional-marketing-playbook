@@ -105,6 +105,7 @@ export const ChapterOnchainGTM = () => (
       <p>
         Institutions do not close on vision. They close on justification.
       </p>
+      <PullQuote quote="Institutions do not close on vision. They close on justification." />
     </SectionBlock>
 
     <SectionBlock title="The one messaging rule that covers everything">

@@ -7,6 +7,7 @@ export const Chapter05 = () => (
   <>
     <SectionBlock>
       <p>Institutional buyers do not want content that excites them. They want content that helps them say yes. Every piece of content you make should answer one of three questions: Is this proven? Is this safe? Is this worth the effort to evaluate?</p>
+      <PullQuote quote="Institutional buyers do not want content that excites them. They want content that helps them say yes." />
     </SectionBlock>
 
     <SectionBlock title="Tier 1: Research Reports and White Papers">

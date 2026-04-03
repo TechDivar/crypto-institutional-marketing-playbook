@@ -49,6 +49,7 @@ export const Chapter07 = () => (
         right="'The Bloomberg for on-chain data' or 'settlement without the SWIFT overhead'"
       />
       <p>SWIFT is not the most technically advanced payment network. Bloomberg is not the most technically sophisticated data platform. They are the most trusted. Your real competition is the incumbent, not the crypto competitor.</p>
+      <PullQuote quote="SWIFT is not the most technically advanced. Bloomberg is not the most sophisticated. They are the most trusted. Your real competition is the incumbent." />
     </SectionBlock>
 
     <SectionBlock title="Mistake 7: The 'Rip and Replace' Narrative">

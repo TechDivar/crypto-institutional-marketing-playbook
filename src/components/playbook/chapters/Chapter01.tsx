@@ -15,7 +15,8 @@ export const Chapter01 = () => (
       </p>
     </SectionBlock>
 
-    <SectionBlock title="Why It Is Different From Regular Crypto Marketing">
+    <PullQuote quote="A single deal can take six to eighteen months and involve twelve different people with veto power." />
+
       <ComparisonTable
         headers={["Consumer Crypto Marketing", "Institutional Marketing"]}
         rows={[
