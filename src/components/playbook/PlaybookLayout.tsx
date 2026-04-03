@@ -12,6 +12,7 @@ export const PlaybookLayout = () => {
 
   return (
     <div className="flex min-h-screen bg-background">
+      {activeChapter !== null && <ReadingProgressBar />}
       {/* Mobile menu button */}
       {activeChapter !== null && (
         <button

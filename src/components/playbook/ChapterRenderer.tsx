@@ -57,6 +57,8 @@ const chapterComponents: Record<number, React.LazyExoticComponent<React.FC>> = {
 export const ChapterRenderer = ({ chapterId, onNavigate, totalChapters }: ChapterRendererProps) => {
   const ChapterContent = chapterComponents[chapterId];
   const isThankYou = chapterId === 20;
+  const chapter = chapters.find(c => c.id === chapterId);
+  const takeaways = chapter?.takeaways;
 
   return (
     <div>
@@ -64,6 +66,7 @@ export const ChapterRenderer = ({ chapterId, onNavigate, totalChapters }: Chapte
       <Suspense fallback={<div className="min-h-[50vh]" />}>
         {ChapterContent && <ChapterContent />}
       </Suspense>
+      {takeaways && takeaways.length > 0 && <KeyTakeaways items={takeaways} />}
       {!isThankYou && (
         <NavigationButtons chapterId={chapterId} onNavigate={onNavigate} totalChapters={totalChapters} />
       )}
