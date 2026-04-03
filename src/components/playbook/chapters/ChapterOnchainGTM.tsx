@@ -4,63 +4,57 @@ import { Callout } from "../ui/Callout";
 
 export const ChapterOnchainGTM = () => (
   <>
-    <SectionBlock title="The Core Strategic Insight: Infrastructure Arbitrage">
+    <SectionBlock title="First, the most important thing to understand">
       <p>
-        Going onchain is not a feature. It is a positioning decision.
+        Going onchain is not a feature update.
       </p>
       <p>
-        Most fintechs frame it as product expansion. That weakens the story.
+        It is a positioning decision.
       </p>
       <p>
-        The stronger framing is this: <strong>you are moving from being an interface to owning part of the financial stack.</strong>
+        Most fintechs get this wrong. They frame it as product expansion. They say "we added crypto" and wonder why nobody is impressed.
       </p>
       <p>
-        Fintechs that already control distribution (users) and interface (app) can now control rails (infrastructure). That is the real shift.
+        Here is what actually moves institutional buyers: <strong>you are no longer just an interface. You are owning part of the financial stack.</strong>
+      </p>
+      <p>
+        Fintechs that already have users and a product can now own the rails too. That is the real story.
       </p>
       <Callout variant="tip">
-        Institutional buyers do not care that you "added crypto." They care that you reduced dependency on legacy systems and improved control over settlement, custody, and access.
+        Nobody in treasury or compliance is excited that you "added crypto." They want to know if you reduced their dependency on slow, expensive legacy systems.
       </Callout>
     </SectionBlock>
 
-    <SectionBlock title="Three GTM Angles That Actually Land">
-      <h3 className="text-lg font-bold text-foreground mb-3">1. The Hidden Cost of Legacy Rails</h3>
+    <SectionBlock title="Three angles that actually land">
+      <h3 className="text-lg font-bold text-foreground mb-3">1. Show them what legacy rails are costing them</h3>
       <p>
-        Legacy infrastructure is expensive, but the cost is often invisible.
-      </p>
-      <BulletList items={[
-        "Custody fees",
-        "Delayed settlement cycles",
-        "Restricted asset access",
-      ]} />
-      <p>
-        Most institutions accept these as fixed constraints. Your job is to <strong>make the cost visible</strong> before you position your solution.
+        Custody fees. Settlement delays. Limited asset access.
       </p>
       <p>
-        CFOs and treasury teams respond to cost clarity. If the problem is not clearly quantified, the solution does not matter.
+        Most institutions treat these as facts of life. Your job is to <strong>make the cost visible</strong> before you pitch anything.
+      </p>
+      <p>
+        CFOs respond to numbers. If the problem is not clearly quantified, nobody will care about your solution.
       </p>
     </SectionBlock>
 
     <SectionBlock>
-      <h3 className="text-lg font-bold text-foreground mb-3">2. Vertical Integration as a Moat</h3>
+      <h3 className="text-lg font-bold text-foreground mb-3">2. Owning the stack beats adding a feature</h3>
       <p>
-        "We are adding crypto" sounds optional.<br />
-        "We are owning more of the stack" sounds strategic.
+        "We are adding crypto" sounds optional.
       </p>
       <p>
-        Position the move as reducing reliance on custodians, clearinghouses, and legacy intermediaries. This shifts the conversation from experimentation to defensibility.
+        "We are owning more of the financial stack" sounds like a strategy.
       </p>
-      <p className="font-medium text-foreground">For institutions, this reads as:</p>
-      <BulletList items={[
-        "Better margins",
-        "More control",
-        "Less counterparty dependency",
-      ]} />
+      <p>
+        Position the move as reducing reliance on custodians, clearinghouses, and legacy middlemen. That is a conversation about margins and control, not experimentation.
+      </p>
     </SectionBlock>
 
     <SectionBlock>
-      <h3 className="text-lg font-bold text-foreground mb-3">3. Asset Access as the Entry Point</h3>
+      <h3 className="text-lg font-bold text-foreground mb-3">3. Asset access is your simplest hook</h3>
       <p>
-        Access is one of the most practical hooks in institutional marketing.
+        What can they access now that they could not access before?
       </p>
       <BulletList items={[
         "Tokenized assets",
@@ -68,65 +62,59 @@ export const ChapterOnchainGTM = () => (
         "New liquidity venues",
       ]} />
       <p>
-        The pitch is simple: <strong>what can they access now that they could not before?</strong>
-      </p>
-      <p>
-        New access creates new revenue potential. That is easier to justify internally than abstract innovation.
+        New access means new revenue potential. That is much easier to justify internally than "we are innovating."
       </p>
     </SectionBlock>
 
-    <SectionBlock title="The Three-Stage Institutional GTM Motion">
-      <h3 className="text-lg font-bold text-foreground mb-3">Stage 1 — Awareness</h3>
-      <p className="font-medium text-foreground">Make the current system feel expensive.</p>
+    <SectionBlock title="The three stages of selling to institutions">
+      <h3 className="text-lg font-bold text-foreground mb-3">Stage 1: Make the current system feel expensive</h3>
+      <p>
+        Do not pitch your product yet. Just show the cost of the status quo.
+      </p>
       <BulletList items={[
-        "Show settlement delays",
-        "Show cost layers",
-        "Show access limitations",
+        "Settlement delays",
+        "Cost layers",
+        "Access limitations",
       ]} />
       <p>
-        Do not sell the product yet. Define the problem clearly.
+        Define the problem clearly first.
       </p>
     </SectionBlock>
 
     <SectionBlock>
-      <h3 className="text-lg font-bold text-foreground mb-3">Stage 2 — Consideration</h3>
-      <p className="font-medium text-foreground">Reframe your product as infrastructure.</p>
-      <p>This is where the heavy lifting happens:</p>
-      <BulletList items={[
-        "Case studies",
-        "Regulatory clarity",
-        "Technical credibility",
-      ]} />
+      <h3 className="text-lg font-bold text-foreground mb-3">Stage 2: Reframe your product as infrastructure</h3>
       <p>
-        You are no longer a tool. You are part of their stack.
+        This is where most fintechs lose the deal.
+      </p>
+      <p>
+        Case studies. Regulatory clarity. Technical credibility. You need all three.
+      </p>
+      <p>
+        You are not selling a tool. You are becoming part of their stack.
       </p>
     </SectionBlock>
 
     <SectionBlock>
-      <h3 className="text-lg font-bold text-foreground mb-3">Stage 3 — Conversion</h3>
-      <p className="font-medium text-foreground">Give them numbers they can defend internally.</p>
+      <h3 className="text-lg font-bold text-foreground mb-3">Stage 3: Give them a number they can defend internally</h3>
       <BulletList items={[
         "Faster settlement",
         "Lower operational cost",
         "New asset exposure",
       ]} />
       <p>
-        Institutional buyers do not close on vision. They close on justification.
+        Institutions do not close on vision. They close on justification.
       </p>
     </SectionBlock>
 
-    <SectionBlock title="Key Messaging Principle">
+    <SectionBlock title="The one messaging rule that covers everything">
       <p>
         Institutional buyers do not buy transformation.
       </p>
-      <p className="font-medium text-foreground">They buy:</p>
-      <BulletList items={[
-        "Cost reduction",
-        "Risk mitigation",
-        "Access",
-      ]} />
+      <p>
+        They buy cost reduction. They buy risk mitigation. They buy access.
+      </p>
       <Callout variant="warning">
-        If your message does not map to one of these three — cost reduction, risk mitigation, or access — it will not land in an institutional setting.
+        If your message does not map to one of those three things, it will not land. Simple as that.
       </Callout>
     </SectionBlock>
   </>
