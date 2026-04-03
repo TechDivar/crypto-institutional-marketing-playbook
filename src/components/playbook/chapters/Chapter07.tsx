@@ -1,5 +1,6 @@
 import { SectionBlock } from "../ui/SectionBlock";
 import { DosDontsCard } from "../ui/DosDontsCard";
+import { PullQuote } from "../ui/PullQuote";
 
 export const Chapter07 = () => (
   <>
