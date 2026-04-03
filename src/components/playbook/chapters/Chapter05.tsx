@@ -1,6 +1,7 @@
 import { SectionBlock } from "../ui/SectionBlock";
 import { BulletList } from "../ui/BulletList";
 import { Callout } from "../ui/Callout";
+import { PullQuote } from "../ui/PullQuote";
 
 export const Chapter05 = () => (
   <>
