@@ -2,6 +2,7 @@ import { SectionBlock } from "../ui/SectionBlock";
 import { ComparisonTable } from "../ui/ComparisonTable";
 import { Callout } from "../ui/Callout";
 import { BulletList } from "../ui/BulletList";
+import { PullQuote } from "../ui/PullQuote";
 
 export const Chapter01 = () => (
   <>
@@ -13,6 +14,8 @@ export const Chapter01 = () => (
         These are not individuals making a quick decision on a Tuesday afternoon. These are organisations with committees, compliance departments, legal reviews, and procurement processes. A single deal can take six to eighteen months and involve twelve different people with veto power.
       </p>
     </SectionBlock>
+
+    <PullQuote quote="A single deal can take six to eighteen months and involve twelve different people with veto power." />
 
     <SectionBlock title="Why It Is Different From Regular Crypto Marketing">
       <ComparisonTable

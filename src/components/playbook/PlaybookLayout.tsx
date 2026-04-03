@@ -3,6 +3,7 @@ import { chapters } from "@/data/playbook-data";
 import { PlaybookSidebar } from "./PlaybookSidebar";
 import { PlaybookHero } from "./PlaybookHero";
 import { ChapterRenderer } from "./ChapterRenderer";
+import { ReadingProgressBar } from "./ui/ReadingProgressBar";
 import { Menu, X } from "lucide-react";
 
 export const PlaybookLayout = () => {
@@ -11,6 +12,7 @@ export const PlaybookLayout = () => {
 
   return (
     <div className="flex min-h-screen bg-background">
+      {activeChapter !== null && <ReadingProgressBar />}
       {/* Mobile menu button */}
       {activeChapter !== null && (
         <button

@@ -1,6 +1,8 @@
 import { lazy, Suspense } from "react";
 import { ChapterHeader } from "./ui/ChapterHeader";
 import { NavigationButtons } from "./ui/NavigationButtons";
+import { KeyTakeaways } from "./ui/KeyTakeaways";
+import { chapters } from "@/data/playbook-data";
 
 const ChapterJobMarket = lazy(() => import("./chapters/ChapterJobMarket").then(m => ({ default: m.ChapterJobMarket })));
 const Chapter01 = lazy(() => import("./chapters/Chapter01").then(m => ({ default: m.Chapter01 })));
@@ -55,6 +57,8 @@ const chapterComponents: Record<number, React.LazyExoticComponent<React.FC>> = {
 export const ChapterRenderer = ({ chapterId, onNavigate, totalChapters }: ChapterRendererProps) => {
   const ChapterContent = chapterComponents[chapterId];
   const isThankYou = chapterId === 20;
+  const chapter = chapters.find(c => c.id === chapterId);
+  const takeaways = chapter?.takeaways;
 
   return (
     <div>
@@ -62,6 +66,7 @@ export const ChapterRenderer = ({ chapterId, onNavigate, totalChapters }: Chapte
       <Suspense fallback={<div className="min-h-[50vh]" />}>
         {ChapterContent && <ChapterContent />}
       </Suspense>
+      {takeaways && takeaways.length > 0 && <KeyTakeaways items={takeaways} />}
       {!isThankYou && (
         <NavigationButtons chapterId={chapterId} onNavigate={onNavigate} totalChapters={totalChapters} />
       )}

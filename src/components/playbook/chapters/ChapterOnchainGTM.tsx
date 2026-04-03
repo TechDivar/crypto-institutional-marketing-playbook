@@ -1,6 +1,7 @@
 import { SectionBlock } from "../ui/SectionBlock";
 import { BulletList } from "../ui/BulletList";
 import { Callout } from "../ui/Callout";
+import { PullQuote } from "../ui/PullQuote";
 
 export const ChapterOnchainGTM = () => (
   <>
@@ -104,6 +105,7 @@ export const ChapterOnchainGTM = () => (
       <p>
         Institutions do not close on vision. They close on justification.
       </p>
+      <PullQuote quote="Institutions do not close on vision. They close on justification." />
     </SectionBlock>
 
     <SectionBlock title="The one messaging rule that covers everything">
