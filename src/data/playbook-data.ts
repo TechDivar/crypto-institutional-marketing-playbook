@@ -18,7 +18,7 @@ export const chapters: Chapter[] = [
   { id: 11, title: "Common Mistakes", subtitle: "Consumer crypto logic vs. institutional reality." },
   { id: 12, title: "Messaging Rules", subtitle: "How to land in a boardroom and not get ghosted." },
   { id: 13, title: "The Launch Playbook", subtitle: "From positioning to post-launch." },
-  { id: 14, title: "Onchain GTM Strategy for Fintechs", subtitle: "Positioning as infrastructure, not a feature." },
+  { id: 14, title: "Onchain GTM Strategy for Fintechs", subtitle: "How to position as infrastructure, not a feature." },
   { id: 15, title: "Metrics and KPIs", subtitle: "What actually matters and what does not." },
   { id: 16, title: "How to Get One of These Jobs", subtitle: "What the JDs actually want." },
   { id: 17, title: "The Demand Generation Checklist", subtitle: "Pick your niche, pick your buyer, get your personalised checklist." },
