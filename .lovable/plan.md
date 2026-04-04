@@ -1,48 +1,47 @@
 
 
-## Plan: Add Progress Bar, Key Takeaways Cards, and Pull Quotes
+## Plan: Add Missing Terms to Glossary and Quiz Sections
 
-### 1. Reading Progress Bar
-Create a `ReadingProgressBar` component — a thin fixed bar at the very top of the screen that fills based on scroll position through the page.
+### Gap Analysis
 
-**File**: `src/components/playbook/ui/ReadingProgressBar.tsx`
-- Uses `useEffect` + scroll listener to calculate `scrollY / (docHeight - windowHeight)`
-- Renders a 3px fixed bar at top with `bg-primary` fill, `z-50`
-- Smooth width transition
+After reviewing all chapters against the glossary and quiz, here are the missing items:
 
-**Integration**: Add to `PlaybookLayout.tsx` — render when `activeChapter !== null`, above everything else.
+**Missing from Glossary:**
 
-### 2. Pull Quote Component
-Create a `PullQuote` component for highlighting key one-liners between sections.
+*Technology section:*
+- **Clearinghouse** — referenced in ChapterOnchainGTM (custodians, clearinghouses, legacy middlemen)
+- **Onchain Credit** — referenced in ChapterOnchainGTM as a key hook
+- **DeFi** — used across multiple chapters, never defined
+- **Infrastructure Arbitrage** — core concept of Chapter 14
 
-**File**: `src/components/playbook/ui/PullQuote.tsx`
-- Large italic text, left border accent (primary color), generous padding
-- Optional `author` prop for attribution
-- Styled distinctly from `Callout` — more editorial/magazine feel
+*Marketing section:*
+- **Sibos** — referenced in Chapter 4 (events table) and Chapter 12 quiz
+- **Demand Generation** — used in ChapterChecklist (Phase 3 title)
+- **CRM** — referenced heavily in Chapter 06c (HubSpot tracking)
+- **Nurture Sequence** — referenced in Chapter 12 quiz and sales cycle content
+- **Product Champion** — referenced in Chapter 12 quiz (enterprise buying dynamics)
+- **First-Touch / Last-Touch Attribution** — defined in Chapter 06c but not in glossary (only Multi-Touch is there)
+- **Board-Ready One-Pager** — referenced in Chapter 12 quiz hint
+- **Clay** — referenced in Chapter 06c as a key tool
+- **HeyReach** — referenced in Chapter 06c as a LinkedIn outreach tool
 
-**Integration**: Add 1-2 pull quotes per chapter in existing chapter files where strong one-liners already exist. Will add to ~6-8 chapters that have the best quotes (e.g., "Institutions do not close on vision. They close on justification." from ChapterOnchainGTM).
+*Buyers section:*
+- **LP Allocator** — referenced in Chapter 03 persona and quiz
 
-### 3. Key Takeaways Card
-Create a `KeyTakeaways` component — a styled card at the bottom of each chapter.
+**Missing from Quiz (Test Yourself):**
 
-**File**: `src/components/playbook/ui/KeyTakeaways.tsx`
-- Card with gradient top border, "Key Takeaways" header with a bookmark icon
-- 3-4 bullet points per chapter
-- Placed just before the navigation buttons
+- **Onchain GTM section** — no quiz questions cover the new Chapter 14 content (infrastructure vs feature positioning, three selling stages)
+- **Pipeline Attribution Model section** — Chapter 06c content on building attribution models has no quiz coverage beyond 2 basic questions
+- **Demand Gen Checklist** — no quiz questions test the tactical checklist content
 
-**Integration**: Add to `ChapterRenderer.tsx` with a data map of takeaways per chapter ID, or add directly inside each chapter file before the closing fragment. Adding a takeaways data structure in `playbook-data.ts` keeps it cleaner — each chapter gets a `takeaways: string[]` array.
+### Changes
 
-### Files to modify/create
+**File: `src/components/playbook/chapters/Chapter13.tsx`**
+- Add ~13 new glossary terms across existing sections (Buyers, Technology, Marketing Terms)
 
-| File | Action |
-|------|--------|
-| `src/components/playbook/ui/ReadingProgressBar.tsx` | Create |
-| `src/components/playbook/ui/PullQuote.tsx` | Create |
-| `src/components/playbook/ui/KeyTakeaways.tsx` | Create |
-| `src/components/playbook/PlaybookLayout.tsx` | Add progress bar |
-| `src/data/playbook-data.ts` | Add `takeaways` arrays to each chapter |
-| `src/components/playbook/ChapterRenderer.tsx` | Render KeyTakeaways after chapter content |
-| ~8 chapter files | Add 1-2 PullQuote components where strong quotes exist |
+**File: `src/components/playbook/chapters/Chapter12.tsx`**
+- Add new quiz section: "Onchain GTM & Infrastructure Positioning" (~3 questions covering Chapter 14 concepts)
+- Add new quiz section: "Demand Generation & Tactical Execution" (~3 questions covering checklist and tooling content)
 
-### No backend changes needed.
+### No other files affected. No backend changes.
 
