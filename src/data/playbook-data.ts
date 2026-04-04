@@ -14,7 +14,7 @@ export const chapters: Chapter[] = [
     ] },
   { id: 2, title: "What Is Crypto Institutional Marketing?", subtitle: "It's not about going viral on X or building a community. This one is different.",
     takeaways: [
-      "Institutional marketing convinces risk-conscious organisations to trust your product with serious money.",
+      "Crypto institutional marketing convinces risk-conscious organisations to trust your crypto product with serious money.",
       "Consumer crypto logic (FOMO, memes, influencers) does not work here — committees decide over months.",
       "The three pillars are credibility, clarity, and continuity.",
     ] },
