@@ -44,7 +44,7 @@ export const Chapter01 = () => (
       <BulletList items={[
         "Credibility: Your product must feel like it has been stress-tested. Case studies, audit reports, regulatory compliance, and real enterprise clients are your evidence.",
         "Clarity: Complex technology must be translated into outcomes that a CFO, a risk manager, or a compliance officer can explain to their board without a crypto dictionary.",
-        "Continuity: The sales process is long. Institutional marketing is not about one big launch. It is about staying visible, relevant, and trustworthy over months while a decision is being made.",
+        "Continuity: The sales process is long. Crypto institutional marketing is not about one big launch. It is about staying visible, relevant, and trustworthy over months while a decision is being made.",
       ]} />
       <Callout variant="info" source="DWF Ventures, 'Building for Institutions: DeFi's Next Steps' (February 2026)">
         Regulatory changes made in 2025 have moved crypto from speculation-driven growth to institutional-led momentum, with a large number of institutional investors moving on-chain and increasing holdings.
