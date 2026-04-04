@@ -16,6 +16,7 @@ export const Chapter13 = () => (
         <GlossaryTerm term="Family Office" definition="Private wealth management for ultra-high-net-worth individuals. Often early movers because they have less regulatory overhead than banks." />
         <GlossaryTerm term="Hedge Fund" definition="An investment fund using aggressive strategies. Many are early movers in crypto because they have high risk tolerance and sophisticated teams." />
         <GlossaryTerm term="Corporate Treasury" definition="The team inside a company managing cash, debt, and short-term investments. Stablecoin and payments products target this buyer." />
+        <GlossaryTerm term="LP Allocator" definition="A limited partner responsible for deciding where capital gets deployed across funds. They evaluate GPs on deal sourcing, judgment, and process discipline — and increasingly want crypto exposure through regulated vehicles." />
       </dl>
     </SectionBlock>
 
