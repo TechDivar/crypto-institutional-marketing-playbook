@@ -57,6 +57,10 @@ export const Chapter13 = () => (
         <GlossaryTerm term="SWIFT" definition="Society for Worldwide Interbank Financial Telecommunication. The dominant messaging network for cross-border bank transfers. Persists despite being slow and expensive because it offers shared governance and regulatory comfort." />
         <GlossaryTerm term="CME Group" definition="Chicago Mercantile Exchange. One of the world's largest derivatives exchanges, offering regulated crypto futures and options. A key institutional trading venue signalling serious market participation." />
         <GlossaryTerm term="COBOL" definition="A legacy programming language still running critical banking systems. Persists because rewriting stable systems introduces existential risk — a reminder that enterprises value continuity over innovation." />
+        <GlossaryTerm term="Clearinghouse" definition="An intermediary between buyers and sellers in financial markets that ensures trades settle correctly. One of the legacy middlemen that on-chain infrastructure can replace or streamline." />
+        <GlossaryTerm term="Onchain Credit" definition="Lending and credit products built natively on blockchain infrastructure. A key hook for fintechs positioning on-chain capabilities to institutional buyers." />
+        <GlossaryTerm term="DeFi" definition="Decentralised Finance. Financial services built on public blockchains without traditional intermediaries. Institutional DeFi adds compliance, permissioning, and custody layers on top." />
+        <GlossaryTerm term="Infrastructure Arbitrage" definition="The strategic advantage of owning part of the financial stack rather than renting access from legacy providers. The core thesis behind fintechs moving on-chain." />
       </dl>
     </SectionBlock>
 
