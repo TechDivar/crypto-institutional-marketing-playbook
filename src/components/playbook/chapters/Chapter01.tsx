@@ -36,7 +36,7 @@ export const Chapter01 = () => (
         Every company uses some version of the same phrase: "bridge the gap between traditional finance and digital assets." What they all mean is: can you take something that sounds complex, risky, and unfamiliar and make it sound inevitable, safe, and already proven?
       </p>
       <Callout variant="quote">
-        Institutional marketing is the practice of making a new, unfamiliar, or technically complex product feel safe enough for large organisations to bet their reputation on it.
+        Crypto institutional marketing is the practice of making a new, unfamiliar, or technically complex crypto product feel safe enough for large organisations to bet their reputation on it.
       </Callout>
     </SectionBlock>
 
