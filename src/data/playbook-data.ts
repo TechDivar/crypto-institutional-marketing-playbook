@@ -12,7 +12,7 @@ export const chapters: Chapter[] = [
       "Research, compliance knowledge, and sales enablement are the most in-demand skills.",
       "Salary ranges are wide — seniority and institutional experience drive the premium.",
     ] },
-  { id: 2, title: "What Is Institutional Marketing?", subtitle: "It's not about going viral on X or building a community. This one is different.",
+  { id: 2, title: "What Is Crypto Institutional Marketing?", subtitle: "It's not about going viral on X or building a community. This one is different.",
     takeaways: [
       "Institutional marketing convinces risk-conscious organisations to trust your product with serious money.",
       "Consumer crypto logic (FOMO, memes, influencers) does not work here — committees decide over months.",
