@@ -62,5 +62,23 @@ export const Chapter12 = () => (
         { question: "A deal closed after 9 months. The prospect attended a webinar, downloaded a report, met your team at Token2049, then booked a demo. How do you attribute this?", hint: "This is multi-touch attribution. No single touchpoint 'caused' the deal. Use a weighted model: the webinar created awareness, the report built credibility, the event built trust, and the demo converted. Track all touches in your CRM and attribute proportional influence. The report and event likely carried the most weight." },
       ]}
     />
+
+    <QuizSection
+      title="Onchain GTM & Infrastructure Positioning"
+      questions={[
+        { question: "A fintech founder says: 'We just added crypto wallets to our app.' What is wrong with this framing and how would you reposition it for institutional buyers?", hint: "Adding wallets is a feature. Owning settlement, custody, or lending infrastructure is a position. The difference matters because institutions do not buy features — they buy stack ownership. Reframe: 'We moved from renting financial rails to owning them.' That is the story that gets a meeting with a head of digital assets." },
+        { question: "You are pitching a bank's treasury team on your on-chain infrastructure. Walk through the three stages of your GTM motion.", hint: "Stage 1: Make the current system feel expensive — quantify what they spend on custody fees, settlement delays, and nostro account prefunding. Stage 2: Reframe your product as infrastructure they own, not a vendor they rent — back it with case studies and regulatory clarity. Stage 3: Give them a number they can defend internally — faster settlement, lower operational cost, new asset exposure. Institutions close on justification, not vision." },
+        { question: "A competitor positions themselves as 'the blockchain layer for banks.' You sell a similar product. How do you differentiate without a feature war?", hint: "Do not compete on architecture. Compete on the outcome the buyer cares about. If they care about cost, lead with settlement savings. If they care about risk, lead with compliance-embedded infrastructure. If they care about access, lead with tokenized asset exposure. The winner is whoever makes the buyer's internal business case easier to write." },
+      ]}
+    />
+
+    <QuizSection
+      title="Demand Generation & Tactical Execution"
+      questions={[
+        { question: "You have Clay, HeyReach, and HubSpot in your stack. Walk through how you would use all three to generate a meeting with a head of digital assets at a target bank.", hint: "Clay builds and enriches the list — find the right person, their role, their company's recent moves. HeyReach runs personalised LinkedIn outreach at scale — not a pitch, a useful insight or research share. HubSpot tracks every touch from first engagement to booked meeting. The sequence is: identify (Clay), warm (HeyReach), track and convert (HubSpot). If you skip enrichment, your outreach is generic. If you skip tracking, you cannot prove what worked." },
+        { question: "Your demand gen checklist says LinkedIn posts should include links. A colleague argues links hurt reach. Who is right and why?", hint: "The algorithm does not penalise links. What kills reach is low-quality content that happens to include a link. A strong post with a link will still perform. The real question is whether the link adds value to the reader. If it does, include it. If the post stands alone without it, consider putting the link in a follow-up comment for cleaner formatting — but that is a design choice, not an algorithm hack." },
+        { question: "You have completed your 90-day demand generation checklist. How do you measure whether it actually worked?", hint: "Four things: How many target accounts engaged with your content (not total impressions — named accounts). How many of those engagements turned into meetings. How much pipeline those meetings created. And how your content-to-meeting conversion rate compares to the previous quarter. If you cannot answer all four, your tracking is not set up properly." },
+      ]}
+    />
   </>
 );

@@ -16,6 +16,7 @@ export const Chapter13 = () => (
         <GlossaryTerm term="Family Office" definition="Private wealth management for ultra-high-net-worth individuals. Often early movers because they have less regulatory overhead than banks." />
         <GlossaryTerm term="Hedge Fund" definition="An investment fund using aggressive strategies. Many are early movers in crypto because they have high risk tolerance and sophisticated teams." />
         <GlossaryTerm term="Corporate Treasury" definition="The team inside a company managing cash, debt, and short-term investments. Stablecoin and payments products target this buyer." />
+        <GlossaryTerm term="LP Allocator" definition="A limited partner responsible for deciding where capital gets deployed across funds. They evaluate GPs on deal sourcing, judgment, and process discipline — and increasingly want crypto exposure through regulated vehicles." />
       </dl>
     </SectionBlock>
 
@@ -56,6 +57,10 @@ export const Chapter13 = () => (
         <GlossaryTerm term="SWIFT" definition="Society for Worldwide Interbank Financial Telecommunication. The dominant messaging network for cross-border bank transfers. Persists despite being slow and expensive because it offers shared governance and regulatory comfort." />
         <GlossaryTerm term="CME Group" definition="Chicago Mercantile Exchange. One of the world's largest derivatives exchanges, offering regulated crypto futures and options. A key institutional trading venue signalling serious market participation." />
         <GlossaryTerm term="COBOL" definition="A legacy programming language still running critical banking systems. Persists because rewriting stable systems introduces existential risk — a reminder that enterprises value continuity over innovation." />
+        <GlossaryTerm term="Clearinghouse" definition="An intermediary between buyers and sellers in financial markets that ensures trades settle correctly. One of the legacy middlemen that on-chain infrastructure can replace or streamline." />
+        <GlossaryTerm term="Onchain Credit" definition="Lending and credit products built natively on blockchain infrastructure. A key hook for fintechs positioning on-chain capabilities to institutional buyers." />
+        <GlossaryTerm term="DeFi" definition="Decentralised Finance. Financial services built on public blockchains without traditional intermediaries. Institutional DeFi adds compliance, permissioning, and custody layers on top." />
+        <GlossaryTerm term="Infrastructure Arbitrage" definition="The strategic advantage of owning part of the financial stack rather than renting access from legacy providers. The core thesis behind fintechs moving on-chain." />
       </dl>
     </SectionBlock>
 
@@ -71,10 +76,19 @@ export const Chapter13 = () => (
         <GlossaryTerm term="POC / Pilot" definition="Proof of Concept. A limited trial that allows an institution to test a product before full commitment." />
         <GlossaryTerm term="NDA" definition="Non-Disclosure Agreement. Institutional buyers often require an NDA before sharing detailed information about their needs." />
         <GlossaryTerm term="Multi-Touch Attribution" definition="A measurement model that assigns credit for a conversion across multiple marketing touchpoints rather than giving all credit to the first or last interaction." />
+        <GlossaryTerm term="First-Touch / Last-Touch Attribution" definition="First-touch gives all credit to the first interaction that brought a prospect in. Last-touch gives all credit to the final interaction before conversion. Both are incomplete — which is why multi-touch exists." />
         <GlossaryTerm term="UTM Parameters" definition="Urchin Tracking Module. Tags added to URLs to track which campaigns, channels, and content pieces drive traffic and conversions." />
         <GlossaryTerm term="Systems Integrator" definition="A consulting or technology firm that helps enterprises connect new solutions with existing infrastructure. Often a gatekeeper in enterprise procurement decisions." />
         <GlossaryTerm term="Rip and Replace" definition="A go-to-market narrative that positions new technology as a full replacement for legacy systems. Almost always fails in enterprise sales — institutions prefer incremental integration." />
         <GlossaryTerm term="Consultant / Translation Layer" definition="The intermediary layer of consulting firms, auditors, and advisors that filter and validate new technologies before they reach enterprise buyers. Ignoring this layer is a common founder mistake." />
+        <GlossaryTerm term="Demand Generation" definition="The process of creating awareness and interest in your product through content, events, outreach, and campaigns. In institutional marketing, it is about warming named accounts, not generating mass leads." />
+        <GlossaryTerm term="CRM" definition="Customer Relationship Management. Software (like HubSpot or Salesforce) that tracks every interaction with prospects and customers across the sales cycle." />
+        <GlossaryTerm term="Nurture Sequence" definition="A planned series of content touches sent to a prospect over time to build trust and move them toward a buying decision. Institutional nurture sequences run months, not days." />
+        <GlossaryTerm term="Product Champion" definition="The internal advocate at a target account who believes in your solution and pushes for adoption. They are not the final decision-maker — your job is to arm them with the materials to sell internally." />
+        <GlossaryTerm term="Board-Ready One-Pager" definition="A single-page document designed to survive a boardroom. Includes pilot results, ROI model, reference clients, and risk mitigation — clean enough for a CFO to approve in one meeting." />
+        <GlossaryTerm term="Sibos" definition="The annual global financial services conference organised by SWIFT. A key venue for institutional crypto companies to meet banking decision-makers." />
+        <GlossaryTerm term="Clay" definition="A data enrichment and prospecting tool used to build and enrich target account lists before content creation and outreach." />
+        <GlossaryTerm term="HeyReach" definition="A LinkedIn automation tool for distributing personalised content and outreach to prospects at scale. Used alongside Clay and HubSpot in institutional demand generation." />
         <GlossaryTerm term="Messari" definition="A crypto research and data platform providing institutional-grade market intelligence, on-chain analytics, and governance research." />
         <GlossaryTerm term="Token2049" definition="One of the largest global crypto industry conferences, held in Dubai and Singapore. A key venue for institutional networking and deal origination." />
       </dl>
