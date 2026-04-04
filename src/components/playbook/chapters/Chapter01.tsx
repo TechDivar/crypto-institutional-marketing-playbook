@@ -8,7 +8,7 @@ export const Chapter01 = () => (
   <>
     <SectionBlock>
       <p>
-        Institutional marketing is the act of convincing large, risk-conscious organisations (banks, asset managers, hedge funds, pension funds, regulators, and enterprises) to trust your product with serious money or serious infrastructure decisions.
+        Crypto institutional marketing is the act of convincing large, risk-conscious organisations (banks, asset managers, hedge funds, pension funds, regulators, and enterprises) to trust your crypto product with serious money or serious infrastructure decisions.
       </p>
       <p>
         These are not individuals making a quick decision on a Tuesday afternoon. These are organisations with committees, compliance departments, legal reviews, and procurement processes. A single deal can take six to eighteen months and involve twelve different people with veto power.
