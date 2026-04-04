@@ -17,7 +17,7 @@ export const KeyTakeaways = ({ items }: KeyTakeawaysProps) => (
     <div className="p-6">
       <div className="flex items-center gap-2 mb-4">
         <Bookmark className="w-5 h-5 text-primary" />
-        <h3 className="text-lg font-bold text-foreground">Key Takeaways</h3>
+        <h3 className="text-lg font-bold text-foreground">In Simple Terms</h3>
       </div>
       <ul className="space-y-3">
         {items.map((item, i) => (

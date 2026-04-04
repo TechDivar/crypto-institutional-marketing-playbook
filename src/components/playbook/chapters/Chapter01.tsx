@@ -8,7 +8,7 @@ export const Chapter01 = () => (
   <>
     <SectionBlock>
       <p>
-        Institutional marketing is the act of convincing large, risk-conscious organisations (banks, asset managers, hedge funds, pension funds, regulators, and enterprises) to trust your product with serious money or serious infrastructure decisions.
+        Crypto institutional marketing is the act of convincing large, risk-conscious organisations (banks, asset managers, hedge funds, pension funds, regulators, and enterprises) to trust your crypto product with serious money or serious infrastructure decisions.
       </p>
       <p>
         These are not individuals making a quick decision on a Tuesday afternoon. These are organisations with committees, compliance departments, legal reviews, and procurement processes. A single deal can take six to eighteen months and involve twelve different people with veto power.
@@ -36,7 +36,7 @@ export const Chapter01 = () => (
         Every company uses some version of the same phrase: "bridge the gap between traditional finance and digital assets." What they all mean is: can you take something that sounds complex, risky, and unfamiliar and make it sound inevitable, safe, and already proven?
       </p>
       <Callout variant="quote">
-        Institutional marketing is the practice of making a new, unfamiliar, or technically complex product feel safe enough for large organisations to bet their reputation on it.
+        Crypto institutional marketing is the practice of making a new, unfamiliar, or technically complex crypto product feel safe enough for large organisations to bet their reputation on it.
       </Callout>
     </SectionBlock>
 
@@ -44,7 +44,7 @@ export const Chapter01 = () => (
       <BulletList items={[
         "Credibility: Your product must feel like it has been stress-tested. Case studies, audit reports, regulatory compliance, and real enterprise clients are your evidence.",
         "Clarity: Complex technology must be translated into outcomes that a CFO, a risk manager, or a compliance officer can explain to their board without a crypto dictionary.",
-        "Continuity: The sales process is long. Institutional marketing is not about one big launch. It is about staying visible, relevant, and trustworthy over months while a decision is being made.",
+        "Continuity: The sales process is long. Crypto institutional marketing is not about one big launch. It is about staying visible, relevant, and trustworthy over months while a decision is being made.",
       ]} />
       <Callout variant="info" source="DWF Ventures, 'Building for Institutions: DeFi's Next Steps' (February 2026)">
         Regulatory changes made in 2025 have moved crypto from speculation-driven growth to institutional-led momentum, with a large number of institutional investors moving on-chain and increasing holdings.
